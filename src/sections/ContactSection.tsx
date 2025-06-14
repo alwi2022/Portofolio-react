@@ -4,9 +4,6 @@ import {
   Phone,
   MapPin,
   Download,
-  Github,
-  Linkedin,
-  Instagram,
 } from "lucide-react";
 
 const ContactSection = () => {
@@ -17,12 +14,19 @@ const ContactSection = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    const body = `From: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
+
+    window.location.href = `mailto:imambahrialwi21@gmail.com?subject=New Message from Portfolio Website&body=${encodeURIComponent(
+      body
+    )}`;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -166,30 +170,35 @@ const ContactSection = () => {
                 <div className="flex gap-4">
                   {[
                     {
-                      icon: Github,
+                      icon: "github",
                       href: "https://github.com/alwi2022",
                       label: "GitHub",
                     },
                     {
-                      icon: Linkedin,
+                      icon: "linkedin",
                       href: "https://www.linkedin.com/in/imam-bahri-alwi-019816250/",
                       label: "LinkedIn",
                     },
                     {
-                      icon: Instagram,
+                      icon: "instagram",
                       href: "https://www.instagram.com/aaalwi1/",
                       label: "Instagram",
                     },
-                  ].map(({ icon: Icon, href, label }) => (
+                  ].map(({ icon, href, label }) => (
                     <a
                       key={label}
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 rounded-lg transition-colors"
+                      className="transition-transform hover:scale-150 dark:fill-white fill-black"
                       aria-label={label}
                     >
-                      <Icon className="w-5 h-5 text-zinc-800 dark:text-zinc-100" />
+                      <img
+                        src={`https://skillicons.dev/icons?i=${icon}`}
+                        alt={label}
+                        width={30}
+                        height={30}
+                      />
                     </a>
                   ))}
                 </div>
