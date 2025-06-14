@@ -1,0 +1,15 @@
+@import "tailwindcss";
+button.group span {
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+button.group {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  overflow: hidden;
+}
