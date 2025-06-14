@@ -141,7 +141,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     rows={5}
                     className="w-full px-4 py-3 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Tell me about your project..."
+                   placeholder="Let me know how I can support your idea or product."
                     required
                   />
                 </div>
