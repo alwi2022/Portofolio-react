@@ -13,3 +13,5 @@ button.group {
   height: 30px;
   overflow: hidden;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));

@@ -41,8 +41,8 @@ const toggleTheme = () => {
       <nav className="flex justify-between items-center px-4 sm:px-10 lg:px-20 py-5 relative">
         {/* Logo */}
     
-    <img src="ChatGPT Image Jun 14, 2025, 04_01_22 PM.png"
-     alt=""
+    <img src="logo.png"
+     alt="logo"
      className="w-12 h-12 sm:w-14 sm:h-14"
      />
 
