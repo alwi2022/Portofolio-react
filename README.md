@@ -1,5 +1,6 @@
-# 🧑‍💻 Imam Bahri Alwi — Portfolio
+# Imam Bahri Alwi — Portfolio
 
+[![GitHub stars](https://img.shields.io/github/stars/alwi2022/Portofolio-react?style=social)](https://github.com/alwi2022/Portofolio-react/stargazers)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
@@ -8,7 +9,7 @@
 
 A modern, responsive, and bilingual portfolio built with React, Vite, and Tailwind CSS — featuring EN/ID language toggle, clean UI, and optimized for SEO.
 
-## ✨ Features
+##  Features
 
 - 🌐 Language toggle (EN ↔ ID)
 - ⚡️ Built with Vite for fast performance
@@ -17,7 +18,7 @@ A modern, responsive, and bilingual portfolio built with React, Vite, and Tailwi
 - 🧠 SEO optimized (Open Graph, Twitter Card, JSON-LD)
 - 🔒 Fully responsive and accessible
 
-## 🚀 Live Demo
+##  Live Demo
 
 👉 [https://portfolio.alwi.tech](https://portfolio.alwi.tech)
 
