@@ -88,7 +88,7 @@ export const langData = {
         "Fullstack JavaScript",
         "Pecinta Teknologi",
       ],
-      desc: "Pengembang JavaScript full-stack dari Serang, Indonesia. Lulusan Hacktiv8, antusias membangun solusi digital yang bermakna dengan kode yang rapi dan skalabel.",
+      desc: "Pengembang JavaScript Full-stack dari Serang, Indonesia. Lulusan Hacktiv8, antusias membangun solusi digital yang bermakna dengan kode yang rapi dan skalabel.",
       connect: "Terhubung dengan saya di sini",
     },
 
