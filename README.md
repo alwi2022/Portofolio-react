@@ -42,7 +42,7 @@ src/
 ├── main.tsx           # Entry point with Router
 ```
 
-## 🛠 Getting Started
+## Getting Started
 
 Clone the repo and install dependencies:
 
