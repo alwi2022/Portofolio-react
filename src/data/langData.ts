@@ -73,6 +73,11 @@ export const langData = {
     footer: {
       copyright: "© 2025 Imam Bahri Alwi. All rights reserved.",
     },
+    notFound: {
+      title: "Page not found",
+      message: "Sorry, we couldn’t find the page you’re looking for.",
+      back: "Back to Homepage",
+    },
   },
   id: {
     nav: ["Beranda", "Proyek", "Keahlian", "Kontak"],
@@ -151,6 +156,11 @@ export const langData = {
     },
     footer: {
       copyright: "© 2025 Imam Bahri Alwi. Hak cipta dilindungi.",
+    },
+    notFound: {
+      title: "Halaman tidak ditemukan",
+      message: "Maaf, kami tidak dapat menemukan halaman yang kamu cari.",
+      back: "Kembali ke Beranda",
     },
   },
 } as const;
