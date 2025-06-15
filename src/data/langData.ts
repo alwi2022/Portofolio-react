@@ -12,7 +12,7 @@ export const langData = {
       sectionTitle: "Recent Projects",
       items: [
         {
-          title: "QuickHire",
+          title: "QuickHire Dev",
           description:
             "Build professional resumes in minutes. Just fill the form and let AI generate the Summary & Experience sections.",
         },
@@ -96,7 +96,7 @@ export const langData = {
       sectionTitle: "Proyek Terbaru",
       items: [
         {
-          title: "QuickHire",
+          title: "QuickHire Dev",
           description:
             "Buat resume profesional dalam hitungan menit. Isi formulir dan biarkan AI membuat ringkasan dan pengalaman kerja Anda.",
         },
