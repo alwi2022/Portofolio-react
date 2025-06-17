@@ -79,90 +79,94 @@ export const langData = {
       back: "Back to Homepage",
     },
   },
-  id: {
-    nav: ["Beranda", "Proyek", "Keahlian", "Kontak"],
-    hero: {
-      title: "Imam Bahri Alwi",
-      typed: [
-        "Pengembang Perangkat Lunak",
-        "Fullstack JavaScript",
-        "Pecinta Teknologi",
-      ],
-      desc: "Pengembang JavaScript Full-stack dari Serang, Indonesia. Lulusan Hacktiv8, antusias membangun solusi digital yang bermakna dengan kode yang rapi dan skalabel.",
-      connect: "Terhubung dengan saya di sini",
-    },
+ id: {
+  nav: ["Beranda", "Proyek", "Keahlian", "Kontak"],
+  hero: {
+    title: "Imam Bahri Alwi",
+    typed: [
+      "Pengembang Perangkat Lunak",
+      "Fullstack JavaScript",
+      "Pemerhati Teknologi",
+    ],
+    desc: "Fullstack JavaScript developer asal Serang, Indonesia. Lulusan Hacktiv8 yang fokus membangun solusi digital yang bersih, efisien, dan mudah dikembangkan.",
+    connect: "Hubungi saya di sini",
+  },
 
-    projects: {
-      sectionTitle: "Proyek Terbaru",
-      items: [
-        {
-          title: "QuickHire Dev",
-          description:
-            "Buat resume profesional dalam hitungan menit. Isi formulir dan biarkan AI membuat ringkasan dan pengalaman kerja Anda.",
-        },
-        {
-          title: "Personal Finance Tracker",
-          description:
-            "Alat sederhana dan bermanfaat untuk memantau pengeluaran harian dan mengelola anggaran pribadi dengan mudah.",
-        },
-        {
-          title: "Maneka",
-          description:
-            "Platform perencanaan karier berbasis AI yang terinspirasi dari teori kecerdasan majemuk Gardner.",
-        },
-      ],
-      buttonLabels: {
-        website: "Situs Web",
-        github: "GitHub",
-        expo: "Expo QR",
+  projects: {
+    sectionTitle: "Proyek Terbaru",
+    items: [
+      {
+        title: "QuickHire Dev",
+        description:
+          "Membuat resume profesional dalam hitungan menit. Cukup isi formulir, dan biarkan AI yang menyusun bagian Ringkasan dan Pengalaman kerja Anda.",
       },
-    },
-    skills: {
-      sectionTitle: "Keahlian",
-      description:
-        "Teknologi yang saya gunakan untuk membangun aplikasi modern dan skalabel",
-      languagesTitle: "Bahasa & Framework",
-      toolsTitle: "Alat & Platform",
-    },
-    contact: {
-      sectionTitle: "Mari Bekerja Sama",
-      description:
-        "Punya ide proyek? Mari diskusikan bagaimana saya bisa membantu mewujudkannya.",
-      formTitle: "Kirim pesan untuk saya",
-      form: {
-        firstName: "Nama Depan *",
-        lastName: "Nama Belakang",
-        email: "Alamat Email *",
-        message: "Pesan *",
-        placeholder:
-          "Jelaskan bagaimana saya bisa mendukung ide atau produk Anda.",
-        send: "Kirim Pesan",
-        sending: "Mengirim...",
+      {
+        title: "Personal Finance Tracker",
+        description:
+          "Alat sederhana namun efektif untuk mencatat pengeluaran harian dan mengelola anggaran pribadi dengan mudah.",
       },
-      infoTitle: "Hubungi saya",
-      infoLabels: {
-        email: "Surel",
-        phone: "Telepon",
-        location: "Lokasi",
+      {
+        title: "Maneka",
+        description:
+          "Platform perencanaan karier berbasis AI yang terinspirasi dari teori kecerdasan majemuk milik Howard Gardner.",
       },
-      resumeDownload: "Unduh Resume",
-      validation: {
-        empty: "Harap isi semua kolom yang wajib diisi.",
-        invalidEmail: "Harap masukkan alamat email yang valid.",
-        success: "Pesan berhasil dikirim!",
-        error: "Gagal mengirim pesan. Silakan coba lagi nanti.",
-        loading: "Mengirim pesan...",
-      },
-    },
-    footer: {
-      copyright: "© 2025 Imam Bahri Alwi. Hak cipta dilindungi.",
-    },
-    notFound: {
-      title: "Halaman tidak ditemukan",
-      message: "Maaf, kami tidak dapat menemukan halaman yang kamu cari.",
-      back: "Kembali ke Beranda",
+    ],
+    buttonLabels: {
+      website: "Kunjungi Situs",
+      github: "GitHub",
+      expo: "QR Expo",
     },
   },
+
+  skills: {
+    sectionTitle: "Keahlian",
+    description:
+      "Teknologi yang saya gunakan untuk membangun aplikasi modern dan mudah diskalakan",
+    languagesTitle: "Bahasa & Framework",
+    toolsTitle: "Alat & Platform",
+  },
+
+  contact: {
+    sectionTitle: "Mari Bekerja Sama",
+    description:
+      "Punya ide atau proyek? Saya terbuka untuk berdiskusi dan membantu mewujudkannya.",
+    formTitle: "Kirim Pesan",
+    form: {
+      firstName: "Nama Depan *",
+      lastName: "Nama Belakang",
+      email: "Alamat Email *",
+      message: "Pesan *",
+      placeholder: "Tuliskan bagaimana saya dapat membantu proyek atau ide Anda.",
+      send: "Kirim Pesan",
+      sending: "Sedang mengirim...",
+    },
+    infoTitle: "Kontak",
+    infoLabels: {
+      email: "Email",
+      phone: "Telepon",
+      location: "Lokasi",
+    },
+    resumeDownload: "Unduh Resume",
+    validation: {
+      empty: "Harap lengkapi semua kolom wajib.",
+      invalidEmail: "Alamat email tidak valid.",
+      success: "Pesan berhasil dikirim!",
+      error: "Gagal mengirim pesan. Silakan coba beberapa saat lagi.",
+      loading: "Mengirim pesan...",
+    },
+  },
+
+  footer: {
+    copyright: "© 2025 Imam Bahri Alwi. Seluruh hak dilindungi.",
+  },
+
+  notFound: {
+    title: "Halaman Tidak Ditemukan",
+    message: "Maaf, kami tidak dapat menemukan halaman yang Anda maksud.",
+    back: "Kembali ke Beranda",
+  },
+}
+
 } as const;
 
 export type LangKey = keyof typeof langData;
