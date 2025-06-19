@@ -253,7 +253,7 @@ const ContactSection = () => {
 
               <div className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 p-8 rounded-xl shadow-md">
                 <a
-                  href="/HCK-078 ImamBahriAlwiP (1).docx"
+                  href="/fullstack-cv-imambahrialwi.pdf"
                   className="flex items-center justify-center gap-3 w-full bg-gray-900 dark:bg-gray-100 text-white dark:text-black font-medium px-6 py-4 rounded-lg transition-transform transform hover:scale-105"
                 >
                   <Download className="w-5 h-5" />
