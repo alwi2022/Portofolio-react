@@ -33,7 +33,7 @@ const Header = () => {
           {navLabels.map((label, i) => (
             <li key={label}>
               <a
-                href={i === 0 ? "/" : `#${langData["en"].nav[i]}`}
+                href={i === 0 ? "/" : `${langData["en"].nav[i]}`}
                 className="px-3 py-2 rounded-md hover:bg-zinc-700 transition-colors"
               >
                 {label}
@@ -69,7 +69,7 @@ const Header = () => {
             {navLabels.map((label, i) => (
               <li key={label} className="w-full">
                 <a
-                  href={i === 0 ? "/" : `#${langData["en"].nav[i]}`}
+                  href={i === 0 ? "/" : `${langData["en"].nav[i]}`}
                   className="block w-full py-2 text-lg hover:bg-zinc-800 rounded-md px-2 text-white"
                   onClick={() => setMenuOpen(false)}
                 >

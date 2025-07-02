@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import App from "./App";
 import "./index.css";
 import { LangProvider } from "./context/LangContext";
+import Project from "./pages/Project";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
+          <Route path="/project" element={<Project />} />
         </Routes>
       </BrowserRouter>
     </LangProvider>
