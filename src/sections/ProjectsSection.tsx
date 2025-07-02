@@ -2,6 +2,8 @@ import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 import { Icon, Github, Link, QrCode } from "lucide-react";
+import { Link as RouterLink } from "react-router";
+
 
 
 const ProjectsSection = () => {
@@ -13,12 +15,23 @@ const ProjectsSection = () => {
   return (
     <section id="Projects" className="mt-20 mb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-12 text-center">
+
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight  dark:text-white mb-12 text-center">
           {projectLang.sectionTitle}
         </h1>
+        <div className="mb-4 text-right">
+          <RouterLink
+            to="/project"
+            className="text-sm text-zinc-900 dark:text-white hover:underline"
+          >
+            {lang === "en" ? "See all projects" : "Lihat semua proyek"}
+          </RouterLink>
+        </div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-            {projectLang.items.slice(0, 3).map((project, index) => (
+
+          {projectLang.items.filter((project) => project.featured).map((project, index) => (
             <div
               key={projectLang.items[index].title}
               className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-xl shadow hover:shadow-lg transition-transform hover:scale-105"
@@ -46,7 +59,7 @@ const ProjectsSection = () => {
                       rel="noopener noreferrer"
                       className="px-4 py-2 text-sm font-medium rounded-md bg-zinc-900 text-white dark:bg-white dark:text-black hover:opacity-90 transition"
                     >
-                       {link.labelKey === "website" && (
+                      {link.labelKey === "website" && (
                         <Link className="w-4 h-4 text-zinc-900  inline mr-1" />
                       )}
                       {link.labelKey === "github" && (
@@ -56,7 +69,7 @@ const ProjectsSection = () => {
                         <QrCode className="w-4 h-4 text-zinc-900  inline mr-1" />
                       )}
                       {projectLang.buttonLabels[link.labelKey as keyof typeof projectLang.buttonLabels]}
-                     
+
                     </a>
                   ))}
                 </div>

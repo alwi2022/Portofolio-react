@@ -1,6 +1,6 @@
 export const langData = {
   en: {
-    nav: ["Home", "Project", "Skills", "Contact"],
+    nav: ["Home", "Projects", "Skills", "Contact"],
     hero: {
       title: "Imam Bahri Alwi",
       typed: ["Software Developer", "Fullstack JavaScript", "Tech Enthusiast"],
@@ -12,6 +12,20 @@ export const langData = {
       sectionTitle: "Recent Projects",
       items: [
         {
+          title: "TypeSynq Royale",
+          description: "Multiplayer typing battle game. Race against friends or go solo to test your typing speed and accuracy.",
+
+          image: "/TypeSynq/TypeSynq.png",
+          links: [
+            { labelKey: "website", url: "https://multisync-type-battle.vercel.app" },
+            { labelKey: "github", url: "https://github.com/alwi2022" },
+          ],
+          tags: ["React", "Multisynq", "Tailwind CSS", "Typescript"],
+          status: "Live",
+          featured: false,
+
+        },
+        {
           title: "QuickHire Dev",
           description:
             "Build professional resumes in minutes. Just fill the form and let AI generate the Summary & Experience sections.",
@@ -22,7 +36,8 @@ export const langData = {
           ],
           tags: ["React", "Node.js", "PostgreSQL", "Express", "Typescript"],
           status: "Live",
-          
+          featured: true,
+
         },
         {
           title: "Personal Finance Tracker",
@@ -35,7 +50,8 @@ export const langData = {
           ],
           tags: ["React", "Node.js", "MongoDB", "Express", "Typescript"],
           status: "Live",
-          
+          featured: true,
+
         },
         {
           title: "Maneka",
@@ -46,10 +62,12 @@ export const langData = {
             { labelKey: "expo", url: "https://expo.dev/preview/update?message=fix:%20slicing%2020%20question&updateRuntimeVersion=1.0.0&createdAt=2025-03-17T14:37:37.110Z&slug=exp&projectId=4bd366a8-2bbc-4e99-9fbf-af38b1d16b68&group=4d0832dd-2aa7-4acd-bef5-59916d281c6d" },
             { labelKey: "github", url: "https://github.com/TalentDiscovery/Maneka-Backend-Public" },
           ],
-          
+
           tags: ["React Native", "Expo", "Node.js", "MongoDB", "Typescript"],
           status: "Beta",
-        },
+          featured: true,
+        }
+    
       ],
       buttonLabels: {
         website: "Website",
@@ -120,6 +138,19 @@ export const langData = {
       sectionTitle: "Proyek Terbaru",
       items: [
         {
+          title: "TypeSynq Royale",
+          description: "Game mengetik multi-pemain. Tantang teman atau bermain sendiri untuk menguji kecepatan dan akurasi mengetik Anda.",
+
+          image: "/TypeSynq/TypeSynq.png",
+          links: [
+            { labelKey: "website", url: "https://multisync-type-battle.vercel.app" },
+            { labelKey: "github", url: "https://github.com/alwi2022" },
+          ],
+          tags: ["React", "Multisynq", "Tailwind CSS", "Typescript"],
+          status: "Live",
+          featured: false,
+        },
+        {
           title: "QuickHire Dev",
           description:
             "Membuat resume profesional dalam hitungan menit. Cukup isi formulir, dan biarkan AI yang menyusun bagian Ringkasan dan Pengalaman kerja Anda.",
@@ -130,7 +161,7 @@ export const langData = {
           ],
           tags: ["React", "Node.js", "PostgreSQL", "Express", "Typescript"],
           status: "Live",
-          
+          featured: true,
         },
 
         {
@@ -144,7 +175,7 @@ export const langData = {
           ],
           tags: ["React", "Node.js", "MongoDB", "Express", "Typescript"],
           status: "Live",
-          
+          featured: true,
         },
         {
           title: "Maneka",
@@ -163,8 +194,9 @@ export const langData = {
           ],
           tags: ["React Native", "Expo", "Node.js", "MongoDB", "Typescript"],
           status: "Beta",
-          
+          featured: true, 
         },
+      
       ],
       buttonLabels: {
         website: "Kunjungi Situs",
