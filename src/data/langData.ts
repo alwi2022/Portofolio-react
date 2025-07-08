@@ -134,15 +134,15 @@ export const langData = {
           showTitle: false
         },
         {
-          title: "Fullstack Javascript Immersive",
-          image: "/images/certificates/hacktiv8.png",
-          credentialUrl: "https://hacktiv8.com/certificates/alwi2022",
-          showTitle: false
-        },
-        {
           title: "JavaScript Algorithms and Data Structures",
           image: "/images/certificates/freecodecamp-javascript.png",
           credentialUrl: "https://freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
+          showTitle: false
+        },
+        {
+          title: "Fullstack Javascript Immersive",
+          image: "/images/certificates/hacktiv8.png",
+          credentialUrl: "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.png",
           showTitle: false
         },
         {
@@ -383,17 +383,18 @@ export const langData = {
           showTitle: false
         },
         {
-          title: "Fullstack Javascript Immersive",
-          image: "/images/certificates/hacktiv8.png",
-          credentialUrl: "https://hacktiv8.com/certificates/alwi20222",
-          showTitle: false
-        },
-        {
           title: "JavaScript Algorithms and Data Structures",
           image: "/images/certificates/freecodecamp-javascript.png",
           credentialUrl: "https://www.freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
           showTitle: false
         },
+        {
+          title: "Fullstack Javascript Immersive",
+          image: "/images/certificates/hacktiv8.png",
+          credentialUrl: "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.png",
+          showTitle: false
+        },
+        
         {
           title: "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
           image: "/images/certificates/dicoding-aws.png",

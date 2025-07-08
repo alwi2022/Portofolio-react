@@ -42,13 +42,13 @@ const CertificateSection = () => {
                                                 href={certificate.credentialUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-2 px-6 py-3 bg-black/70 text-white font-medium rounded-lg hover:bg-black/90 transition-colors duration-200"
+                                                className="inline-flex items-center gap-2 px-6 py-3 bg-black/60 hover:text-blue-200 font-medium rounded-lg hover:bg-black/60 transition-colors duration-200"
                                             >
                                                 <ExternalLink className="w-4 h-4" />
                                                 {certificateLang.viewCredential}
                                             </a>
                                         ) : (
-                                            <div className="inline-flex items-center gap-2 px-6 py-3 bg-black/70 text-white font-medium rounded-lg">
+                                            <div className="inline-flex items-center gap-2 px-6 py-3 bg-black/60 text-white font-medium rounded-lg">
                                                 <ExternalLink className="w-4 h-4" />
                                                 {certificateLang.viewCredential}
                                             </div>
