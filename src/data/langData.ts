@@ -67,7 +67,7 @@ export const langData = {
           status: "Beta",
           featured: true,
         }
-    
+
       ],
       buttonLabels: {
         website: "Website",
@@ -81,6 +81,125 @@ export const langData = {
         "Technologies I use to build scalable and modern applications",
       languagesTitle: "Languages & Frameworks",
       toolsTitle: "Tools & Platforms",
+    },
+    experience: {
+      sectionTitle: "Experience",
+      responsibilities: "Key Responsibilities",
+      technologies: "Technologies Used",
+      items: [
+        {
+          position: "Frontend Developer",
+          company: "HalloHukum",
+          type: "Freelance",
+          duration: "April 2025 – July 2025",
+          location: "Remote",
+          description: "Developed a LegalTech mobile application connecting clients with lawyers, focusing on creating intuitive user interfaces and seamless user experiences for both client and lawyer applications.",
+          responsibilities: [
+            "Built two mobile applications (client and lawyer) using React Native with Expo framework",
+            "Integrated real-time chat functionality, video/audio calls, and secure authentication using REST APIs",
+            "Designed responsive UI components with consistent state management across both applications",
+            "Collaborated in agile development sprints with backend engineers to ensure feature alignment",
+            "Implemented user-friendly interfaces for legal consultation workflows"
+          ],
+          technologies: ["React Native", "Expo", "REST API", "JavaScript", "State Management"]
+        },
+        {
+          position: "Full Stack JavaScript Student",
+          company: "Hacktiv8",
+          type: "Intensive Program",
+          duration: "October 2024 – February 2025",
+          location: "Jakarta, Indonesia",
+          description: "Completed an intensive full-stack JavaScript bootcamp program, gaining comprehensive knowledge in modern web development technologies and best practices.",
+          responsibilities: [
+            "Mastered full-stack development using JavaScript ecosystem",
+            "Built multiple web applications using React.js, Node.js, and databases",
+            "Learned modern development workflows and deployment strategies",
+            "Collaborated on team projects using Git version control",
+            "Participated in code reviews and pair programming sessions"
+          ],
+          technologies: ["JavaScript", "React.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "Git"]
+        }
+      ]
+    },
+    certificates: {
+      sectionTitle: "Certificates",
+      subtitle: "My Achievements",
+      description: "Here are some of the certificates I've earned through my learning journey and professional development.",
+      viewCredential: "View Credential",
+      items: [
+        {
+          title: "Web Programming Basics: HTML, CSS, and Responsive Flexbox",
+          image: "/images/certificates/dicoding-html-css.png",
+          credentialUrl: "https://www.dicoding.com/certificates/ERZRGYR2QPYV",
+          showTitle: false
+        },
+        {
+          title: "Fullstack Javascript Immersive",
+          image: "/images/certificates/hacktiv8.png",
+          credentialUrl: "https://hacktiv8.com/certificates/alwi2022",
+          showTitle: false
+        },
+        {
+          title: "JavaScript Algorithms and Data Structures",
+          image: "/images/certificates/freecodecamp-javascript.png",
+          credentialUrl: "https://freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
+          showTitle: false
+        },
+        {
+          title: "Cloud Practitioner Essentials (AWS Cloud Basics)",
+          image: "/images/certificates/dicoding-aws.png",
+          credentialUrl: "https://www.dicoding.com/certificates/QLZ92LDKDX5D",
+          showTitle: false
+        },
+        {
+          title: "Backend Development for Beginners with JavaScript",
+          image: "/images/certificates/dicoding-backend.png",
+          credentialUrl: "https://www.dicoding.com/certificates/MEPJN5E3LX3V",
+          showTitle: false
+        },
+        {
+          title: "Frontend Web Development for Beginners",
+          image: "/images/certificates/dicoding-frontend.png",
+          credentialUrl: "https://www.dicoding.com/certificates/72ZDVQM3VZYW",
+          showTitle: false
+        },
+        {
+          title: "Problem Solving (Basic) - HackerRank",
+          image: "/images/certificates/hackerrank-problem-solving.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/80f26cd43965",
+          showTitle: false
+        },
+        {
+          title: "SQL (Intermediate) - HackerRank",
+          image: "/images/certificates/hackerrank-sql.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/1d057e9da521",
+          showTitle: false
+        },
+        {
+          title: "React (Basic) - HackerRank",
+          image: "/images/certificates/hackerrank-react.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/bb7a82f2383c",
+          showTitle: false
+        },
+        {
+          title: "JavaScript (Intermediate) - HackerRank",
+          image: "/images/certificates/hackerrank-javascript.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/3d00c06b155e",
+          showTitle: false
+        },
+        {
+          title: "Node.js (Intermediate) - HackerRank",
+          image: "/images/certificates/hackerrank-nodejs.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/d9e76b8ad085",
+          showTitle: false
+        },
+        {
+          title: "CSS (Basic) - HackerRank",
+          image: "/images/certificates/hackerrank-css.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/645c2a3d72e1",
+          showTitle: false
+        }
+      ]
     },
 
     contact: {
@@ -194,9 +313,9 @@ export const langData = {
           ],
           tags: ["React Native", "Expo", "Node.js", "MongoDB", "Typescript"],
           status: "Beta",
-          featured: true, 
+          featured: true,
         },
-      
+
       ],
       buttonLabels: {
         website: "Kunjungi Situs",
@@ -212,7 +331,125 @@ export const langData = {
       languagesTitle: "Bahasa & Framework",
       toolsTitle: "Alat & Platform",
     },
-
+    experience: {
+      sectionTitle: "Pengalaman",
+      responsibilities: "Tanggung Jawab Utama",
+      technologies: "Teknologi yang Digunakan",
+      items: [
+        {
+          position: "Frontend Developer",
+          company: "HalloHukum",
+          type: "Freelance",
+          duration: "April 2025 – Juli 2025",
+          location: "Remote",
+          description: "Mengembangkan aplikasi mobile LegalTech yang menghubungkan klien dengan pengacara, fokus pada pembuatan antarmuka pengguna yang intuitif dan pengalaman pengguna yang mulus untuk aplikasi klien dan pengacara.",
+          responsibilities: [
+            "Membangun dua aplikasi mobile (klien dan pengacara) menggunakan React Native dengan framework Expo",
+            "Mengintegrasikan fungsi chat real-time, panggilan video/audio, dan otentikasi aman menggunakan REST API",
+            "Merancang komponen UI responsif dengan manajemen state yang konsisten di kedua aplikasi",
+            "Berkolaborasi dalam sprint pengembangan agile dengan backend engineer untuk memastikan keselarasan fitur",
+            "Mengimplementasikan antarmuka yang user-friendly untuk alur kerja konsultasi hukum"
+          ],
+          technologies: ["React Native", "Expo", "REST API", "JavaScript", "State Management"]
+        },
+        {
+          position: "Siswa Full Stack JavaScript",
+          company: "Hacktiv8",
+          type: "Program Intensif",
+          duration: "Oktober 2024 – Februari 2025",
+          location: "Jakarta, Indonesia",
+          description: "Menyelesaikan program bootcamp JavaScript full-stack intensif, memperoleh pengetahuan komprehensif tentang teknologi pengembangan web modern dan praktik terbaik.",
+          responsibilities: [
+            "Menguasai pengembangan full-stack menggunakan ekosistem JavaScript",
+            "Membangun beberapa aplikasi web menggunakan React.js, Node.js, dan database",
+            "Mempelajari alur kerja pengembangan modern dan strategi deployment",
+            "Berkolaborasi dalam proyek tim menggunakan Git version control",
+            "Berpartisipasi dalam code review dan pair programming"
+          ],
+          technologies: ["JavaScript", "React.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "Git"]
+        }
+      ]
+    },
+    certificates: {
+      sectionTitle: "Sertifikat",
+      subtitle: "Pencapaian Saya",
+      description: "Berikut adalah beberapa sertifikat yang telah saya peroleh melalui perjalanan belajar dan pengembangan profesional.",
+      viewCredential: "Lihat Kredensial",
+      items: [
+        {
+          title: "Dasar Pemrograman Web: HTML, CSS, dan Responsive Flexbox",
+          image: "/images/certificates/dicoding-html-css.png",
+          credentialUrl: "https://www.dicoding.com/certificates/ERZRGYR2QPYV",
+          showTitle: false
+        },
+        {
+          title: "Fullstack Javascript Immersive",
+          image: "/images/certificates/hacktiv8.png",
+          credentialUrl: "https://hacktiv8.com/certificates/alwi20222",
+          showTitle: false
+        },
+        {
+          title: "JavaScript Algorithms and Data Structures",
+          image: "/images/certificates/freecodecamp-javascript.png",
+          credentialUrl: "https://www.freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
+          showTitle: false
+        },
+        {
+          title: "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
+          image: "/images/certificates/dicoding-aws.png",
+          credentialUrl: "https://www.dicoding.com/certificates/QLZ92LDKDX5D",
+          showTitle: false
+        },
+        {
+          title: "Belajar Back-End Pemula dengan JavaScript",
+          image: "/images/certificates/dicoding-backend.png",
+          credentialUrl: "https://www.dicoding.com/certificates/MEPJN5E3LX3V",
+          showTitle: false
+        },
+        {
+          title: "Belajar Membuat Front-End Web untuk Pemula",
+          image: "/images/certificates/dicoding-frontend.png",
+          credentialUrl: "https://www.dicoding.com/certificates/72ZDVQM3VZYW",
+          showTitle: false
+        },
+        {
+          title: "Problem Solving (Basic) - HackerRank",
+          image: "/images/certificates/hackerrank-problem-solving.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/80f26cd43965",
+          showTitle: false
+        },
+        {
+          title: "SQL (Intermediate) - HackerRank",
+          image: "/images/certificates/hackerrank-sql.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/1d057e9da521",
+          showTitle: false
+        },
+        {
+          title: "React (Basic) - HackerRank",
+          image: "/images/certificates/hackerrank-react.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/bb7a82f2383c",
+          showTitle: false
+        },
+        {
+          title: "JavaScript (Intermediate) - HackerRank",
+          image: "/images/certificates/hackerrank-javascript.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/3d00c06b155e",
+          showTitle: false
+        },
+        {
+          title: "Node.js (Intermediate) - HackerRank",
+          image: "/images/certificates/hackerrank-nodejs.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/d9e76b8ad085",
+          showTitle: false
+        },
+        {
+          title: "CSS (Basic) - HackerRank",
+          image: "/images/certificates/hackerrank-css.png",
+          credentialUrl: "https://www.hackerrank.com/certificates/645c2a3d72e1",
+          showTitle: false
+        }
+      ]
+    },
     contact: {
       sectionTitle: "Mari Bekerja Sama",
       description:

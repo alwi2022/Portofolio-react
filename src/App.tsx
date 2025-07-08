@@ -5,6 +5,8 @@ import SkillsSection from "./sections/SkillsSection";
 import ContactSection from "./sections/ContactSection";
 import { JSX } from "react";
 import Footer from "./sections/FooterSection";
+import CertificateSection from "./sections/CertificateSection";
+import ExperienceSection from "./sections/ExperienceSection";
 
 function App(): JSX.Element {
   return (
@@ -13,8 +15,10 @@ function App(): JSX.Element {
 
       <main className="px-4 sm:px-10 lg:px-20">
         <HeroSection />
+        <ExperienceSection /> {/* Section baru */}
         <ProjectsSection />
         <SkillsSection />
+        <CertificateSection />
         <ContactSection />
       </main>
 

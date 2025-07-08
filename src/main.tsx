@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<App />} />
-        <Route path="/project" element={<Project />} />
+          <Route path="/project" element={<Project />} />
         </Routes>
       </BrowserRouter>
     </LangProvider>
