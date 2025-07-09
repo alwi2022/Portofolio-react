@@ -1,3 +1,4 @@
+// src/sections/HeroSection.tsx
 import { TypeAnimation } from "react-type-animation";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
@@ -7,10 +8,7 @@ const HeroSection = () => {
   const hero = langData[lang].hero;
 
   return (
-    <section
-      id="hero"
-      className="mb-20 flex flex-col md:flex-row mt-20 px-4 sm:px-10 lg:px-20"
-    >
+    <section id="Home" className="mb-20 flex flex-col md:flex-row mt-20 px-4 sm:px-10 lg:px-20">
       <div>
         <div>
           <h1 className=" text-gray-100 text-3xl md:text-5xl font-bold mb-2 tracking-tight">

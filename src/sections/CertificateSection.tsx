@@ -1,3 +1,4 @@
+// src/sections/CertificateSection.tsx
 import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";

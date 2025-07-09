@@ -1,3 +1,4 @@
+// src/sections/ExperienceSection.tsx
 import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
@@ -21,7 +22,7 @@ const ExperienceSection = () => {
               className="relative pl-8 pb-12 border-l-2  border-zinc-600 last:pb-0"
             >
               {/* Timeline dot */}
-              <div className="absolute -left-[9px] top-0 w-4 h-4  bg-gray-100 rounded-full border-4 border-white border-zinc-900"></div>
+              <div className="absolute -left-[9px] top-0 w-4 h-4 bg-gray-100 rounded-full border-4 border-zinc-900"></div>
 
               {/* Content */}
               <div className=" bg-zinc-900 border border-zinc-700 rounded-xl p-6 ml-4 shadow hover:shadow-lg transition-all duration-300 hover:scale-[1.01]">
@@ -39,7 +40,7 @@ const ExperienceSection = () => {
                     <span className="inline-block px-3 py-1 text-xs font-medium  bg-zinc-800 text-gray-300 rounded-md">
                       {experience.type}
                     </span>
-                    
+
                   </div>
 
                   <div className="flex flex-col lg:items-end gap-2 mt-4 lg:mt-0 text-sm text-gray-400">

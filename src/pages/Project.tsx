@@ -11,7 +11,7 @@ export default function Project() {
   const projectLang = langData[lang].projects;
 
   const ProjectCard = ({ project }: { project: ProjectType }) => (
-    <div className="bg-zinc-900 border-zinc-700 rounded-xl shadow hover:shadow-lg transition-all duration-300 hover:scale-105">
+    <div className="bg-zinc-900 border border-zinc-700 rounded-xl shadow hover:shadow-lg transition-all duration-300 hover:scale-105">
       <img
         src={project.image}
         alt={`${project.title} Preview`}

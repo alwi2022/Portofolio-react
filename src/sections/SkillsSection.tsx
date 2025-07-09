@@ -1,3 +1,4 @@
+// src/sections/SkillsSection.tsx
 import React, { JSX } from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";

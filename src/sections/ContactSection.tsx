@@ -1,3 +1,4 @@
+// src/sections/ContactSection.tsx
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Download } from "lucide-react";
 import emailjs from "@emailjs/browser";

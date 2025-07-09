@@ -1,3 +1,4 @@
+// src/sections/FooterSection.tsx
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 
