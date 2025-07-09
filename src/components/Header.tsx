@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLang } from "../context/LangContext";
-import { getNavigationItems } from "../config/navigation";
+import { getNavigationItems } from "../utils/navigation";
 import { useNavigation } from "../hooks/useNavigation";
 
 const Header = () => {

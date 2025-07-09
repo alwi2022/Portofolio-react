@@ -1,4 +1,4 @@
-// config/navigation.ts
+// src/utils/navigation.ts
 export interface NavItem {
     label: string;
     type: 'route' | 'section';

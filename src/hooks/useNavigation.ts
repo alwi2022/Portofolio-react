@@ -1,7 +1,7 @@
 // hooks/useNavigation.ts
 import { useNavigate, useLocation } from 'react-router';
 import { useCallback } from 'react';
-import { NavItem } from '../config/navigation';
+import { NavItem } from '../utils/navigation';
 
 export const useNavigation = () => {
   const navigate = useNavigate();

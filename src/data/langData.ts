@@ -14,7 +14,7 @@ export const langData = {
           title: "TypeSynq Royale",
           description: "Multiplayer typing battle game. Race against friends or go solo to test your typing speed and accuracy.",
 
-          image: "/TypeSynq/TypeSynq.png",
+          image: "/images/projects/TypeSynq.png",
           links: [
             { labelKey: "website", url: "https://multisync-type-battle.vercel.app" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -28,7 +28,7 @@ export const langData = {
           title: "QuickHire Dev",
           description:
             "Build professional resumes in minutes. Just fill the form and let AI generate the Summary & Experience sections.",
-          image: "/Quickhire/Quickhire.png",
+          image: "/images/projects/Quickhire.png",
           links: [
             { labelKey: "website", url: "https://resume.alwi.tech/" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -42,7 +42,7 @@ export const langData = {
           title: "Personal Finance Tracker",
           description:
             "A simple yet powerful tool to monitor your daily expenses and manage your personal budget with ease.",
-          image: "/Expanse-tracker/image.png",
+          image: "/images/projects/Expanse-tracker.png",
           links: [
             { labelKey: "website", url: "https://finance.alwi.tech" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -56,7 +56,7 @@ export const langData = {
           title: "Maneka",
           description:
             "AI-powered career planning platform inspired by Gardner’s theory of multiple intelligences.",
-          image: "/Maneka/Maneka1.PNG",
+          image: "/images/projects/Maneka.PNG",
           links: [
             { labelKey: "expo", url: "https://expo.dev/preview/update?message=fix:%20slicing%2020%20question&updateRuntimeVersion=1.0.0&createdAt=2025-03-17T14:37:37.110Z&slug=exp&projectId=4bd366a8-2bbc-4e99-9fbf-af38b1d16b68&group=4d0832dd-2aa7-4acd-bef5-59916d281c6d" },
             { labelKey: "github", url: "https://github.com/TalentDiscovery/Maneka-Backend-Public" },
@@ -260,7 +260,7 @@ export const langData = {
           title: "TypeSynq Royale",
           description: "Game mengetik multi-pemain. Tantang teman atau bermain sendiri untuk menguji kecepatan dan akurasi mengetik Anda.",
 
-          image: "/TypeSynq/TypeSynq.png",
+          image: "/images/projects/TypeSynq.png",
           links: [
             { labelKey: "website", url: "https://multisync-type-battle.vercel.app" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -273,7 +273,7 @@ export const langData = {
           title: "QuickHire Dev",
           description:
             "Membuat resume profesional dalam hitungan menit. Cukup isi formulir, dan biarkan AI yang menyusun bagian Ringkasan dan Pengalaman kerja Anda.",
-          image: "/Quickhire/Quickhire.png",
+          image: "/images/projects/Quickhire.png",
           links: [
             { labelKey: "website", url: "https://resume.alwi.tech/" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -287,7 +287,7 @@ export const langData = {
           title: "Personal Finance Tracker",
           description:
             "Alat sederhana namun efektif untuk mencatat pengeluaran harian dan mengelola anggaran pribadi dengan mudah.",
-          image: "/Expanse-tracker/image.png",
+          image: "/images/projects/Expanse-tracker.png",
           links: [
             { labelKey: "website", url: "https://finance.alwi.tech" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -300,7 +300,7 @@ export const langData = {
           title: "Maneka",
           description:
             "Platform perencanaan karier berbasis AI yang terinspirasi dari teori kecerdasan majemuk milik Howard Gardner.",
-          image: "/Maneka/Maneka1.PNG",
+          image: "/images/projects/Maneka.PNG",
           links: [
             {
               labelKey: "expo",
