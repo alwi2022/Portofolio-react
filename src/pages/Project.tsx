@@ -46,7 +46,7 @@ export default function Project() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium rounded-md  bg-white text-black hover:opacity-90 transition-opacity"
+              className="px-4 py-3 text-sm font-medium rounded-md  bg-white text-black hover:opacity-90 transition-opacity"
             >
               {link.labelKey === "website" && (
                 <LinkIcon className="w-4 h-4 text-zinc-900 inline mr-1" />

@@ -33,7 +33,7 @@ const Header = () => {
           <img
             src="logo.png"
             alt="logo"
-            className="w-12 h-12 sm:w-14 sm:h-14"
+            className="w-12 h-auto aspect-square"
           />
         </button>
 
@@ -56,7 +56,7 @@ const Header = () => {
           {/* Language Toggle */}
           <button
             onClick={toggleLang}
-            className="px-3 py-2 rounded-md bg-zinc-800 hover:bg-zinc-700 text-sm font-medium text-white transition"
+            className="px-3 py-2 min-h-[48px] rounded-md bg-zinc-800 hover:bg-zinc-700 text-sm font-medium text-white transition"
           >
             {lang === "en" ? "ID" : "EN"}
           </button>
@@ -64,7 +64,7 @@ const Header = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg bg-zinc-800 text-white"
+            className="md:hidden p-3 min-w-[48px] min-h-[48px] rounded-lg bg-zinc-800 text-white"
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
