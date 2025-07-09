@@ -10,9 +10,9 @@ const ExperienceSection = () => {
   return (
     <section id="Experience" className="mt-20 mb-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-10 lg:px-20">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-100 mb-16 text-center">
+        <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-100 mb-16 text-center">
           {experienceLang.sectionTitle}
-        </h1>
+        </h2>
 
         <div className="space-y-12">
           {experienceLang.items.map((experience, index) => (
@@ -29,9 +29,9 @@ const ExperienceSection = () => {
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                   <div className="flex-1">
-                    <h2 className="text-xl font-bold text-gray-100 mb-1">
+                    <h3 className="text-xl font-bold text-gray-100 mb-1">
                       {experience.position}
-                    </h2>
+                    </h3>
                     <div className="flex items-center gap-2 text-lg font-semibold text-gray-100 mb-2">
                       <Briefcase className="w-4 h-4" />
                       {experience.company}
