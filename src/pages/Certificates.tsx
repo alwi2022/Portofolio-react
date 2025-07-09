@@ -27,26 +27,26 @@ export default function Certificates() {
         />
 
         {/* Overlay */}
-<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-  <div className="transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-    {certificate.credentialUrl ? (
-      <a
-        href={certificate.credentialUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 px-6 py-3 bg-black/60 text-white font-medium rounded-lg hover:text-blue-200 transition-colors duration-200"
-      >
-        <ExternalLink className="w-4 h-4" />
-        {certificateLang.viewCredential}
-      </a>
-    ) : (
-      <div className="inline-flex items-center gap-2 px-6 py-3 bg-black/60 text-white font-medium rounded-lg">
-        <ExternalLink className="w-4 h-4" />
-        {certificateLang.viewCredential}
-      </div>
-    )}
-  </div>
-</div>
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+          <div className="transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+            {certificate.credentialUrl ? (
+              <a
+                href={certificate.credentialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-black/60 text-white font-medium rounded-lg hover:text-blue-200 transition-colors duration-200"
+              >
+                <ExternalLink className="w-4 h-4" />
+                {certificateLang.viewCredential}
+              </a>
+            ) : (
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-black/60 text-white font-medium rounded-lg">
+                <ExternalLink className="w-4 h-4" />
+                {certificateLang.viewCredential}
+              </div>
+            )}
+          </div>
+        </div>
 
       </div>
 

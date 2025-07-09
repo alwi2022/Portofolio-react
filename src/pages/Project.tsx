@@ -79,9 +79,13 @@ export default function Project() {
             {lang === "en" ? "Portfolio / Projects" : "Portofolio / Proyek"}
           </p>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
             {lang === "en" ? "All Projects" : "Semua Proyek"}
           </h2>
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
+            {projectLang.description}
+          </p>
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
             {projectLang.items.map((project: any, index: number) => (

@@ -8,6 +8,7 @@ export const langData = {
     },
     projects: {
       sectionTitle: "Recent Projects",
+      description: "Here are some of the projects I've worked on recently",
       items: [
         {
           title: "TypeSynq Royale",
@@ -253,6 +254,7 @@ export const langData = {
 
     projects: {
       sectionTitle: "Proyek Terbaru",
+      description: "Berikut adalah beberapa proyek yang telah saya kerjakan terbaru",
       items: [
         {
           title: "TypeSynq Royale",

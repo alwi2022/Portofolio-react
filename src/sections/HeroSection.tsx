@@ -18,14 +18,14 @@ const HeroSection = () => {
           </h1>
 
           {/* Typed Subtitle */}
-         <TypeAnimation
-  key={lang}
-  sequence={hero.typed.flatMap((text) => [text, 2000])}
-  wrapper="span"
-  speed={50}
-  className="text-gray-600 dark:text-gray-400 text-xl md:text-2xl font-normal tracking-tight mb-4 block"
-  repeat={Infinity}
-/>
+          <TypeAnimation
+            key={lang}
+            sequence={hero.typed.flatMap((text) => [text, 2000])}
+            wrapper="span"
+            speed={50}
+            className="text-gray-600 dark:text-gray-400 text-xl md:text-2xl font-normal tracking-tight mb-4 block"
+            repeat={Infinity}
+          />
 
 
           {/* Description */}

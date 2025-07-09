@@ -13,12 +13,15 @@ const ProjectsSection = () => {
 
 
   return (
-    <section id="Projects" className="mt-20 mb-20 px-4 sm:px-10 lg:px-20">
+    <section id="Projects" className="mt-20 mb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
 
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight  dark:text-white mb-12 text-center">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight  dark:text-white mb-4 text-center">
           {projectLang.sectionTitle}
         </h1>
+        <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto text-center">
+          {projectLang.description}
+          </p>
         <div className="mb-4 text-right">
           <RouterLink
             to="/project"

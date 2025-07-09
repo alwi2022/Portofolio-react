@@ -1,93 +1,100 @@
 import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
-import { Calendar, MapPin, Users, Code } from "lucide-react";
+import { Calendar, MapPin, Briefcase } from "lucide-react";
 
 const ExperienceSection = () => {
   const { lang } = useLang();
   const experienceLang = langData[lang].experience;
 
   return (
-      <section id="Experience" className="mt-20 mb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight dark:text-white mb-12 text-center">
+    <section id="Experience" className="mt-20 mb-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-10 lg:px-20">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-950 dark:text-gray-100 mb-16 text-center">
           {experienceLang.sectionTitle}
         </h1>
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           {experienceLang.items.map((experience, index) => (
             <div
               key={index}
-              className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-xl shadow hover:shadow-lg transition-all duration-300 p-8"
+              className="relative pl-8 pb-12 border-l-2 border-zinc-300 dark:border-zinc-600 last:pb-0"
             >
-              {/* Header */}
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <div>
-                  <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-2">
-                    {experience.position}
-                  </h2>
-                  <h3 className="text-xl font-semibold  mb-2">
-                    {experience.company}
-                  </h3>
-                  <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-2">
-                    {experience.type}
-                  </p>
-                </div>
-                <div className="flex flex-col md:items-end space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{experience.duration}</span>
+              {/* Timeline dot */}
+              <div className="absolute -left-[9px] top-0 w-4 h-4 bg-gray-950 dark:bg-gray-100 rounded-full border-4 border-white dark:border-zinc-900"></div>
+              
+              {/* Content */}
+              <div className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-xl p-6 ml-4 shadow hover:shadow-lg transition-all duration-300 hover:scale-[1.01]">
+                
+                {/* Header */}
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                  <div className="flex-1">
+                    <h2 className="text-xl font-bold text-gray-950 dark:text-gray-100 mb-1">
+                      {experience.position}
+                    </h2>
+                    <div className="flex items-center gap-2 text-lg font-semibold text-gray-950 dark:text-gray-100 mb-2">
+                      <Briefcase className="w-4 h-4" />
+                      {experience.company}
+                    </div>
+                    <span className="inline-block px-3 py-1 text-xs font-medium bg-zinc-200 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 rounded-md">
+                      {experience.type}
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>{experience.location}</span>
+                  
+                  <div className="flex flex-col lg:items-end gap-2 mt-4 lg:mt-0 text-sm text-gray-600 dark:text-gray-400">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      <span className="font-medium">{experience.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4" />
+                      <span>{experience.location}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Description */}
-              <p className="text-zinc-700 dark:text-zinc-300 mb-4 leading-relaxed">
-                {experience.description}
-              </p>
+                {/* Description */}
+                <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                  {experience.description}
+                </p>
 
-              {/* Responsibilities */}
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-                  <Users className="w-5 h-5" />
-                  {experienceLang.responsibilities}
-                </h4>
-                <ul className="space-y-2">
-                  {experience.responsibilities.map((responsibility, respIndex) => (
-                    <li
-                      key={respIndex}
-                      className="flex items-start gap-3 text-zinc-700 dark:text-zinc-300"
-                    >
-                      <span className="w-2 h-2  rounded-full mt-2 flex-shrink-0"></span>
-                      <span>{responsibility}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Technologies */}
-              {experience.technologies && experience.technologies.length > 0 && (
-                <div>
-                  <h4 className="text-lg font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-                    <Code className="w-5 h-5" />
-                    {experienceLang.technologies}
+                {/* Responsibilities */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-950 dark:text-gray-100 mb-3 uppercase tracking-wider">
+                    {experienceLang.responsibilities}
                   </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {experience.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 text-sm font-medium rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-200"
+                  <ul className="space-y-2">
+                    {experience.responsibilities.map((responsibility, respIndex) => (
+                      <li
+                        key={respIndex}
+                        className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed"
                       >
-                        {tech}
-                      </span>
+                        <span className="w-1.5 h-1.5 bg-gray-950 dark:bg-gray-100 rounded-full mt-2 flex-shrink-0"></span>
+                        <span>{responsibility}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
-              )}
+
+                {/* Technologies */}
+                {experience.technologies && experience.technologies.length > 0 && (
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-950 dark:text-gray-100 mb-3 uppercase tracking-wider">
+                      {experienceLang.technologies}
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {experience.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1 text-xs font-medium rounded-md bg-zinc-200 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 border border-zinc-300 dark:border-zinc-600"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
