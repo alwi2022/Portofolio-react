@@ -1,11 +1,14 @@
+// src/components/Header.tsx
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLang } from "../context/LangContext";
-import { langData } from "../data/langData";
+import { getNavigationItems } from "../config/navigation";
+import { useNavigation } from "../hooks/useNavigation";
 
 const Header = () => {
   const { lang, setLang } = useLang();
-  const navLabels = langData[lang].nav;
+  const navigationItems = getNavigationItems(lang);
+  const { handleNavigation } = useNavigation();
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -18,26 +21,37 @@ const Header = () => {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const toggleLang = () => setLang(lang === "en" ? "id" : "en");
 
+  const handleNavClick = (item: typeof navigationItems[0], event: React.MouseEvent) => {
+    event.preventDefault();
+    handleNavigation(item);
+    setMenuOpen(false);
+  };
+
   return (
     <header className="border-b border-zinc-700 bg-zinc-900 transition-colors">
       <nav className="flex justify-between items-center px-4 sm:px-10 lg:px-20 py-5 relative">
         {/* Logo */}
-        <img
-          src="logo.png"
-          alt="logo"
-          className="w-12 h-12 sm:w-14 sm:h-14"
-        />
+        <button
+          onClick={(e) => handleNavClick(navigationItems[0], e)}
+          className="cursor-pointer"
+        >
+          <img
+            src="logo.png"
+            alt="logo"
+            className="w-12 h-12 sm:w-14 sm:h-14"
+          />
+        </button>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-6 text-lg font-medium text-white">
-          {navLabels.map((label, i) => (
-            <li key={label}>
-              <a
-                  href={i === 0 ? "/" : `#${langData["en"].nav[i]}`}
+          {navigationItems.map((item) => (
+            <li key={item.target}>
+              <button
+                onClick={(e) => handleNavClick(item, e)}
                 className="px-3 py-2 rounded-md hover:bg-zinc-700 transition-colors"
               >
-                {label}
-              </a>
+                {item.label}
+              </button>
             </li>
           ))}
         </ul>
@@ -66,15 +80,14 @@ const Header = () => {
         {/* Mobile Menu */}
         {menuOpen && (
           <ul className="absolute top-full left-0 w-full bg-zinc-900 border-t border-zinc-700 flex flex-col items-start gap-4 px-6 py-4 md:hidden z-50 shadow-md">
-            {navLabels.map((label, i) => (
-              <li key={label} className="w-full">
-                <a
-                  href={i === 0 ? "/" : `#${langData["en"].nav[i]}`}
-                  className="block w-full py-2 text-lg hover:bg-zinc-800 rounded-md px-2 text-white"
-                  onClick={() => setMenuOpen(false)}
+            {navigationItems.map((item) => (
+              <li key={item.target} className="w-full">
+                <button
+                  onClick={(e) => handleNavClick(item, e)}
+                  className="block w-full py-2 text-lg hover:bg-zinc-800 rounded-md px-2 text-white text-left"
                 >
-                  {label}
-                </a>
+                  {item.label}
+                </button>
               </li>
             ))}
           </ul>

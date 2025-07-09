@@ -1,4 +1,4 @@
-import React from "react";
+//src/pages/Project.tsx
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 import Header from "../components/Header";
@@ -12,11 +12,11 @@ export default function Project() {
 
   const ProjectCard = ({ project }: { project: ProjectType }) => (
     <div className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-xl shadow hover:shadow-lg transition-all duration-300 hover:scale-105">
-        <img
-          src={project.image}
-          alt={`${project.title} Preview`}
-            className="w-full h-48 object-cover p-4 rounded-3xl"
-        />
+      <img
+        src={project.image}
+        alt={`${project.title} Preview`}
+        className="w-full h-48 object-cover p-4 rounded-3xl"
+      />
 
 
 
@@ -59,7 +59,7 @@ export default function Project() {
               )}
               {
                 projectLang.buttonLabels[
-                  link.labelKey as keyof typeof projectLang.buttonLabels
+                link.labelKey as keyof typeof projectLang.buttonLabels
                 ] || link.labelKey
               }
             </a>
@@ -84,7 +84,7 @@ export default function Project() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-            {projectLang.items.map((project : any, index : number) => (
+            {projectLang.items.map((project: any, index: number) => (
               <ProjectCard key={index} project={project} />
             ))}
           </div>

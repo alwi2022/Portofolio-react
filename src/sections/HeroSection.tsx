@@ -8,7 +8,7 @@ const HeroSection = () => {
 
   return (
     <section
-      id="hero"
+      id="Home"
       className="mb-20 flex flex-col md:flex-row mt-20 px-4 sm:px-10 lg:px-20"
     >
       <div>

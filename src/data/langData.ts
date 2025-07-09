@@ -1,13 +1,11 @@
 export const langData = {
   en: {
-    nav: ["Home", "Projects", "Skills", "Contact"],
     hero: {
       title: "Imam Bahri Alwi",
       typed: ["Software Developer", "Fullstack JavaScript", "Tech Enthusiast"],
       desc: "Full-stack JavaScript developer from Serang, Indonesia. Hacktiv8 graduate, passionate about building meaningful digital solutions with clean and scalable code.",
       connect: "Connect with me here",
     },
-
     projects: {
       sectionTitle: "Recent Projects",
       items: [
@@ -128,9 +126,9 @@ export const langData = {
       viewCredential: "View Credential",
       items: [
         {
-          title: "Web Programming Basics: HTML, CSS, and Responsive Flexbox",
-          image: "/images/certificates/dicoding-html-css.png",
-          credentialUrl: "https://www.dicoding.com/certificates/ERZRGYR2QPYV",
+          title: "Fullstack Javascript Immersive",
+          image: "/images/certificates/hacktiv8.png",
+          credentialUrl: "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.png",
           showTitle: false
         },
         {
@@ -139,12 +137,7 @@ export const langData = {
           credentialUrl: "https://freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
           showTitle: false
         },
-        {
-          title: "Fullstack Javascript Immersive",
-          image: "/images/certificates/hacktiv8.png",
-          credentialUrl: "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.png",
-          showTitle: false
-        },
+
         {
           title: "Cloud Practitioner Essentials (AWS Cloud Basics)",
           image: "/images/certificates/dicoding-aws.png",
@@ -161,6 +154,12 @@ export const langData = {
           title: "Frontend Web Development for Beginners",
           image: "/images/certificates/dicoding-frontend.png",
           credentialUrl: "https://www.dicoding.com/certificates/72ZDVQM3VZYW",
+          showTitle: false
+        },
+        {
+          title: "Web Programming Basics: HTML, CSS, and Responsive Flexbox",
+          image: "/images/certificates/dicoding-html-css.png",
+          credentialUrl: "https://www.dicoding.com/certificates/ERZRGYR2QPYV",
           showTitle: false
         },
         {
@@ -241,7 +240,6 @@ export const langData = {
     },
   },
   id: {
-    nav: ["Beranda", "Proyek", "Keahlian", "Kontak"],
     hero: {
       title: "Imam Bahri Alwi",
       typed: [
@@ -377,9 +375,9 @@ export const langData = {
       viewCredential: "Lihat Kredensial",
       items: [
         {
-          title: "Dasar Pemrograman Web: HTML, CSS, dan Responsive Flexbox",
-          image: "/images/certificates/dicoding-html-css.png",
-          credentialUrl: "https://www.dicoding.com/certificates/ERZRGYR2QPYV",
+          title: "Fullstack Javascript Immersive",
+          image: "/images/certificates/hacktiv8.png",
+          credentialUrl: "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.png",
           showTitle: false
         },
         {
@@ -388,13 +386,6 @@ export const langData = {
           credentialUrl: "https://www.freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
           showTitle: false
         },
-        {
-          title: "Fullstack Javascript Immersive",
-          image: "/images/certificates/hacktiv8.png",
-          credentialUrl: "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.png",
-          showTitle: false
-        },
-        
         {
           title: "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
           image: "/images/certificates/dicoding-aws.png",
@@ -411,6 +402,12 @@ export const langData = {
           title: "Belajar Membuat Front-End Web untuk Pemula",
           image: "/images/certificates/dicoding-frontend.png",
           credentialUrl: "https://www.dicoding.com/certificates/72ZDVQM3VZYW",
+          showTitle: false
+        },
+        {
+          title: "Dasar Pemrograman Web: HTML, CSS, dan Responsive Flexbox",
+          image: "/images/certificates/dicoding-html-css.png",
+          credentialUrl: "https://www.dicoding.com/certificates/ERZRGYR2QPYV",
           showTitle: false
         },
         {

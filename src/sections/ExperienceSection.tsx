@@ -8,7 +8,7 @@ const ExperienceSection = () => {
   const experienceLang = langData[lang].experience;
 
   return (
-    <section id="experience" className="mt-20 mb-20">
+      <section id="Experience" className="mt-20 mb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight dark:text-white mb-12 text-center">
           {experienceLang.sectionTitle}
@@ -26,7 +26,7 @@ const ExperienceSection = () => {
                   <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-2">
                     {experience.position}
                   </h2>
-                  <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-2">
+                  <h3 className="text-xl font-semibold  mb-2">
                     {experience.company}
                   </h3>
                   <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-2">
@@ -62,7 +62,7 @@ const ExperienceSection = () => {
                       key={respIndex}
                       className="flex items-start gap-3 text-zinc-700 dark:text-zinc-300"
                     >
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="w-2 h-2  rounded-full mt-2 flex-shrink-0"></span>
                       <span>{responsibility}</span>
                     </li>
                   ))}
