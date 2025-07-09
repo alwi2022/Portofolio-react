@@ -42,8 +42,8 @@ const SkillCategory = ({
   title: string;
   items: string[];
 }) => (
-  <div className="p-6 bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-105">
-    <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-6">
+    <div className="p-6 bg-zinc-900 border border-zinc-700 rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-105">
+    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
       {title}
     </h2>
     <div className="flex flex-wrap gap-4">
@@ -66,10 +66,10 @@ const SkillsSection = (): JSX.Element => {
   return (
     <section id="Skills" className="mt-20 mb-20 px-4 sm:px-10 lg:px-20">
       <div className="text-center mb-12">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
           {skills.sectionTitle}
         </h1>
-        <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-400">
+        <p className="mt-3 text-lg text-zinc-400">
           {skills.description}
         </p>
       </div>

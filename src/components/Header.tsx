@@ -1,5 +1,5 @@
 // src/components/Header.tsx
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLang } from "../context/LangContext";
 import { getNavigationItems } from "../config/navigation";
@@ -12,11 +12,6 @@ const Header = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Set default theme ke dark
-  useEffect(() => {
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("color-theme", "dark");
-  }, []);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const toggleLang = () => setLang(lang === "en" ? "id" : "en");

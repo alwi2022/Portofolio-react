@@ -12,16 +12,16 @@ const CertificateSection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
                 <div className="text-center ">
 
-                    <h1 className="text-4xl sm:text-5xl font-bold tracking-tight dark:text-white mb-4">
+                    <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
                         {certificateLang.sectionTitle}
                     </h1>
-                    <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+                    <p className="text-lg text-zinc-300 max-w-3xl mx-auto">
                         {certificateLang.description}
                     </p>
                     <div className="mb-4 text-right">
                         <RouterLink
                             to="/certificates"
-                            className="text-sm text-zinc-900 dark:text-white hover:underline"
+                            className="text-sm text-white hover:underline"
                         >
                             {lang === "en" ? "See all certificates" : "Lihat semua sertifikat"}
                         </RouterLink>
@@ -32,7 +32,7 @@ const CertificateSection = () => {
                     {certificateLang.items.slice(0, 3).map((certificate, index) => (
                         <div
                             key={index}
-                            className="group relative bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-xl shadow hover:shadow-lg transition-all duration-300 overflow-hidden"
+                            className="group relative bg-zinc-900 border border-zinc-700 rounded-xl shadow hover:shadow-lg transition-all duration-300 overflow-hidden"
                         >
                             {/* Certificate Image */}
                             <div className="relative overflow-hidden">
@@ -69,7 +69,7 @@ const CertificateSection = () => {
                             {/* Certificate Title (Optional - hanya tampil jika ada) */}
                             {certificate.showTitle && (
                                 <div className="p-4">
-                                    <h3 className="text-sm font-medium text-zinc-900 dark:text-white text-center">
+                                    <h3 className="text-sm font-medium text-white text-center">
                                         {certificate.title}
                                     </h3>
                                 </div>

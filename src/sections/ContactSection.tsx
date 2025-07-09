@@ -74,25 +74,25 @@ const ContactSection = () => {
       <section id="Contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               {t.sectionTitle}
             </h2>
-            <p className="text-lg text-zinc-600 dark:text-zinc-300">
+            <p className="text-lg text-zinc-300">
               {t.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Form */}
-            <div className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-6">
+            <div className="bg-zinc-900 border border-zinc-700 p-8 rounded-xl shadow-md">
+              <h3 className="text-2xl font-bold text-white mb-6">
                 {t.formTitle}
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+                    <label className="block text-sm font-medium text-zinc-300 mb-2">
                       {t.form.firstName}
                     </label>
                     <input
@@ -100,13 +100,13 @@ const ContactSection = () => {
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 border border-zinc-600 rounded-lg bg-zinc-800 text-white focus:ring-2 focus:ring-blue-500"
                       placeholder="John"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+                    <label className="block text-sm font-medium text-zinc-300 mb-2">
                       {t.form.lastName}
                     </label>
                     <input
@@ -114,14 +114,14 @@ const ContactSection = () => {
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 border border-zinc-600 rounded-lg bg-zinc-800 text-white focus:ring-2 focus:ring-blue-500"
                       placeholder="Doe"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+                  <label className="block text-sm font-medium text-zinc-300 mb-2">
                     {t.form.email}
                   </label>
                   <input
@@ -129,14 +129,14 @@ const ContactSection = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-zinc-600 rounded-lg bg-zinc-800 text-white focus:ring-2 focus:ring-blue-500"
                     placeholder="you@example.com"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+                  <label className="block text-sm font-medium text-zinc-300 mb-2">
                     {t.form.message}
                   </label>
                   <textarea
@@ -144,7 +144,7 @@ const ContactSection = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-3 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-zinc-600 rounded-lg bg-zinc-800 text-white resize-none focus:ring-2 focus:ring-blue-500"
                     placeholder={t.form.placeholder}
                     required
                   />
@@ -156,7 +156,7 @@ const ContactSection = () => {
                   className={`w-full flex justify-center items-center gap-2 px-6 py-3 font-medium rounded-lg transition-colors ${
                     loading
                       ? "bg-gray-600 cursor-not-allowed opacity-70"
-                      : "bg-gray-900 dark:bg-gray-100 text-white dark:text-black hover:opacity-90"
+                      : "bg-gray-100 text-black hover:opacity-90"
                   }`}
                 >
                   <Mail className="w-4 h-4" />
@@ -167,8 +167,8 @@ const ContactSection = () => {
 
             {/* Contact Info */}
             <div className="space-y-8">
-              <div className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 p-8 rounded-xl shadow-md">
-                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-6">
+              <div className="bg-zinc-900 border border-zinc-700 p-8 rounded-xl shadow-md">
+                <h3 className="text-2xl font-bold text-white mb-6">
                   {t.infoTitle}
                 </h3>
 
@@ -176,35 +176,35 @@ const ContactSection = () => {
                   {[
                     {
                       icon: (
-                        <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                        <Mail className="w-5 h-5 text-blue-400" />
                       ),
                       label: t.infoLabels.email,
                       value: "imambahrialwi21@gmail.com",
                     },
                     {
                       icon: (
-                        <Phone className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                        <Phone className="w-5 h-5 text-blue-400" />
                       ),
                       label: t.infoLabels.phone,
                       value: "+62 895-6182-16004",
                     },
                     {
                       icon: (
-                        <MapPin className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                        <MapPin className="w-5 h-5 text-blue-400" />
                       ),
                       label: t.infoLabels.location,
                       value: "Serang, Indonesia",
                     },
                   ].map((item) => (
                     <div className="flex items-center gap-4" key={item.label}>
-                      <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                      <div className="p-3 bg-blue-900/30 rounded-lg">
                         {item.icon}
                       </div>
                       <div>
-                        <div className="font-medium text-zinc-900 dark:text-white">
+                        <div className="font-medium text-white">
                           {item.label}
                         </div>
-                        <div className="text-zinc-600 dark:text-zinc-300">
+                        <div className="text-zinc-300">
                           {item.value}
                         </div>
                       </div>
@@ -212,7 +212,7 @@ const ContactSection = () => {
                   ))}
                 </div>
 
-                <div className="mt-10 pt-6 border-t border-zinc-300 dark:border-zinc-700">
+                <div className="mt-10 pt-6 border-t border-zinc-700">
                   <div className="flex gap-4">
                     {[
                       {
@@ -236,7 +236,7 @@ const ContactSection = () => {
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="transition-transform hover:scale-150 dark:fill-white fill-black"
+                        className="transition-transform hover:scale-150 fill-white "
                         aria-label={label}
                       >
                         <img
@@ -251,10 +251,10 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 p-8 rounded-xl shadow-md">
+              <div className="bg-zinc-900 border border-zinc-700 p-8 rounded-xl shadow-md">
                 <a
                   href="/fullstack-cv-imambahrialwi.pdf"
-                  className="flex items-center justify-center gap-3 w-full bg-gray-900 dark:bg-gray-100 text-white dark:text-black font-medium px-6 py-4 rounded-lg transition-transform transform hover:scale-105"
+                  className="flex items-center justify-center gap-3 w-full bg-gray-100 text-black font-medium px-6 py-4 rounded-lg transition-transform transform hover:scale-105"
                 >
                   <Download className="w-5 h-5" />
                   {t.resumeDownload}

@@ -12,7 +12,7 @@ import { HashScrollHandler } from "./components/HashScrollHandler";
 
 function App(): JSX.Element {
   return (
-    <div className="min-h-screen font-sans bg-white dark:bg-zinc-900 text-gray-900 dark:text-white transition-all">
+    <div className="min-h-screen font-sans  bg-zinc-900  text-white transition-all">
       <HashScrollHandler />
       <Header />
 

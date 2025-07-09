@@ -17,7 +17,7 @@ export default function Certificates() {
     certificate: any;
     index: number;
   }) => (
-    <div className="group relative bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-xl shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
+    <div className="group relative bg-zinc-900 border border-zinc-700 rounded-xl shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
       {/* Certificate Image */}
       <div className="relative overflow-hidden">
         <img
@@ -52,7 +52,7 @@ export default function Certificates() {
 
       {/* Always show title on full page */}
       <div className="p-4">
-        <h3 className="text-sm font-medium text-zinc-900 dark:text-white text-center">
+        <h3 className="text-sm font-medium text-white text-center">
           {certificate.title}
         </h3>
       </div>
@@ -60,22 +60,22 @@ export default function Certificates() {
   );
 
   return (
-    <div className="min-h-screen font-sans bg-white dark:bg-zinc-900 text-gray-900 dark:text-white transition-all">
+    <div className="min-h-screen font-sans bg-zinc-900 text-white transition-all">
       <Header />
 
       <main className="px-4 sm:px-10 lg:px-20 py-20">
         <div className="max-w-7xl mx-auto">
-          <p className="text-sm text-gray-500 dark:text-zinc-400 mb-2">
+          <p className="text-sm text-zinc-400 mb-2">
             {lang === "en"
               ? "Portfolio / Certificates"
               : "Portofolio / Sertifikat"}
           </p>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             {lang === "en" ? "All Certificates" : "Semua Sertifikat"}
           </h2>
 
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
+          <p className="text-lg text-zinc-300 mb-8">
             {certificateLang.description}
           </p>
 

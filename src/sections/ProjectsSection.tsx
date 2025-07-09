@@ -16,16 +16,16 @@ const ProjectsSection = () => {
     <section id="Projects" className="mt-20 mb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
 
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight  dark:text-white mb-4 text-center">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4 text-center">
           {projectLang.sectionTitle}
         </h1>
-        <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto text-center">
+        <p className="text-lg  text-gray-300 max-w-3xl mx-auto text-center">
           {projectLang.description}
-          </p>
+        </p>
         <div className="mb-4 text-right">
           <RouterLink
             to="/project"
-            className="text-sm text-zinc-900 dark:text-white hover:underline"
+            className="text-sm text-white hover:underline"
           >
             {lang === "en" ? "See all projects" : "Lihat semua proyek"}
           </RouterLink>
@@ -37,7 +37,7 @@ const ProjectsSection = () => {
           {projectLang.items.filter((project) => project.featured).map((project, index) => (
             <div
               key={project.title}
-              className="bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-xl shadow hover:shadow-lg transition-transform hover:scale-105"
+              className="bg-zinc-900 border border-zinc-700 rounded-xl shadow hover:shadow-lg transition-transform hover:scale-105"
             >
               <img
                 src={project.image}
@@ -45,10 +45,10 @@ const ProjectsSection = () => {
                 className="w-full h-48 object-cover p-4 rounded-3xl"
               />
               <div className="px-6 py-5">
-                <h2 className="text-xl font-semibold text-zinc-900 dark:text-white">
+                <h2 className="text-xl font-semibold text-white">
                   {project.title}
                 </h2>
-                <p className="mt-2 text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed">
+                <p className="mt-2 text-zinc-300 text-sm leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-3 mt-5">
@@ -60,7 +60,7 @@ const ProjectsSection = () => {
                       aria-label={`${project.title} - ${link.labelKey}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 text-sm font-medium rounded-md bg-zinc-900 text-white dark:bg-white dark:text-black hover:opacity-90 transition"
+                      className="px-4 py-2 text-sm font-medium rounded-md  bg-white text-black hover:opacity-90 transition"
                     >
                       {link.labelKey === "website" && (
                         <Link className="w-4 h-4 text-zinc-900  inline mr-1" />
