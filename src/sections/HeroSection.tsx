@@ -34,9 +34,9 @@ const HeroSection = () => {
 
         {/* Connect With Me */}
         <div className="mt-8 mb-16">
-          <p className=" text-gray-400 text-xl md:text-2xl tracking-tight">
+          <h2 className=" text-gray-400 text-xl md:text-2xl tracking-tight">
             {hero.connect}
-          </p>
+          </h2>
           <div className="mt-6 flex flex-wrap gap-5">
             {[
               {

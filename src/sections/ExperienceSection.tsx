@@ -1,5 +1,4 @@
 // src/sections/ExperienceSection.tsx
-import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 import { Calendar, MapPin, Briefcase } from "lucide-react";

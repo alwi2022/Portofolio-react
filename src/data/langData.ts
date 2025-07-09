@@ -14,7 +14,7 @@ export const langData = {
           title: "TypeSynq Royale",
           description: "Multiplayer typing battle game. Race against friends or go solo to test your typing speed and accuracy.",
 
-          image: "/images/projects/TypeSynq.png",
+          image: "/images/projects/TypeSynq.webp",
           links: [
             { labelKey: "website", url: "https://multisync-type-battle.vercel.app" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -28,7 +28,7 @@ export const langData = {
           title: "QuickHire Dev",
           description:
             "Build professional resumes in minutes. Just fill the form and let AI generate the Summary & Experience sections.",
-          image: "/images/projects/Quickhire.png",
+          image: "/images/projects/Quickhire.webp",
           links: [
             { labelKey: "website", url: "https://resume.alwi.tech/" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -42,7 +42,7 @@ export const langData = {
           title: "Personal Finance Tracker",
           description:
             "A simple yet powerful tool to monitor your daily expenses and manage your personal budget with ease.",
-          image: "/images/projects/Expanse-tracker.png",
+          image: "/images/projects/Expanse-tracker.webp",
           links: [
             { labelKey: "website", url: "https://finance.alwi.tech" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -56,7 +56,7 @@ export const langData = {
           title: "Maneka",
           description:
             "AI-powered career planning platform inspired by Gardner’s theory of multiple intelligences.",
-          image: "/images/projects/Maneka.PNG",
+          image: "/images/projects/Maneka.webp",
           links: [
             { labelKey: "expo", url: "https://expo.dev/preview/update?message=fix:%20slicing%2020%20question&updateRuntimeVersion=1.0.0&createdAt=2025-03-17T14:37:37.110Z&slug=exp&projectId=4bd366a8-2bbc-4e99-9fbf-af38b1d16b68&group=4d0832dd-2aa7-4acd-bef5-59916d281c6d" },
             { labelKey: "github", url: "https://github.com/TalentDiscovery/Maneka-Backend-Public" },
@@ -128,74 +128,74 @@ export const langData = {
       items: [
         {
           title: "Fullstack Javascript Immersive",
-          image: "/images/certificates/hacktiv8.png",
-          credentialUrl: "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.png",
+          image: "/images/certificates/hacktiv8.webp",
+          credentialUrl: "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.webp",
           showTitle: false
         },
         {
           title: "JavaScript Algorithms and Data Structures",
-          image: "/images/certificates/freecodecamp-javascript.png",
+          image: "/images/certificates/freecodecamp-javascript.webp",
           credentialUrl: "https://freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
           showTitle: false
         },
 
         {
           title: "Cloud Practitioner Essentials (AWS Cloud Basics)",
-          image: "/images/certificates/dicoding-aws.png",
+          image: "/images/certificates/dicoding-aws.webp",
           credentialUrl: "https://www.dicoding.com/certificates/QLZ92LDKDX5D",
           showTitle: false
         },
         {
           title: "Backend Development for Beginners with JavaScript",
-          image: "/images/certificates/dicoding-backend.png",
+          image: "/images/certificates/dicoding-backend.webp",
           credentialUrl: "https://www.dicoding.com/certificates/MEPJN5E3LX3V",
           showTitle: false
         },
         {
           title: "Frontend Web Development for Beginners",
-          image: "/images/certificates/dicoding-frontend.png",
+          image: "/images/certificates/dicoding-frontend.webp",
           credentialUrl: "https://www.dicoding.com/certificates/72ZDVQM3VZYW",
           showTitle: false
         },
         {
           title: "Web Programming Basics: HTML, CSS, and Responsive Flexbox",
-          image: "/images/certificates/dicoding-html-css.png",
+          image: "/images/certificates/dicoding-html-css.webp",
           credentialUrl: "https://www.dicoding.com/certificates/ERZRGYR2QPYV",
           showTitle: false
         },
         {
           title: "Problem Solving (Basic) - HackerRank",
-          image: "/images/certificates/hackerrank-problem-solving.png",
+          image: "/images/certificates/hackerrank-problem-solving.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/80f26cd43965",
           showTitle: false
         },
         {
           title: "SQL (Intermediate) - HackerRank",
-          image: "/images/certificates/hackerrank-sql.png",
+          image: "/images/certificates/hackerrank-sql.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/1d057e9da521",
           showTitle: false
         },
         {
           title: "React (Basic) - HackerRank",
-          image: "/images/certificates/hackerrank-react.png",
+          image: "/images/certificates/hackerrank-react.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/bb7a82f2383c",
           showTitle: false
         },
         {
           title: "JavaScript (Intermediate) - HackerRank",
-          image: "/images/certificates/hackerrank-javascript.png",
+          image: "/images/certificates/hackerrank-javascript.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/3d00c06b155e",
           showTitle: false
         },
         {
           title: "Node.js (Intermediate) - HackerRank",
-          image: "/images/certificates/hackerrank-nodejs.png",
+          image: "/images/certificates/hackerrank-nodejs.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/d9e76b8ad085",
           showTitle: false
         },
         {
           title: "CSS (Basic) - HackerRank",
-          image: "/images/certificates/hackerrank-css.png",
+          image: "/images/certificates/hackerrank-css.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/645c2a3d72e1",
           showTitle: false
         }
@@ -260,7 +260,7 @@ export const langData = {
           title: "TypeSynq Royale",
           description: "Game mengetik multi-pemain. Tantang teman atau bermain sendiri untuk menguji kecepatan dan akurasi mengetik Anda.",
 
-          image: "/images/projects/TypeSynq.png",
+          image: "/images/projects/TypeSynq.webp",
           links: [
             { labelKey: "website", url: "https://multisync-type-battle.vercel.app" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -273,7 +273,7 @@ export const langData = {
           title: "QuickHire Dev",
           description:
             "Membuat resume profesional dalam hitungan menit. Cukup isi formulir, dan biarkan AI yang menyusun bagian Ringkasan dan Pengalaman kerja Anda.",
-          image: "/images/projects/Quickhire.png",
+          image: "/images/projects/Quickhire.webp",
           links: [
             { labelKey: "website", url: "https://resume.alwi.tech/" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -287,7 +287,7 @@ export const langData = {
           title: "Personal Finance Tracker",
           description:
             "Alat sederhana namun efektif untuk mencatat pengeluaran harian dan mengelola anggaran pribadi dengan mudah.",
-          image: "/images/projects/Expanse-tracker.png",
+          image: "/images/projects/Expanse-tracker.webp",
           links: [
             { labelKey: "website", url: "https://finance.alwi.tech" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
@@ -300,7 +300,7 @@ export const langData = {
           title: "Maneka",
           description:
             "Platform perencanaan karier berbasis AI yang terinspirasi dari teori kecerdasan majemuk milik Howard Gardner.",
-          image: "/images/projects/Maneka.PNG",
+          image: "/images/projects/Maneka.webp",
           links: [
             {
               labelKey: "expo",
@@ -378,73 +378,73 @@ export const langData = {
       items: [
         {
           title: "Fullstack Javascript Immersive",
-          image: "/images/certificates/hacktiv8.png",
-          credentialUrl: "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.png",
+          image: "/images/certificates/hacktiv8.webp",
+          credentialUrl: "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.webp",
           showTitle: false
         },
         {
           title: "JavaScript Algorithms and Data Structures",
-          image: "/images/certificates/freecodecamp-javascript.png",
+          image: "/images/certificates/freecodecamp-javascript.webp",
           credentialUrl: "https://www.freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
           showTitle: false
         },
         {
           title: "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
-          image: "/images/certificates/dicoding-aws.png",
+          image: "/images/certificates/dicoding-aws.webp",
           credentialUrl: "https://www.dicoding.com/certificates/QLZ92LDKDX5D",
           showTitle: false
         },
         {
           title: "Belajar Back-End Pemula dengan JavaScript",
-          image: "/images/certificates/dicoding-backend.png",
+          image: "/images/certificates/dicoding-backend.webp",
           credentialUrl: "https://www.dicoding.com/certificates/MEPJN5E3LX3V",
           showTitle: false
         },
         {
           title: "Belajar Membuat Front-End Web untuk Pemula",
-          image: "/images/certificates/dicoding-frontend.png",
+          image: "/images/certificates/dicoding-frontend.webp",
           credentialUrl: "https://www.dicoding.com/certificates/72ZDVQM3VZYW",
           showTitle: false
         },
         {
           title: "Dasar Pemrograman Web: HTML, CSS, dan Responsive Flexbox",
-          image: "/images/certificates/dicoding-html-css.png",
+          image: "/images/certificates/dicoding-html-css.webp",
           credentialUrl: "https://www.dicoding.com/certificates/ERZRGYR2QPYV",
           showTitle: false
         },
         {
           title: "Problem Solving (Basic) - HackerRank",
-          image: "/images/certificates/hackerrank-problem-solving.png",
+          image: "/images/certificates/hackerrank-problem-solving.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/80f26cd43965",
           showTitle: false
         },
         {
           title: "SQL (Intermediate) - HackerRank",
-          image: "/images/certificates/hackerrank-sql.png",
+          image: "/images/certificates/hackerrank-sql.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/1d057e9da521",
           showTitle: false
         },
         {
           title: "React (Basic) - HackerRank",
-          image: "/images/certificates/hackerrank-react.png",
+          image: "/images/certificates/hackerrank-react.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/bb7a82f2383c",
           showTitle: false
         },
         {
           title: "JavaScript (Intermediate) - HackerRank",
-          image: "/images/certificates/hackerrank-javascript.png",
+          image: "/images/certificates/hackerrank-javascript.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/3d00c06b155e",
           showTitle: false
         },
         {
           title: "Node.js (Intermediate) - HackerRank",
-          image: "/images/certificates/hackerrank-nodejs.png",
+          image: "/images/certificates/hackerrank-nodejs.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/d9e76b8ad085",
           showTitle: false
         },
         {
           title: "CSS (Basic) - HackerRank",
-          image: "/images/certificates/hackerrank-css.png",
+          image: "/images/certificates/hackerrank-css.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/645c2a3d72e1",
           showTitle: false
         }
