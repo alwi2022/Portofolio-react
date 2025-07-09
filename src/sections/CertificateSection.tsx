@@ -21,7 +21,7 @@ const CertificateSection = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                    {certificateLang.items.slice(0,3).map((certificate, index) => (
+                    {certificateLang.items.slice(0, 3).map((certificate, index) => (
                         <div
                             key={index}
                             className="group relative bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-xl shadow hover:shadow-lg transition-all duration-300 overflow-hidden"
@@ -31,7 +31,7 @@ const CertificateSection = () => {
                                 <img
                                     src={certificate.image}
                                     alt={certificate.title}
-                                    className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                                    className="w-full h-50 object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
 
                                 {/* Overlay */}
@@ -64,7 +64,7 @@ const CertificateSection = () => {
                                     <h3 className="text-sm font-medium text-zinc-900 dark:text-white text-center">
                                         {certificate.title}
                                     </h3>
-                                </div>
+                                </div>  
                             )}
                         </div>
                     ))}
