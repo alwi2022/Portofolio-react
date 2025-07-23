@@ -16,7 +16,7 @@ export const langData = {
 
           image: "/images/projects/TypeSynq.webp",
           links: [
-            { labelKey: "website", url: "https://multisync-type-battle.vercel.app" },
+            { labelKey: "website", url: "https://synq-type.vercel.app/" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
           ],
           tags: ["React", "Multisynq", "Tailwind CSS", "Typescript"],
@@ -100,7 +100,7 @@ export const langData = {
             "Collaborated in agile development sprints with backend engineers to ensure feature alignment",
             "Implemented user-friendly interfaces for legal consultation workflows"
           ],
-          technologies: ["React Native", "Expo", "REST API", "JavaScript", "State Management"]
+          technologies: ["React Native", "Expo", "REST API", "Typescript", "React Navigation", "Axios", "State Management"]
         },
         {
           position: "Full Stack JavaScript Student",
@@ -262,7 +262,7 @@ export const langData = {
 
           image: "/images/projects/TypeSynq.webp",
           links: [
-            { labelKey: "website", url: "https://multisync-type-battle.vercel.app" },
+            { labelKey: "website", url: "https://synq-type.vercel.app/" },
             { labelKey: "github", url: "https://github.com/alwi2022" },
           ],
           tags: ["React", "Multisynq", "Tailwind CSS", "Typescript"],
@@ -350,7 +350,7 @@ export const langData = {
             "Berkolaborasi dalam sprint pengembangan agile dengan backend engineer untuk memastikan keselarasan fitur",
             "Mengimplementasikan antarmuka yang user-friendly untuk alur kerja konsultasi hukum"
           ],
-          technologies: ["React Native", "Expo", "REST API", "JavaScript", "State Management"]
+          technologies: ["React Native", "Expo", "REST API", "Typescript", "React Navigation", "Axios", "State Management"]
         },
         {
           position: "Siswa Full Stack JavaScript",
