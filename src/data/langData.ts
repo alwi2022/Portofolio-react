@@ -12,16 +12,16 @@ export const langData = {
       items: [
         {
           title: "TypeSynq Royale",
-          description: "Multiplayer typing battle game. Race against friends or go solo to test your typing speed and accuracy.",
-
+          description: "Web3 multiplayer typing battle game powered by smart contracts on Monad Testnet.",
           image: "/images/projects/TypeSynq.webp",
           links: [
-            { labelKey: "website", url: "https://synq-type.vercel.app/" },
-            { labelKey: "github", url: "https://github.com/alwi2022" },
+            { labelKey: "website", url: "https://synqtype.vercel.app/" },
+            { labelKey: "github", url: "https://github.com/p0isonxs/synqType" },
           ],
-          tags: ["React", "Multisynq", "Tailwind CSS", "Typescript"],
+          tags: ["React", "Multisynq", "Typescript", "Web3", "Solidity"],
           status: "Live",
           featured: false,
+
 
         },
         {
@@ -45,7 +45,7 @@ export const langData = {
           image: "/images/projects/Expanse-tracker.webp",
           links: [
             { labelKey: "website", url: "https://finance.alwi.tech" },
-            { labelKey: "github", url: "https://github.com/alwi2022" },
+            { labelKey: "github", url: "https://github.com/alwi2022/personal-finance-app" },
           ],
           tags: ["React", "Node.js", "MongoDB", "Express", "Typescript"],
           status: "Live",
@@ -82,14 +82,18 @@ export const langData = {
       toolsTitle: "Tools & Platforms",
     },
     experience: {
+
+
       sectionTitle: "Experience",
       responsibilities: "Key Responsibilities",
       technologies: "Technologies Used",
       items: [
+
+
+
         {
           position: "Frontend Developer",
-          company: "HalloHukum",
-          type: "Freelance",
+          company: "HalloHukum LegalTech mobile app (Freelance team project)",
           duration: "April 2025 – July 2025",
           location: "Remote",
           description: "Developed a LegalTech mobile application connecting clients with lawyers, focusing on creating intuitive user interfaces and seamless user experiences for both client and lawyer applications.",
@@ -102,10 +106,25 @@ export const langData = {
           ],
           technologies: ["React Native", "Expo", "REST API", "Typescript", "React Navigation", "Axios", "State Management"]
         },
+
         {
-          position: "Full Stack JavaScript Student",
+          position: "Web Developer & SEO Recovery",
+          company: "ExplorePulau.id",
+          duration: "March 2025 – April 2025",
+          location: "Remote",
+          description: "Resolved a critical SEO and security breach on a tourism website. Led post-hack cleanup, hardening server protection, and restoring organic search visibility.",
+          responsibilities: [
+            "Removed injected malicious files from gambling-site hack and cleaned infected server files",
+            "Strengthened server security and restructured the file system for better protection",
+            "Recovered Google search visibility by removing spam and gambling-related URLs via Search Console",
+            "Maintained and improved page structures including destination and itinerary layouts",
+            "Optimized technical SEO to stabilize indexing and prevent future SEO issues"
+          ],
+          technologies: ["HTML", "CSS", "JavaScript", "SEO", "Google Search Console", "cPanel"]
+        },
+        {
+          position: "Full Stack JavaScript Immersive",
           company: "Hacktiv8",
-          type: "Intensive Program",
           duration: "October 2024 – February 2025",
           location: "Jakarta, Indonesia",
           description: "Completed an intensive full-stack JavaScript bootcamp program, gaining comprehensive knowledge in modern web development technologies and best practices.",
@@ -117,7 +136,10 @@ export const langData = {
             "Participated in code reviews and pair programming sessions"
           ],
           technologies: ["JavaScript", "React.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "Git"]
-        }
+        },
+
+
+
       ]
     },
     certificates: {
@@ -258,14 +280,13 @@ export const langData = {
       items: [
         {
           title: "TypeSynq Royale",
-          description: "Game mengetik multi-pemain. Tantang teman atau bermain sendiri untuk menguji kecepatan dan akurasi mengetik Anda.",
-
+          description: "Game mengetik multi-pemain dengan integrasi Web3, dibangun dengan smart contract di jaringan Monad.",
           image: "/images/projects/TypeSynq.webp",
           links: [
-            { labelKey: "website", url: "https://synq-type.vercel.app/" },
-            { labelKey: "github", url: "https://github.com/alwi2022" },
+            { labelKey: "website", url: "https://synqtype.vercel.app/" },
+            { labelKey: "github", url: "https://github.com/p0isonxs/synqType" },
           ],
-          tags: ["React", "Multisynq", "Tailwind CSS", "Typescript"],
+          tags: ["React", "Multisynq", "Typescript", "Web3", "Solidity"],
           status: "Live",
           featured: false,
         },
@@ -290,7 +311,7 @@ export const langData = {
           image: "/images/projects/Expanse-tracker.webp",
           links: [
             { labelKey: "website", url: "https://finance.alwi.tech" },
-            { labelKey: "github", url: "https://github.com/alwi2022" },
+            { labelKey: "github", url: "https://github.com/alwi2022/personal-finance-app" },
           ],
           tags: ["React", "Node.js", "MongoDB", "Express", "Typescript"],
           status: "Live",
@@ -336,10 +357,12 @@ export const langData = {
       responsibilities: "Tanggung Jawab Utama",
       technologies: "Teknologi yang Digunakan",
       items: [
+
+
+
         {
           position: "Frontend Developer",
-          company: "HalloHukum",
-          type: "Freelance",
+          company: "HalloHukum LegalTech mobile app (Freelance team project)",
           duration: "April 2025 – Juli 2025",
           location: "Remote",
           description: "Mengembangkan aplikasi mobile LegalTech yang menghubungkan klien dengan pengacara, fokus pada pembuatan antarmuka pengguna yang intuitif dan pengalaman pengguna yang mulus untuk aplikasi klien dan pengacara.",
@@ -353,9 +376,23 @@ export const langData = {
           technologies: ["React Native", "Expo", "REST API", "Typescript", "React Navigation", "Axios", "State Management"]
         },
         {
-          position: "Siswa Full Stack JavaScript",
+          position: "Web Developer & SEO Recovery",
+          company: "ExplorePulau.id",
+          duration: "Maret 2025 – April 2025",
+          location: "Remote",
+          description: "Menangani pemulihan keamanan dan SEO untuk situs wisata yang terkena hack. Bertanggung jawab atas pembersihan sistem, penguatan server, dan pemulihan visibilitas pencarian organik.",
+          responsibilities: [
+            "Menghapus file berbahaya yang disuntikkan dari hack situs perjudian dan membersihkan file server yang terinfeksi",
+            "Mengamankan server dan merestrukturisasi sistem file untuk perlindungan lebih lanjut",
+            "Memulihkan visibilitas di Google Search dengan menghapus spam dan URL perjudian melalui Google Search Console",
+            "Memelihara dan memperbaiki struktur halaman seperti destinasi dan rencana perjalanan",
+            "Mengoptimalkan SEO teknis untuk menstabilkan proses indexing dan mencegah masalah di masa depan"
+          ],
+          technologies: ["HTML", "CSS", "JavaScript", "SEO", "Google Search Console", "cPanel"]
+        },
+        {
+          position: "Full Stack JavaScript Immersive",
           company: "Hacktiv8",
-          type: "Program Intensif",
           duration: "Oktober 2024 – Februari 2025",
           location: "Jakarta, Indonesia",
           description: "Menyelesaikan program bootcamp JavaScript full-stack intensif, memperoleh pengetahuan komprehensif tentang teknologi pengembangan web modern dan praktik terbaik.",
@@ -367,7 +404,8 @@ export const langData = {
             "Berpartisipasi dalam code review dan pair programming"
           ],
           technologies: ["JavaScript", "React.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "Git"]
-        }
+        },
+
       ]
     },
     certificates: {
