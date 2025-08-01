@@ -93,7 +93,7 @@ export const langData = {
 
         {
           position: "Frontend Developer",
-          company: "HalloHukum LegalTech mobile app (Freelance team project)",
+          company: "HalloHukum LegalTech mobile app ",
           duration: "April 2025 – July 2025",
           location: "Remote",
           description: "Developed a LegalTech mobile application connecting clients with lawyers, focusing on creating intuitive user interfaces and seamless user experiences for both client and lawyer applications.",
@@ -362,7 +362,7 @@ export const langData = {
 
         {
           position: "Frontend Developer",
-          company: "HalloHukum LegalTech mobile app (Freelance team project)",
+          company: "HalloHukum LegalTech mobile app ",
           duration: "April 2025 – Juli 2025",
           location: "Remote",
           description: "Mengembangkan aplikasi mobile LegalTech yang menghubungkan klien dengan pengacara, fokus pada pembuatan antarmuka pengguna yang intuitif dan pengalaman pengguna yang mulus untuk aplikasi klien dan pengacara.",
