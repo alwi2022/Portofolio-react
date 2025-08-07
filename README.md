@@ -10,12 +10,12 @@ A modern, responsive, and bilingual portfolio built with React, Vite, and Tailwi
 
 ## Features
 
-- 🌐 Language toggle (EN ↔ ID)
-- ⚡️ Built with Vite for fast performance
-- 💼 Projects showcase with live links
-- 📮 Contact form with EmailJS integration
-- 🧠 SEO optimized (Open Graph, Twitter Card, JSON-LD)
-- 🔒 Fully responsive and accessible
+-  Language toggle (EN ↔ ID)
+-  Built with Vite for fast performance
+-  Projects showcase with live links
+-  Contact form with EmailJS integration
+-  SEO optimized (Open Graph, Twitter Card, JSON-LD)
+-  Fully responsive and accessible
 
 ## Live Demo
 
