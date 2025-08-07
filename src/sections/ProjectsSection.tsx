@@ -2,7 +2,7 @@
 import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
-import { Icon, Github, Link, QrCode, X, Twitter } from "lucide-react";
+import {  Github, Link, QrCode, Play } from "lucide-react";
 import { Link as RouterLink } from "react-router";
 
 
@@ -74,7 +74,7 @@ const ProjectsSection = () => {
                         <QrCode className="w-4 h-4 text-zinc-900  inline mr-1" />
                       )}
                       {link.labelKey === "demo" && (
-                        <X className="w-4 h-4 text-zinc-900  inline mr-1" />
+                        <Play className="w-4 h-4 text-zinc-900  inline mr-1" />
                       )}
                       {projectLang.buttonLabels[link.labelKey as keyof typeof projectLang.buttonLabels]}
                     </a>
