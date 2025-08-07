@@ -9,6 +9,7 @@ import Project from "./pages/Project";
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import Certificates from "./pages/Certificates";
+import Experience from "./pages/Experience";
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,7 +29,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/project" element={<Project />} />
-          <Route path="/certificates" element={<Certificates />} />
+          <Route path="/certificates" element={<Certificates />} /> 
+          <Route path="/experience" element={<Experience />} />
         </Routes>
       </BrowserRouter>
     </LangProvider>

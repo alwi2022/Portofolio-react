@@ -2,7 +2,7 @@
 import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
-import { Icon, Github, Link, QrCode } from "lucide-react";
+import { Icon, Github, Link, QrCode, X, Twitter } from "lucide-react";
 import { Link as RouterLink } from "react-router";
 
 
@@ -24,6 +24,7 @@ const ProjectsSection = () => {
           {projectLang.description}
         </p>
         <div className="mb-4 text-right">
+          
           <RouterLink
             to="/project"
             className="text-sm text-white hover:underline"
@@ -35,7 +36,7 @@ const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
 
-          {projectLang.items.filter((project) => project.featured).map((project, index) => (
+          {projectLang.items.slice(0, 3).map((project, index) => (
             <div
               key={project.title}
               className="bg-zinc-900 border border-zinc-700 rounded-xl shadow hover:shadow-lg transition-transform hover:scale-105"
@@ -72,8 +73,10 @@ const ProjectsSection = () => {
                       {link.labelKey === "expo" && (
                         <QrCode className="w-4 h-4 text-zinc-900  inline mr-1" />
                       )}
+                      {link.labelKey === "demo" && (
+                        <X className="w-4 h-4 text-zinc-900  inline mr-1" />
+                      )}
                       {projectLang.buttonLabels[link.labelKey as keyof typeof projectLang.buttonLabels]}
-
                     </a>
                   ))}
                 </div>

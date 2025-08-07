@@ -16,12 +16,12 @@ export const langData = {
           image: "/images/projects/TypeSynq.webp",
           links: [
             { labelKey: "website", url: "https://synqtype.vercel.app/" },
-            { labelKey: "github", url: "https://github.com/p0isonxs/synqType" },
+            { labelKey: "demo", url: "https://x.com/p0isonxs/status/1949463249864552547" },
           ],
           tags: ["React", "Multisynq", "Typescript", "Web3", "Solidity"],
           status: "Live",
-          featured: false,
-
+          featured: true,
+          duration: "Juni 2025 - Juli 2025",
 
         },
         {
@@ -36,7 +36,7 @@ export const langData = {
           tags: ["React", "Node.js", "PostgreSQL", "Express", "Typescript"],
           status: "Live",
           featured: true,
-
+          duration: "Juni 2025",
         },
         {
           title: "Personal Finance Tracker",
@@ -50,7 +50,7 @@ export const langData = {
           tags: ["React", "Node.js", "MongoDB", "Express", "Typescript"],
           status: "Live",
           featured: true,
-
+          duration: "Mei 2025",
         },
         {
           title: "Maneka",
@@ -65,6 +65,7 @@ export const langData = {
           tags: ["React Native", "Expo", "Node.js", "MongoDB", "Typescript"],
           status: "Beta",
           featured: true,
+          duration: "Februari 2025",
         }
 
       ],
@@ -72,6 +73,7 @@ export const langData = {
         website: "Website",
         github: "GitHub",
         expo: "Expo QR",
+        demo: "Demo",
       },
     },
     skills: {
@@ -85,6 +87,7 @@ export const langData = {
 
 
       sectionTitle: "Experience",
+      description: "Here are some of the experiences I've had in my career",
       responsibilities: "Key Responsibilities",
       technologies: "Technologies Used",
       items: [
@@ -284,11 +287,12 @@ export const langData = {
           image: "/images/projects/TypeSynq.webp",
           links: [
             { labelKey: "website", url: "https://synqtype.vercel.app/" },
-            { labelKey: "github", url: "https://github.com/p0isonxs/synqType" },
+            { labelKey: "demo", url: "https://x.com/p0isonxs/status/1949463249864552547" },
           ],
           tags: ["React", "Multisynq", "Typescript", "Web3", "Solidity"],
           status: "Live",
-          featured: false,
+          featured: true,
+          duration: "Juni 2025 - Juli 2025",
         },
         {
           title: "QuickHire Dev",
@@ -302,6 +306,7 @@ export const langData = {
           tags: ["React", "Node.js", "PostgreSQL", "Express", "Typescript"],
           status: "Live",
           featured: true,
+          duration: "Juni 2025",
         },
 
         {
@@ -316,6 +321,7 @@ export const langData = {
           tags: ["React", "Node.js", "MongoDB", "Express", "Typescript"],
           status: "Live",
           featured: true,
+          duration: "Mei 2025",
         },
         {
           title: "Maneka",
@@ -335,12 +341,14 @@ export const langData = {
           tags: ["React Native", "Expo", "Node.js", "MongoDB", "Typescript"],
           status: "Beta",
           featured: true,
+          duration: "Februari 2025",
         },
 
       ],
       buttonLabels: {
         website: "Kunjungi Situs",
         github: "GitHub",
+        demo: "Demo",
         expo: "QR Expo",
       },
     },
@@ -354,6 +362,7 @@ export const langData = {
     },
     experience: {
       sectionTitle: "Pengalaman",
+      description: "Berikut adalah beberapa pengalaman saya dalam karir saya",
       responsibilities: "Tanggung Jawab Utama",
       technologies: "Teknologi yang Digunakan",
       items: [

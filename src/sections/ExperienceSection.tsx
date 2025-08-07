@@ -1,6 +1,7 @@
 // src/sections/ExperienceSection.tsx
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
+import { Link as RouterLink } from "react-router";
 
 const ExperienceSection = () => {
   const { lang } = useLang();
@@ -10,19 +11,31 @@ const ExperienceSection = () => {
     <section id="Experience" className="mt-20 mb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-4">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
             {experienceLang.sectionTitle}
           </h1>
-       
+          <p className="text-lg  text-gray-300 max-w-3xl mx-auto text-center">
+            {experienceLang.description}
+          </p>
+          <div className="mb-4 text-right">
+          <RouterLink
+            to="/experience"
+            className="text-sm text-white hover:underline"
+          >
+            {lang === "en" ? "See all experience" : "Lihat semua pengalaman"}
+          </RouterLink>
         </div>
+        </div>
+
+      
 
         {/* Experience Items */}
         <div className="space-y-12">
-          {experienceLang.items.map((experience, index) => (
+          {experienceLang.items.slice(0, 1).map((experience, index) => (
             <div
               key={index}
-              className="bg-zinc-900 border border-zinc-700 rounded-xl p-8 shadow-md hover:shadow-lg transition-transform hover:scale-105"
+              className="bg-zinc-900 border border-zinc-700 rounded-xl p-8 shadow-md"
             >
               {/* Header */}
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
