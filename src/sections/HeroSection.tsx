@@ -8,8 +8,7 @@ const HeroSection = () => {
   const hero = langData[lang].hero;
 
   return (
-    <section
-    id="Home" className="scroll-mt-24 md:scroll-mt-28 mb-20 flex flex-col md:flex-row mt-20 px-4 sm:px-10 lg:px-20">
+    <section id="Home" className="scroll-mt-24 md:scroll-mt-28 mb-20 mt-20">
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
           {hero.title}

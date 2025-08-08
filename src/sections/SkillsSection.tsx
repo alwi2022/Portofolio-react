@@ -36,7 +36,7 @@ const toolsAndPlatforms = [
   "npm",
 ];
 const SkillCategory = ({ title, items }: { title: string; items: string[] }) => (
-  <div className="p-6 bg-zinc-900 border border-zinc-700 rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-105">
+  <div className="p-6 bg-zinc-900 border border-zinc-700 rounded-xl shadow-md md:hover:shadow-lg transition-transform md:hover:scale-105 motion-reduce:transform-none">
     <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">{title}</h2>
     <div className="flex flex-wrap gap-4">
       {items.map((item) => (
@@ -59,7 +59,7 @@ const SkillsSection = (): JSX.Element => {
   const skills = langData[lang].skills;
 
   return (
-    <section id="Skills" className="mt-16 mb-16 sm:mt-20 sm:mb-20 py-2">
+    <section id="Skills" className="scroll-mt-24 md:scroll-mt-28 mt-16 mb-16 sm:mt-20 sm:mb-20 py-2">
       <div className="text-center mb-10 sm:mb-12">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
           {skills.sectionTitle}

@@ -10,7 +10,9 @@ const CertificateSection = () => {
   const certificateLang = langData[lang].certificates;
 
   return (
-    <section id="Certificates" className="mt-16 mb-16 sm:mt-20 sm:mb-20 py-2">
+  
+    <section id="Certificates" className="scroll-mt-24 md:scroll-mt-28 mt-16 mb-16 sm:mt-20 sm:mb-20 py-2">
+
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-3">
@@ -40,7 +42,7 @@ const CertificateSection = () => {
                 <img
                   src={certificate.image}
                   alt={certificate.title}
-                  className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
+                 className="w-full aspect-video object-cover transition-transform duration-300 md:group-hover:scale-105 motion-reduce:transform-none"
                   loading="lazy"
                 />
 

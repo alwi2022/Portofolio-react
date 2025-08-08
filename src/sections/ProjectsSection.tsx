@@ -10,7 +10,7 @@ const ProjectsSection = () => {
   const projectLang = langData[lang].projects;
 
   return (
-    <section id="Projects" className="scroll-mt-24 md:scroll-mt-28 mb-20 flex flex-col md:flex-row mt-20 px-4 sm:px-10 lg:px-20">
+    <section id="Projects" className="scroll-mt-24 md:scroll-mt-28 mb-20 mt-20">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-3 text-center">
           {projectLang.sectionTitle}
@@ -28,7 +28,7 @@ const ProjectsSection = () => {
           {projectLang.items.slice(0, 3).map((project) => (
             <div
               key={project.title}
-              className="bg-zinc-900 border border-zinc-700 rounded-xl shadow hover:shadow-lg transition-transform hover:scale-105"
+              className="bg-zinc-900 border border-zinc-700 rounded-xl shadow md:hover:shadow-lg transition-transform md:hover:scale-105 motion-reduce:transform-none"
             >
               <img
                 src={project.image}

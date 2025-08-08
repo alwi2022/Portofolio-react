@@ -8,7 +8,7 @@ const ExperienceSection = () => {
   const experienceLang = langData[lang].experience;
 
   return (
-    <section id="Experience" className="scroll-mt-24 md:scroll-mt-28 mb-20 flex flex-col md:flex-row mt-20 px-4 sm:px-10 lg:px-20">
+    <section id="Experience" className="scroll-mt-24 md:scroll-mt-28 mb-20 mt-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-4">
