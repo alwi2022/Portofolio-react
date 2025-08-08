@@ -8,53 +8,47 @@ const ExperienceSection = () => {
   const experienceLang = langData[lang].experience;
 
   return (
-    <section id="Experience" className="mt-20 mb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
+    <section id="Experience" className="scroll-mt-24 md:scroll-mt-28 mb-20 flex flex-col md:flex-row mt-20 px-4 sm:px-10 lg:px-20">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-4">
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-3">
             {experienceLang.sectionTitle}
           </h1>
-          <p className="text-lg  text-gray-300 max-w-3xl mx-auto text-center">
+          <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto">
             {experienceLang.description}
           </p>
-          <div className="mb-4 text-right">
-          <RouterLink
-            to="/experience"
-            className="text-sm text-white hover:underline"
-          >
-            {lang === "en" ? "See all experience" : "Lihat semua pengalaman"}
-          </RouterLink>
+          <div className="mt-3 mb-4 text-right">
+            <RouterLink
+              to="/experience"
+              className="text-sm text-white hover:underline"
+            >
+              {lang === "en" ? "See all experience" : "Lihat semua pengalaman"}
+            </RouterLink>
+          </div>
         </div>
-        </div>
-
-      
 
         {/* Experience Items */}
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           {experienceLang.items.slice(0, 1).map((experience, index) => (
             <div
               key={index}
-              className="bg-zinc-900 border border-zinc-700 rounded-xl p-8 shadow-md"
+              className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 sm:p-8 shadow-md"
             >
               {/* Header */}
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6 gap-2">
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-white mb-2">
+                  <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
                     {experience.position}
                   </h2>
-                  <div className="text-lg font-semibold text-zinc-300">
+                  <div className="text-base sm:text-lg font-semibold text-zinc-300">
                     <span className="italic">{experience.company}</span>
                   </div>
                 </div>
 
-                <div className="flex flex-col lg:items-end gap-2 mt-4 lg:mt-0 text-sm text-zinc-400">
-                  <div className="font-medium italic">
-                    {experience.duration}
-                  </div>
-                  <div className="italic">
-                    {experience.location}
-                  </div>
+                <div className="flex flex-col lg:items-end gap-1 mt-4 lg:mt-0 text-sm text-zinc-400">
+                  <div className="font-medium italic">{experience.duration}</div>
+                  <div className="italic">{experience.location}</div>
                 </div>
               </div>
 
@@ -65,7 +59,7 @@ const ExperienceSection = () => {
 
               {/* Responsibilities */}
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
+                <h3 className="text-sm font-semibold text-white mb-3 uppercase tracking-wider">
                   {experienceLang.responsibilities}
                 </h3>
                 <ul className="space-y-3">
@@ -74,7 +68,7 @@ const ExperienceSection = () => {
                       key={respIndex}
                       className="flex items-start gap-3 text-sm text-zinc-400 leading-relaxed"
                     >
-                      <span className="w-1.5 h-1.5 bg-white rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="mt-2 w-1.5 h-1.5 bg-white rounded-full flex-shrink-0" />
                       <span>{responsibility}</span>
                     </li>
                   ))}
@@ -82,18 +76,15 @@ const ExperienceSection = () => {
               </div>
 
               {/* Technologies */}
-              {experience.technologies && experience.technologies.length > 0 && (
+              {!!(experience.technologies?.length) && (
                 <div>
-                  <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
+                  <h3 className="text-sm font-semibold text-white mb-3 uppercase tracking-wider">
                     {experienceLang.technologies}
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {experience.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="text-xs text-zinc-300 italic"
-                      >
-                        {`${tech}${techIndex !== experience.technologies.length - 1 ? "," : ""}`}
+                    {experience.technologies.map((tech, i) => (
+                      <span key={i} className="text-xs text-zinc-300 italic">
+                        {tech}{i !== experience.technologies.length - 1 ? "," : ""}
                       </span>
                     ))}
                   </div>
