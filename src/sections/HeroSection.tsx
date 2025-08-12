@@ -54,7 +54,7 @@ const HeroSection = () => {
                            focus:outline-none focus:ring-2 focus:ring-zinc-500"
               >
                 <img
-                  src={`https://skillicons.dev/icons?i=${social.icon}`}
+                  src={`/icons/${social.icon}.svg`}
                   alt={social.label}
                   width={32}
                   height={32}

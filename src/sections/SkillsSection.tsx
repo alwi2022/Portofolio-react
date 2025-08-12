@@ -35,20 +35,25 @@ const toolsAndPlatforms = [
   "heroku",
   "npm",
 ];
+
+const SkillIcon = ({ name }: { name: string }) => (
+  <img
+    src={`/icons/${name}.svg`}
+    alt={name}
+    className="w-10 h-10 sm:w-14 sm:h-14"
+    width={56}
+    height={56}
+    loading="lazy"
+    decoding="async"
+  />
+);
+
 const SkillCategory = ({ title, items }: { title: string; items: string[] }) => (
   <div className="p-6 bg-zinc-900 border border-zinc-700 rounded-xl shadow-md md:hover:shadow-lg transition-transform md:hover:scale-105 motion-reduce:transform-none">
     <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">{title}</h2>
     <div className="flex flex-wrap gap-4">
       {items.map((item) => (
-        <img
-          key={item}
-          src={`https://skillicons.dev/icons?i=${item}`}
-          alt={item}
-          className="w-10 h-10 sm:w-14 sm:h-14"
-          width={56}
-          height={56}
-          loading="lazy"
-        />
+        <SkillIcon key={item} name={item} />
       ))}
     </div>
   </div>

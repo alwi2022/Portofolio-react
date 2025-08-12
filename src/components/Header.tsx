@@ -36,7 +36,7 @@ const Header = () => {
           className="cursor-pointer"
           aria-label="Go to home"
         >
-          <img src="logo.png" alt="logo" className="w-12 h-auto aspect-square" />
+          <img src="logo.webp" alt="logo" className="w-12 h-auto aspect-square" />
         </button>
 
         {/* Desktop Menu */}

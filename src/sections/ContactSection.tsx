@@ -237,7 +237,7 @@ const ContactSection = () => {
                         className="inline-flex items-center justify-center min-h-[44px] min-w-[44px] p-3 rounded-lg bg-zinc-800/40 hover:bg-zinc-800 transition focus:outline-none focus:ring-2 focus:ring-zinc-500"
                       >
                         <img
-                          src={`https://skillicons.dev/icons?i=${icon}`}
+                         src={`/icons/${icon}.svg`}
                           alt={label}
                           width={32}
                           height={32}
