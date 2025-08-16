@@ -36,7 +36,7 @@ export const langData = {
           tags: ["React", "Node.js", "PostgreSQL", "Express", "Typescript"],
           status: "Live",
           featured: true,
-          duration: "Juni 2025",
+          duration: "April 2025",
         },
         {
           title: "Personal Finance Tracker",
@@ -306,7 +306,7 @@ export const langData = {
           tags: ["React", "Node.js", "PostgreSQL", "Express", "Typescript"],
           status: "Live",
           featured: true,
-          duration: "Juni 2025",
+          duration: "April 2025",
         },
 
         {
