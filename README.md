@@ -75,7 +75,7 @@ vercel --prod
 Feel free to reach out if you'd like to collaborate or just say hello!
 
 - GitHub: [@alwi2022](https://github.com/alwi2022)
-- LinkedIn: [Imam Bahri Alwi](https://www.linkedin.com/in/imam-bahri-alwi-019816250/)
+- LinkedIn: [Imam Bahri Alwi](https://www.linkedin.com/in/imambahrialwi)
 - Portfolio: [portfolio.alwi.tech](https://portfolio.alwi.tech)
 
 ---

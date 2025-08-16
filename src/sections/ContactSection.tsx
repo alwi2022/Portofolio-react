@@ -225,7 +225,7 @@ const ContactSection = () => {
                   <div className="flex flex-wrap gap-3">
                     {[
                       { icon: "github", href: "https://github.com/alwi2022", label: "GitHub" },
-                      { icon: "linkedin", href: "https://www.linkedin.com/in/imam-bahri-alwi-019816250/", label: "LinkedIn" },
+                      { icon: "linkedin", href: "https://www.linkedin.com/in/imambahrialwi", label: "LinkedIn" },
                       { icon: "instagram", href: "https://www.instagram.com/aaalwi1/", label: "Instagram" },
                     ].map(({ icon, href, label }) => (
                       <a

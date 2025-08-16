@@ -41,7 +41,7 @@ const HeroSection = () => {
           <div className="mt-6 flex flex-wrap justify-center gap-4 sm:gap-5">
             {[
               { href: "https://github.com/alwi2022", label: "GitHub", icon: "github" },
-              { href: "https://www.linkedin.com/in/imam-bahri-alwi-019816250/", label: "LinkedIn", icon: "linkedin" },
+              { href: "https://www.linkedin.com/in/imambahrialwi/", label: "LinkedIn", icon: "linkedin" },
               { href: "https://www.instagram.com/aaalwi1/", label: "Instagram", icon: "instagram" },
             ].map((social) => (
               <a
