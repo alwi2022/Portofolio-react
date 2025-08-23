@@ -55,6 +55,29 @@ export function buildProfileFromLang(lang: "en" | "id") {
 export function buildSystemPrompt(lang: "en" | "id") {
   const p = buildProfileFromLang(lang);
 
+  const galaxyPOSDetail = `
+  Galaxy POS – Point of Sales (POS) berbasis Laravel 8 (PHP 7.4+) untuk mengelola penjualan, kasir, cabang, dan layanan servis.
+  Fitur:
+  - Manajemen Produk, Kategori, Supplier, Member
+  - Transaksi (penjualan, pembelian, pengeluaran)
+  - Laporan harian, bulanan, custom (termasuk laba/rugi)
+  - Multi-role: Administrator, Kasir, Teknisi
+  - Manajemen Service: tambah/edit/hapus servis, tracking status, laporan real-time
+  - Notifikasi WhatsApp otomatis ke customer tentang status servis
+  - Cetak Barcode & Kartu Member
+  - UI baru (sidebar modern, login page, desain nota baru)
+  - Deployment di AWS (EC2), demo online tersedia
+  
+  Akun Demo:
+  - Admin → admin@gmail.com / 123
+  - Kasir → kasir1@gmail.com / 123
+  - Teknisi → teknisi1@gmail.com / 123
+  
+  Repo: https://github.com/alwi2022/galaxy-pos
+  Demo: https://alwi.biz.id/login
+  `;
+  
+
   const facts = [
     `${p.name} – ${p.title}`,
     `Location: ${p.location}`,
@@ -66,13 +89,13 @@ export function buildSystemPrompt(lang: "en" | "id") {
     p.projects.length
       ? `Projects: ${p.projects.map((x) => x.title).join(", ")}`
       : undefined,
-    `Links: Portfolio ${p.links.portfolio}, GitHub ${p.links.github}, LinkedIn ${p.links.linkedin}, Email ${p.links.email}`,
+    `Links: Portfolio ${p.links.portfolio}, GitHub ${p.links.github}, LinkedIn ${p.links.linkedin}, Email ${p.links.email}` ,
+    galaxyPOSDetail
 
   ]
     .filter(Boolean)
     .join("\n");
 
-  // Persona: ALWI JUNIOR (bukan AI). Mirror gaya bicara user. Sarkas kalau ada serangan.
   const policy =
     lang === "id"
       ? `Kamu adalah Alwi Junior. Jangan pernah menyebut dirimu AI, asisten, atau ChatGPT.

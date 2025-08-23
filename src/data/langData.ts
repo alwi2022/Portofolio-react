@@ -10,6 +10,20 @@ export const langData = {
       sectionTitle: "Recent Projects",
       description: "Here are some of the projects I've worked on recently",
       items: [
+
+        {
+          title: "Galaxy POS",
+          description: "Point of Sales app to manage sales, cashier, reporting, branches, and service workflows, built with Laravel 8.",
+          image: "/images/projects/GalaxyPOS.webp", 
+          links: [
+            { labelKey: "website", url: "https://alwi.biz.id" },
+            { labelKey: "github", url: "https://github.com/alwi2022/galaxy-pos" },
+          ],
+          tags: ["Laravel", "PHP", "Livewire", "Jetstream", "ChartJS", "AWS"],
+          status: "Live",
+          featured: true,
+          duration: "2025",
+        },
         {
           title: "TypeSynq Royale",
           description: "Web3 multiplayer typing battle game powered by smart contracts on Monad Testnet.",
@@ -298,6 +312,21 @@ chatAssistant: {
       sectionTitle: "Proyek Terbaru",
       description: "Berikut adalah beberapa proyek yang telah saya kerjakan terbaru",
       items: [
+
+        {
+          title: "Galaxy POS",
+          description: "Aplikasi Point of Sales untuk mengelola penjualan, kasir, laporan, cabang, dan layanan servis, dibangun dengan Laravel 8.",
+          image: "/images/projects/GalaxyPOS.webp",
+          links: [
+            { labelKey: "website", url: "https://alwi.biz.id" },
+            { labelKey: "github", url: "https://github.com/alwi2022/galaxy-pos" },
+          ],
+          tags: ["Laravel", "PHP", "Livewire", "Jetstream", "ChartJS", "AWS"],
+          status: "Live",
+          featured: true,
+          duration: "2025",
+        },
+
         {
           title: "TypeSynq Royale",
           description: "Game mengetik multi-pemain dengan integrasi Web3, dibangun dengan smart contract di jaringan Monad.",

@@ -44,7 +44,7 @@ export function useChatAssistant(lang: "en" | "id", _hello: string) {
     setInput("");
     setLoading(true);
     try {
-      const res = await fetch("https://multisynq-backend-5c73bdaaee10.herokuapp.com/api/chat", {
+      const res = await fetch(import.meta.env.VITE_BACKEND_API, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
