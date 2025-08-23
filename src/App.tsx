@@ -8,6 +8,7 @@ import { JSX } from "react";
 import Footer from "./sections/FooterSection";
 import CertificateSection from "./sections/CertificateSection";
 import ExperienceSection from "./sections/ExperienceSection";
+import ChatAssistant from "./components/Chat";
 import { HashScrollHandler } from "./components/HashScrollHandler";
 
 function App(): JSX.Element {
@@ -22,6 +23,7 @@ function App(): JSX.Element {
         <ProjectsSection />
         <SkillsSection />
         <CertificateSection />
+        <ChatAssistant />
         <ContactSection />
       </main>
       <Footer />

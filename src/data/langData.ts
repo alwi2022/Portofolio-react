@@ -259,6 +259,28 @@ export const langData = {
       message: "Sorry, we couldn’t find the page you’re looking for.",
       back: "Back to Homepage",
     },
+
+    // di dalam langData.en
+chatAssistant: {
+ button: "Ask Alwi Jr",
+    header: "Ask about Imam Bahri Alwi",
+    sub: "You can ask about skills, experience, projects, availability, and more.",
+    inputPlaceholder: "Type your question…",
+    send: "Send",
+    hello: `Yo! I'm Alwi Jr Ask me anything about Alwi.`,
+    suggestions: [
+      "Give me a short profile summary",
+      "What stack and tools does Alwi use?",
+      "Describe the HalloHukum project (STAR)",
+      "Is Alwi available for onsite work in Jabodetabek?",
+      "Share GitHub & LinkedIn links",
+    ],
+    disclaimer:
+      "AI may be imperfect—sources are Alwi's public profile, portfolio & CV.",
+    error: "Sorry, something went wrong. Please try again.",
+    systemInstructionHint: "Ask only about Imam Bahri Alwi.",
+},
+
   },
   id: {
     hero: {
@@ -531,6 +553,27 @@ export const langData = {
       message: "Maaf, kami tidak dapat menemukan halaman yang Anda maksud.",
       back: "Kembali ke Beranda",
     },
+    // di dalam langData.id
+chatAssistant: {
+    button: "Tanya Alwi Jr",
+    header: "Tanya tentang Imam Bahri Alwi",
+    sub: "Bisa tanya soal skill, pengalaman, proyek, ketersediaan, dan lainnya.",
+    inputPlaceholder: "Ketik pertanyaan…",
+    send: "Kirim",
+    hello: `Halo! Gue Alwi Jr Tanya aja apa pun tentang Alwi.`,
+    error: "Maaf, terjadi kesalahan. Coba lagi ya.",
+    systemInstructionHint: "Tanyakan hanya tentang Imam Bahri Alwi.",
+    suggestions: [
+      "Ringkas profil singkat",
+      "Stack & tools yang dipakai apa?",
+      "Ceritakan proyek HalloHukum (STAR)",
+      "Apakah Alwi bersedia kerja on-site di Jabodetabek?",
+      "Bagikan tautan GitHub & LinkedIn",
+    ],
+    disclaimer:
+      "Jawaban AI mungkin tidak sempurna—sumber dari profil, portfolio & CV Alwi.",
+},
+
   }
 
 } as const;
