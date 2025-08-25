@@ -30,7 +30,7 @@ const ExperienceSection = () => {
 
         {/* Experience Items */}
         <div className="space-y-8 sm:space-y-12">
-          {experienceLang.items.slice(0, 1).map((experience, index) => (
+          {experienceLang.items.slice(0, 2).map((experience, index) => (
             <div
               key={index}
               className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 sm:p-8 shadow-md"

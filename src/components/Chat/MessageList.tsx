@@ -1,7 +1,7 @@
 // src/components/Chat/MessageList.tsx
 import React from "react";
 import type { ChatMessage } from "../../types/Chat";
-
+import { sanitizeHTML } from "./sanitize";
 type Props = {
   messages: ChatMessage[];
   suggestions: ReadonlyArray<string>;
@@ -41,7 +41,7 @@ export default function MessageList({
             className={`${
               m.role === "user" ? "bg-white text-black" : "bg-zinc-800 text-white"
             } max-w-[85%] px-3 py-2 rounded-2xl whitespace-pre-wrap leading-relaxed text-sm`}
-            dangerouslySetInnerHTML={{ __html: m.content }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHTML(m.content) }}
           />
         </div>
       ))}

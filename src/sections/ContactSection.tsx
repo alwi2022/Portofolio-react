@@ -9,6 +9,19 @@ import { langData } from "../data/langData";
 const ContactSection = () => {
   const { lang } = useLang();
   const t = langData[lang].contact;
+  const [showMap, setShowMap] = useState(false);
+
+  // 2) Tambah helper untuk URL embed & open-in-maps
+  const mapsLang = lang === "id" ? "id" : "en";
+  const mapsPlace =
+    "Jl. Jelambar S No.23, RT 06 RW 02, Jelambar Baru, Kec. Grogol petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11460";
+
+  const mapsEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
+    mapsPlace
+  )}&hl=${mapsLang}&z=11&output=embed`;
+  const mapsOpenUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    mapsPlace
+  )}`;
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -72,13 +85,18 @@ const ContactSection = () => {
     <>
       <Toaster position="top-right" reverseOrder={false} />
 
-      <section id="Contact" className="scroll-mt-24 md:scroll-mt-28 mb-20 mt-20">
+      <section
+        id="Contact"
+        className="scroll-mt-24 md:scroll-mt-28 mb-20 mt-20"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
               {t.sectionTitle}
             </h2>
-            <p className="text-base sm:text-lg text-zinc-300">{t.description}</p>
+            <p className="text-base sm:text-lg text-zinc-300">
+              {t.description}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
@@ -180,53 +198,115 @@ const ContactSection = () => {
                 </h3>
 
                 <div className="space-y-6">
-                  {[
-                    {
-                      icon: <Mail className="w-5 h-5" />,
-                      label: t.infoLabels.email,
-                      value: "imambahrialwi21@gmail.com",
-                      href: "mailto:imambahrialwi21@gmail.com",
-                    },
-                    {
-                      icon: <Phone className="w-5 h-5" />,
-                      label: t.infoLabels.phone,
-                      value: "+62 895-6182-16004",
-                      href: "tel:+62895618216004",
-                    },
-                    {
-                      icon: <MapPin className="w-5 h-5" />,
-                      label: t.infoLabels.location,
-                      value: "Serang, Indonesia",
-                      href: undefined,
-                    },
-                  ].map(({ icon, label, value, href }) => (
-                    <div className="flex items-center gap-4" key={label}>
-                      <div className="p-3 bg-blue-900/30 rounded-lg text-blue-400">
-                        {icon}
-                      </div>
-                      <div>
-                        <div className="font-medium text-white">{label}</div>
-                        {href ? (
-                          <a
-                            href={href}
-                            className="text-zinc-300 underline underline-offset-2 decoration-zinc-500 hover:decoration-zinc-300"
-                          >
-                            {value}
-                          </a>
-                        ) : (
-                          <div className="text-zinc-300">{value}</div>
-                        )}
-                      </div>
+                  {/* Email */}
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-blue-900/30 rounded-lg text-blue-400">
+                      <Mail className="w-5 h-5" />
                     </div>
-                  ))}
+                    <div>
+                      <div className="font-medium text-white">
+                        {t.infoLabels.email}
+                      </div>
+                      <a
+                        href="mailto:imambahrialwi21@gmail.com"
+                        className="text-zinc-300 underline underline-offset-2 decoration-zinc-500 hover:decoration-zinc-300"
+                      >
+                        imambahrialwi21@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Phone */}
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-blue-900/30 rounded-lg text-blue-400">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-white">
+                        {t.infoLabels.phone}
+                      </div>
+                      <a
+                        href="tel:+62895618216004"
+                        className="text-zinc-300 underline underline-offset-2 decoration-zinc-500 hover:decoration-zinc-300"
+                      >
+                        +62 895-6182-16004
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Location + Map actions */}
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-blue-900/30 rounded-lg text-blue-400">
+                      <MapPin className="w-5 h-5" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-medium text-white">
+                        {t.infoLabels.location}
+                      </div>
+                      <div className="text-zinc-300">Jakarta, Indonesia</div>
+
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        <button
+                          type="button"
+                          onClick={() => setShowMap((v) => !v)}
+                          className="px-3 py-1.5 text-xs rounded-md bg-zinc-800 hover:bg-zinc-700 border border-zinc-700"
+                        >
+                          {showMap
+                            ? lang === "id"
+                              ? "Sembunyikan peta"
+                              : "Hide map"
+                            : lang === "id"
+                            ? "Lihat peta"
+                            : "Show map"}
+                        </button>
+                        <a
+                          href={mapsOpenUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-3 py-1.5 text-xs rounded-md bg-zinc-100 text-black hover:opacity-90"
+                        >
+                          {lang === "id"
+                            ? "Buka di Google Maps"
+                            : "Open in Google Maps"}
+                        </a>
+                      </div>
+
+                      {showMap && (
+                        <div className="mt-3 rounded-lg overflow-hidden border border-zinc-700 bg-zinc-950">
+                          {/* Responsive 16:9 */}
+                          <div className="relative w-full pt-[56.25%]">
+                            <iframe
+                              title="Alwi Location Map"
+                              src={mapsEmbedSrc}
+                              loading="lazy"
+                              referrerPolicy="no-referrer-when-downgrade"
+                              className="absolute inset-0 w-full h-full border-0"
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
 
                 <div className="mt-10 pt-6 border-t border-zinc-700">
                   <div className="flex flex-wrap gap-3">
                     {[
-                      { icon: "github", href: "https://github.com/alwi2022", label: "GitHub" },
-                      { icon: "linkedin", href: "https://www.linkedin.com/in/imambahrialwi", label: "LinkedIn" },
-                      { icon: "instagram", href: "https://www.instagram.com/aaalwi1/", label: "Instagram" },
+                      {
+                        icon: "github",
+                        href: "https://github.com/alwi2022",
+                        label: "GitHub",
+                      },
+                      {
+                        icon: "linkedin",
+                        href: "https://www.linkedin.com/in/imambahrialwi",
+                        label: "LinkedIn",
+                      },
+                      {
+                        icon: "instagram",
+                        href: "https://www.instagram.com/aaalwi1/",
+                        label: "Instagram",
+                      },
                     ].map(({ icon, href, label }) => (
                       <a
                         key={label}
@@ -237,7 +317,7 @@ const ContactSection = () => {
                         className="inline-flex items-center justify-center min-h-[44px] min-w-[44px] p-3 rounded-lg bg-zinc-800/40 hover:bg-zinc-800 transition focus:outline-none focus:ring-2 focus:ring-zinc-500"
                       >
                         <img
-                         src={`/icons/${icon}.svg`}
+                          src={`/icons/${icon}.svg`}
                           alt={label}
                           width={32}
                           height={32}
