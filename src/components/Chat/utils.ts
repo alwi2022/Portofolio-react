@@ -49,11 +49,11 @@ export function buildProfileFromLang(lang: "en" | "id") {
       currentCity: "Jakarta, Indonesia",
       dob: "2005-03-05",
       education: [
-        { school: "SMK Nurul Huda (Multimedia)", period: "2020–2023" },
-        { school: "BEC (English course)", period: "Sep 2023 – Feb 2024" },
+        { school: "SMK Nurul Huda (Multimedia)", period: "2020 - 2023" },
+        { school: "BEC (English course)", period: "Sep 2023 - Feb 2024" },
         {
           school: "Hacktiv8 – Fullstack JavaScript Immersive",
-          period: "Oct 2024 – Feb 2025",
+          period: "Oct 2024 - Feb 2025",
         },
       ],
       hobbies: ["Running", "Coding"],
@@ -61,7 +61,7 @@ export function buildProfileFromLang(lang: "en" | "id") {
     experience: {
       position: String(exp?.position ?? "Frontend Developer"),
       company: String(exp?.company ?? "Hallo Hukum"),
-      duration: String(exp?.duration ?? "Apr–Jun 2025"),
+      duration: String(exp?.duration ?? "Apr - Jun 2025"),
       highlights:
         (exp?.responsibilities as ReadonlyArray<string> | undefined) ?? [],
     },
@@ -85,7 +85,7 @@ export function buildSystemPrompt(lang: "en" | "id") {
     {
       name: "Galaxy POS",
       short:
-        "POS Laravel 8 (PHP 7.4+) untuk penjualan, kasir, cabang, dan layanan servis.",
+        "POS Laravel 8 (PHP 7.4+) untuk penjualan, kasir, cabang, dan layanan service.",
       points: [
         "Manajemen produk/kategori/supplier/member, penjualan/pembelian/pengeluaran",
         "Laporan harian/bulanan/custom (laba rugi), multi-role (Admin/Kasir/Teknisi)",
@@ -202,7 +202,7 @@ export function buildSystemPrompt(lang: "en" | "id") {
     `Location: ${p.location}`,
     `Address: ${p.fullAddress} (Don't give it if you don't ask for the full address specifically)`,
     `Summary: ${p.summary}`,
-    `Bio: Lahir di Serang (2005-03-05), sekarang tinggal di Jakarta. Lulusan SMK Nurul Huda (Multimedia) → kursus Inggris 6 bulan di BEC → Hacktiv8 Fullstack JS. Hobi: running, coding and watching movies .`,
+    `Bio: Lahir di Serang (2005-03-05), sekarang tinggal di Jakarta. Lulusan SMK Nurul Huda (Multimedia) tahun 2020 - 2023 → kursus Inggris 6 bulan di BEC → Hacktiv8 Fullstack JS tahun 2024 - 2025 dengan nilai akhir 90/100. Hobi: running, coding and watching movies .`,
     `Recent Experience: ${p.experience.position} @ ${p.experience.company} (${p.experience.duration})`,
     p.experience.highlights.length
       ? `Highlights: ${p.experience.highlights.join("; ")}`
