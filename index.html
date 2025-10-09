@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- ✅ Meta dasar -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imam Bahri Alwi | Fullstack JavaScript Developer</title>
@@ -11,18 +10,14 @@
   <meta name="author" content="Imam Bahri Alwi" />
   <meta name="robots" content="index, follow" />
 
-  <!-- ✅ Favicon modern untuk browser modern -->
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon_48x48.png" />
 
-  <!-- ✅ Fallback favicon untuk browser lama dan Googlebot -->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
-  <!-- ✅ Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- ✅ Open Graph (for Facebook, WhatsApp, etc) -->
   <meta property="og:title" content="Imam Bahri Alwi | Fullstack JavaScript Developer" />
   <meta property="og:description"
     content="Check out my projects, skills, and how to get in touch. Let's build something great together." />
@@ -30,52 +25,85 @@
   <meta property="og:url" content="https://portfolio.alwi.tech/" />
   <meta property="og:type" content="website" />
 
-  <!-- ✅ Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Imam Bahri Alwi | Fullstack Developer" />
   <meta name="twitter:description" content="Portfolio of Imam Bahri Alwi. Explore my projects and skills." />
   <meta name="twitter:image" content="/og-image.png" />
 
-  <!-- ✅ Canonical & Multilingual SEO -->
   <link rel="canonical" href="https://portfolio.alwi.tech/" />
   <link rel="alternate" href="https://portfolio.alwi.tech/en" hreflang="en" />
   <link rel="alternate" href="https://portfolio.alwi.tech/id" hreflang="id" />
   <link rel="alternate" href="https://portfolio.alwi.tech/" hreflang="x-default" />
 
-  <!-- ✅ Structured Data JSON-LD -->
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Imam Bahri Alwi",
-        "url": "https://portfolio.alwi.tech/",
-        "sameAs": [
-          "https://github.com/alwi2022",
-          "https://www.linkedin.com/in/imambahrialwi",
-          "https://www.instagram.com/aaalwi1/"
-        ],
-        "knowsAbout": [
-          "React.js",
-          "JavaScript",
-          "Fullstack Development",
-          "Frontend Development",
-          "Backend Development",
-          "Hacktiv8 Bootcamp",
-          "Jakarta Indonesia"
-        ],
-        "jobTitle": "Fullstack JavaScript Developer",
-        "description": "Portfolio of Imam Bahri Alwi, a fullstack JavaScript developer passionate about building modern, scalable applications.",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Freelancer"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Jakarta",
-          "addressCountry": "ID"
-        }
-      }
-    </script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "@id":"https://portfolio.alwi.tech/#me",
+  "name":"Imam Bahri Alwi",
+  "url":"https://portfolio.alwi.tech/",
+  "sameAs":[
+    "https://github.com/alwi2022",
+    "https://www.linkedin.com/in/imambahrialwi",
+    "https://www.instagram.com/aaalwi1/"
+  ],
+  "knowsAbout":[
+    "React.js","JavaScript","Fullstack Development","Frontend Development","Backend Development","Hacktiv8 Bootcamp","Jakarta Indonesia"
+  ],
+  "jobTitle":"Fullstack JavaScript Developer",
+  "description":"Portfolio of Imam Bahri Alwi, a fullstack JavaScript developer passionate about building modern, scalable applications.",
+  "worksFor":{"@type":"Organization","name":"DRX"},
+  "address":{"@type":"PostalAddress","addressLocality":"Jakarta","addressCountry":"ID"}
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://portfolio.alwi.tech/#org",
+  "name":"Imam Bahri Alwi",
+  "url":"https://portfolio.alwi.tech/",
+  "logo":{
+    "@type":"ImageObject",
+    "url":"https://portfolio.alwi.tech/logo.png",
+    "width":512,
+    "height":512
+  },
+  "sameAs":[
+    "https://github.com/alwi2022",
+    "https://www.linkedin.com/in/imambahrialwi",
+    "https://www.instagram.com/aaalwi1/"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "@id":"https://portfolio.alwi.tech/#website",
+  "url":"https://portfolio.alwi.tech/",
+  "name":"Imam Bahri Alwi Portfolio",
+  "inLanguage":["en","id"],
+  "about":{"@id":"https://portfolio.alwi.tech/#me"},
+  "publisher":{"@id":"https://portfolio.alwi.tech/#org"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "@id":"https://portfolio.alwi.tech/#webpage",
+  "url":"https://portfolio.alwi.tech/",
+  "name":"Imam Bahri Alwi | Fullstack JavaScript Developer",
+  "isPartOf":{"@id":"https://portfolio.alwi.tech/#website"},
+  "about":{"@id":"https://portfolio.alwi.tech/#me"}
+}
+</script>
+
 </head>
 
 <body>

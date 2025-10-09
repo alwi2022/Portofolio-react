@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Home -->
   <url>
     <loc>https://portfolio.alwi.tech/</loc>
-    <lastmod>2025-06-17</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en" />
@@ -13,13 +15,116 @@
   </url>
 
   <url>
-    <loc>https://portfolio.alwi.tech/id</loc>
-    <lastmod>2025-06-17</lastmod>
+    <loc>https://portfolio.alwi.tech/en</loc>
+    <lastmod>2025-10-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en" />
     <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/" />
+  </url>
+
+  <url>
+    <loc>https://portfolio.alwi.tech/id</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/" />
+  </url>
+
+  <!-- Experience -->
+  <url>
+    <loc>https://portfolio.alwi.tech/experience</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en/experience" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id/experience" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/experience" />
+  </url>
+
+  <url>
+    <loc>https://portfolio.alwi.tech/en/experience</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en/experience" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id/experience" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/experience" />
+  </url>
+
+  <url>
+    <loc>https://portfolio.alwi.tech/id/experience</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en/experience" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id/experience" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/experience" />
+  </url>
+
+  <!-- Project -->
+  <url>
+    <loc>https://portfolio.alwi.tech/project</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en/project" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id/project" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/project" />
+  </url>
+
+  <url>
+    <loc>https://portfolio.alwi.tech/en/project</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en/project" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id/project" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/project" />
+  </url>
+
+  <url>
+    <loc>https://portfolio.alwi.tech/id/project</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en/project" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id/project" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/project" />
+  </url>
+
+  <!-- Certificates -->
+  <url>
+    <loc>https://portfolio.alwi.tech/certificates</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en/certificates" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id/certificates" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/certificates" />
+  </url>
+
+  <url>
+    <loc>https://portfolio.alwi.tech/en/certificates</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en/certificates" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id/certificates" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/certificates" />
+  </url>
+
+  <url>
+    <loc>https://portfolio.alwi.tech/id/certificates</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio.alwi.tech/en/certificates" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://portfolio.alwi.tech/id/certificates" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio.alwi.tech/certificates" />
   </url>
 
 </urlset>
