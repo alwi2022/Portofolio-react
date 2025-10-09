@@ -43,10 +43,14 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Routes>
              <Route path="/" element={<App />} />
 
-          <Route path="/:lang(id|en)" element={<LangRoute />} />
+       <Route path="/:lang(id|en)" element={<LangRoute />} />
           <Route path="/project" element={<Project />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/experience" element={<Experience />} />
+
+            <Route path="/:lang(id|en)/project" element={<Project />} />
+  <Route path="/:lang(id|en)/certificates" element={<Certificates />} />
+  <Route path="/:lang(id|en)/experience" element={<Experience />} />
            <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <ChatAssistant />
