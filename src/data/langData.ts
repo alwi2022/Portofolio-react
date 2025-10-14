@@ -119,7 +119,7 @@ export const langData = {
       items: [
         {
           position: "Fullstack Developer",
-          company: "PT Berkat Indah Garment DRX",
+          company: "PT Berkat Indah Garment",
           duration: "September 2025 – Present",
           location: "Jakarta, Indonesia",
           description:
@@ -493,7 +493,7 @@ export const langData = {
       items: [
         {
           position: "Fullstack Developer",
-          company: "PT Berkat Indah Garment DRX",
+          company: "PT Berkat Indah Garment",
           duration: "September 2025 – Sekarang",
           location: "Jakarta, Indonesia",
           description:
