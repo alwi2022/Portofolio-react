@@ -119,18 +119,18 @@ export const langData = {
       items: [
         {
           position: "Fullstack Developer",
-          company: "PT Berkat Indah Garment (DRX Token)",
+          company: "PT Berkat Indah Garment DRX",
           duration: "September 2025 – Present",
           location: "Jakarta, Indonesia",
           description:
-            "Contributing as a Fullstack Developer in the DRX Token ecosystem, responsible for building, maintaining, and optimizing the company’s web infrastructure across three main repositories — Landing Page, Admin CMS, and Backend CMS API — with a strong focus on SEO implementation and system scalability.",
+            "Contributing as a Fullstack Developer in the DRX Token ecosystem, responsible for building, maintaining, and optimizing the company’s web infrastructure across three main repositories such as Landing Page, Admin CMS, and Backend CMS API  with a strong focus on SEO implementation and system scalability.",
           responsibilities: [
             "Developed and maintained web applications including landing pages, CMS admin dashboards, and API services",
             "Implemented scalable backend services using NestJS, Prisma, and PostgreSQL for content and user management",
             "Built responsive and accessible frontend interfaces with Next.js and TailwindCSS to ensure consistent user experiences",
-            "Collaborated with software engineers, designers, and SEO specialists to align technical execution with business goals",
+            "Collaborated with developers, designers, and SEO specialists to align technical execution with business goals",
             "Applied SEO enhancements directly in code, including dynamic metadata, structured data (JSON-LD), and OpenGraph optimization",
-            "Optimized performance and code structures to improve reliability, maintainability, and API response times",
+            "Optimized performance and code structures to improve reliability and maintainability",
             "Maintained consistency and synchronization between multiple repositories to support a unified development workflow",
           ],
           technologies: [
@@ -493,18 +493,18 @@ export const langData = {
       items: [
         {
           position: "Fullstack Developer",
-          company: "PT Berkat Indah Garment (DRX Token)",
+          company: "PT Berkat Indah Garment DRX",
           duration: "September 2025 – Sekarang",
           location: "Jakarta, Indonesia",
           description:
-            "Berkontribusi sebagai Fullstack Developer dalam pengembangan ekosistem web DRX Token. Bertanggung jawab dalam membangun, memelihara, dan mengoptimalkan infrastruktur web perusahaan yang mencakup tiga repository utama — Landing Page, Admin CMS, dan Backend CMS API — dengan fokus pada implementasi SEO dan skalabilitas sistem.",
+            "Berkontribusi sebagai Fullstack Developer dalam pengembangan ekosistem web DRX Token. Bertanggung jawab dalam membangun, memelihara, dan mengoptimalkan infrastruktur web perusahaan yang mencakup tiga repository utama seperti Landing Page, Admin CMS, dan Backend CMS API  dengan fokus pada implementasi SEO dan skalabilitas sistem.",
           responsibilities: [
             "Mengembangkan dan memelihara aplikasi web termasuk landing page, dashboard admin CMS, dan layanan API",
-            "Membangun layanan backend yang skalabel menggunakan NestJS, Prisma, dan PostgreSQL untuk pengelolaan konten dan pengguna",
+            "Membangun layanan backend yang skalabel menggunakan NestJS, Prisma, dan PostgreSQL untuk pengelolaan konten dan user",
             "Menerapkan antarmuka frontend yang responsif dan konsisten menggunakan Next.js dan TailwindCSS",
-            "Berkolaborasi dengan tim software engineer, desainer, dan SEO untuk menyelaraskan eksekusi teknis dengan kebutuhan bisnis",
+            "Berkolaborasi dengan tim developer, desainer, dan SEO untuk menyelaraskan eksekusi teknis dengan kebutuhan bisnis",
             "Menerapkan peningkatan SEO langsung ke dalam kode, termasuk metadata dinamis, structured data (JSON-LD), dan optimasi OpenGraph",
-            "Mengoptimalkan performa dan struktur code untuk meningkatkan keandalan, efisiensi, dan kecepatan API",
+            "Mengoptimalkan performa dan struktur code untuk meningkatkan reliability dan efisiensi",
             "Menjaga konsistensi serta sinkronisasi antar repository untuk mendukung alur pengembangan yang terintegrasi",
           ],
           technologies: [
