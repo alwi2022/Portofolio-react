@@ -373,7 +373,7 @@ export const langData = {
         "Fullstack JavaScript",
         "Penggemar Teknologi",
       ],
-      desc: "Pengembang JavaScript full-stack. Lulusan Hacktiv8 dengan pengalaman langsung di React, Next.js, dan Node.js. Bersemangat membangun aplikasi web yang bersih dan skalabel..",
+      desc: "Pengembang JavaScript full-stack. Lulusan Hacktiv8 dengan pengalaman langsung di React, Next.js, dan Node.js. Bersemangat membangun aplikasi web yang bersih dan skalabel",
       connect: "Hubungi saya di sini",
     },
 
