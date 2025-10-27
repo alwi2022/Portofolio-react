@@ -2,8 +2,8 @@ export const langData = {
   en: {
     hero: {
       title: "Imam Bahri Alwi",
-      typed: ["Software Developer", "Fullstack JavaScript", "Tech Enthusiast"],
-      desc: "Full-stack JavaScript developer. Hacktiv8 graduate with hands-on experience in React, Next.js, and Node.js. Passionate about building clean, scalable web applications.",
+      typed: ["Software Developer", "Fullstack Developer", "Tech Enthusiast"],
+      desc: "Full-stack developer. Hacktiv8 graduate with hands-on experience in React, Next.js, and Node.js. Passionate about building clean, scalable web applications.",
       connect: "Connect with me here",
     },
     projects: {
@@ -370,10 +370,10 @@ export const langData = {
       title: "Imam Bahri Alwi",
       typed: [
         "Pengembang Perangkat Lunak",
-        "Fullstack JavaScript",
+        "Fullstack Developer",
         "Penggemar Teknologi",
       ],
-      desc: "Pengembang JavaScript full-stack. Lulusan Hacktiv8 dengan pengalaman langsung di React, Next.js, dan Node.js. Bersemangat membangun aplikasi web yang bersih dan skalabel",
+      desc: "Full-stack developer. Lulusan Hacktiv8 dengan pengalaman langsung di React, Next.js, dan Node.js. Bersemangat membangun aplikasi web yang bersih dan skalabel",
       connect: "Hubungi saya di sini",
     },
 
