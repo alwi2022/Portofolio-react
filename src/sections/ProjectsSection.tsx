@@ -2,7 +2,7 @@
 import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
-import { Github, Link, QrCode, Play } from "lucide-react";
+import { Github, Link, QrCode, Play, File } from "lucide-react";
 import { Link as RouterLink } from "react-router";
 
 const ProjectsSection = () => {
@@ -56,6 +56,7 @@ const ProjectsSection = () => {
                       className="inline-flex items-center gap-2 min-h-[44px] px-4 py-2 text-sm font-medium rounded-md bg-white text-black hover:opacity-90 transition"
                     >
                       {link.labelKey === "website" && <Link className="w-4 h-4" />}
+                      {link.labelKey === "Docs" && <File className="w-4 h-4" />}
                       {link.labelKey === "github" && <Github className="w-4 h-4" />}
                       {link.labelKey === "expo" && <QrCode className="w-4 h-4" />}
                       {link.labelKey === "demo" && <Play className="w-4 h-4" />}

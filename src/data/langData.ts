@@ -16,7 +16,7 @@ export const langData = {
             "Point of Sales app to manage sales, cashier, reporting, branches, and service workflows, built with Laravel 8.",
           image: "/images/projects/GalaxyPOS.webp",
           links: [
-            { labelKey: "website", url: "https://alwi.biz.id" },
+            { labelKey: "Docs", url: "https://github.com/alwi2022/galaxy-pos/blob/main/README.md" },
             {
               labelKey: "github",
               url: "https://github.com/alwi2022/galaxy-pos",
@@ -99,6 +99,7 @@ export const langData = {
       ],
       buttonLabels: {
         website: "Website",
+        Docs: "Documentation",
         github: "GitHub",
         expo: "Expo QR",
         demo: "Demo",
@@ -388,7 +389,7 @@ export const langData = {
             "Aplikasi Point of Sales untuk mengelola penjualan, kasir, laporan, cabang, dan layanan servis, dibangun dengan Laravel 8.",
           image: "/images/projects/GalaxyPOS.webp",
           links: [
-            { labelKey: "website", url: "https://alwi.biz.id" },
+            { labelKey: "Docs", url: "https://github.com/alwi2022/galaxy-pos/blob/main/README.md" },
             {
               labelKey: "github",
               url: "https://github.com/alwi2022/galaxy-pos",
@@ -472,6 +473,7 @@ export const langData = {
       ],
       buttonLabels: {
         website: "Kunjungi Situs",
+        Docs: "Dokumentasi",
         github: "GitHub",
         demo: "Demo",
         expo: "QR Expo",
