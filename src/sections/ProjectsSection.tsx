@@ -1,5 +1,3 @@
-// src/sections/ProjectsSection.tsx
-import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 import { Github, Link, QrCode, Play, File } from "lucide-react";
@@ -34,7 +32,10 @@ const ProjectsSection = () => {
                 src={project.image}
                 alt={`${project.title} Preview`}
                 className="w-full aspect-video object-cover rounded-t-xl"
+                width={1920}
+                height={1200}
                 loading="lazy"
+                decoding="async"
               />
               <div className="px-6 py-5">
                 <h2 className="text-lg sm:text-xl font-semibold text-white">

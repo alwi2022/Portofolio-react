@@ -1,15 +1,14 @@
-// src/pages/Experience.tsx
-import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 import Header from "../components/Header";
 import Footer from "../sections/FooterSection";
+import type { ExperienceType } from "../types/project";
 
 export default function Experience() {
   const { lang } = useLang();
   const experienceLang = langData[lang].experience;
 
-  const ExperienceItem = ({ experience }: { experience: any }) => (
+  const ExperienceItem = ({ experience }: { experience: ExperienceType }) => (
     <div className="mb-12 pb-8 border-b border-zinc-700 last:border-b-0">
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
         <div className="flex-1">
@@ -80,8 +79,8 @@ export default function Experience() {
           </div>
 
           <div>
-            {experienceLang.items.map((exp: any, i: number) => (
-              <ExperienceItem key={i} experience={exp} />
+            {experienceLang.items.map((exp) => (
+              <ExperienceItem key={`${exp.company}-${exp.duration}`} experience={exp} />
             ))}
           </div>
 

@@ -11,15 +11,7 @@
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@components/*": ["components/*"],
-      "@sections/*": ["sections/*"],
-      "@assets/*": ["assets/*"],
-      "@types/*": ["types/*"],
-      "@constants/*": ["constants/*"]
-    }
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

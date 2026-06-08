@@ -1,5 +1,5 @@
 // src/main.tsx
-import React from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import {
   BrowserRouter,
@@ -11,12 +11,12 @@ import {
 import App from "./App";
 import "./index.css";
 import { LangProvider, useLang } from "./context/LangContext";
-import Project from "./pages/Project";
-import { useEffect } from "react";
 import { useLocation } from "react-router";
-import Certificates from "./pages/Certificates";
-import Experience from "./pages/Experience";
-import ChatAssistant from "./components/Chat";
+
+const Project = lazy(() => import("./pages/Project"));
+const Certificates = lazy(() => import("./pages/Certificates"));
+const Experience = lazy(() => import("./pages/Experience"));
+const ChatAssistant = lazy(() => import("./components/Chat"));
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,7 +28,7 @@ export default function ScrollToTop() {
   return null;
 }
 
-function LangRoute() {
+function LocalizedRoute({ children }: { children: React.ReactNode }) {
   const { lang: urlLang } = useParams();
   const { setLang } = useLang();
 
@@ -38,7 +38,11 @@ function LangRoute() {
     }
   }, [urlLang, setLang]);
 
-  return <App />;
+  if (urlLang !== "id" && urlLang !== "en") {
+    return <Navigate to="/" replace />;
+  }
+
+  return <>{children}</>;
 }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -46,20 +50,50 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <LangProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<App />} />
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<App />} />
 
-          <Route path="/:lang(id|en)" element={<LangRoute />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/certificates" element={<Certificates />} />
-          <Route path="/experience" element={<Experience />} />
+            <Route
+              path="/:lang"
+              element={
+                <LocalizedRoute>
+                  <App />
+                </LocalizedRoute>
+              }
+            />
+            <Route path="/project" element={<Project />} />
+            <Route path="/certificates" element={<Certificates />} />
+            <Route path="/experience" element={<Experience />} />
 
-          <Route path="/:lang(id|en)/project" element={<Project />} />
-          <Route path="/:lang(id|en)/certificates" element={<Certificates />} />
-          <Route path="/:lang(id|en)/experience" element={<Experience />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-        <ChatAssistant />
+            <Route
+              path="/:lang/project"
+              element={
+                <LocalizedRoute>
+                  <Project />
+                </LocalizedRoute>
+              }
+            />
+            <Route
+              path="/:lang/certificates"
+              element={
+                <LocalizedRoute>
+                  <Certificates />
+                </LocalizedRoute>
+              }
+            />
+            <Route
+              path="/:lang/experience"
+              element={
+                <LocalizedRoute>
+                  <Experience />
+                </LocalizedRoute>
+              }
+            />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+          <ChatAssistant />
+        </Suspense>
       </BrowserRouter>
     </LangProvider>
   </React.StrictMode>

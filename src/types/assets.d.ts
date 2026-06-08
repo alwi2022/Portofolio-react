@@ -23,8 +23,11 @@ declare module '*.gif' {
   export default content;
 }
 
+declare module '*.css';
+
 // vite-env.d.ts
 interface ImportMetaEnv {
+  readonly DEV: boolean;
   readonly VITE_EMAILJS_SERVICE_ID: string;
   readonly VITE_EMAILJS_TEMPLATE_ID: string;
   readonly VITE_EMAILJS_PUBLIC_KEY: string;

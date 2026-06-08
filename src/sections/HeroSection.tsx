@@ -59,6 +59,7 @@ const HeroSection = () => {
                   width={32}
                   height={32}
                   loading="lazy"
+                  decoding="async"
                 />
               </a>
             ))}

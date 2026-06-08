@@ -1,5 +1,2 @@
 User-agent: *
 Sitemap: https://portfolio.alwi.tech/sitemap.xml
-
-Disallow: /id
-Disallow: /en

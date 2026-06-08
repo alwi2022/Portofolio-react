@@ -4,7 +4,7 @@ import { langData } from "../data/langData";
 import Header from "../components/Header";
 import Footer from "../sections/FooterSection";
 import { ProjectType } from "../types/project";
-import { Link as LinkIcon, Github, QrCode } from "lucide-react";
+import { File, Github, Link as LinkIcon, Play, QrCode } from "lucide-react";
 
 export default function Project() {
   const { lang } = useLang();
@@ -17,7 +17,10 @@ export default function Project() {
         src={project.image}
         alt={`${project.title} Preview`}
         className="w-full aspect-video object-cover"
+        width={1920}
+        height={1200}
         loading="lazy"
+        decoding="async"
       />
 
       <div className="px-6 py-5">
@@ -42,8 +45,10 @@ export default function Project() {
               className="inline-flex items-center gap-2 min-h-[44px] px-4 py-2 text-sm font-medium rounded-md bg-white text-black hover:opacity-90 transition"
             >
               {link.labelKey === "website" && <LinkIcon className="w-4 h-4" />}
+              {link.labelKey === "Docs" && <File className="w-4 h-4" />}
               {link.labelKey === "github" && <Github className="w-4 h-4" />}
               {link.labelKey === "expo" && <QrCode className="w-4 h-4" />}
+              {link.labelKey === "demo" && <Play className="w-4 h-4" />}
               {projectLang.buttonLabels[link.labelKey as keyof typeof projectLang.buttonLabels] || link.labelKey}
             </a>
           ))}
@@ -69,8 +74,8 @@ export default function Project() {
           <p className="text-lg text-gray-300 mb-8">{projectLang.description}</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10">
-            {projectLang.items.map((project: any, i: number) => (
-              <ProjectCard key={i} project={project} />
+            {projectLang.items.map((project) => (
+              <ProjectCard key={project.title} project={project as ProjectType} />
             ))}
           </div>
         </div>

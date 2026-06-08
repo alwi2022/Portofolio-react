@@ -1,4 +1,3 @@
-import React from "react";
 import { Loader2, Send } from "lucide-react";
 
 export default function MessageInput({
@@ -9,7 +8,7 @@ export default function MessageInput({
   placeholder,
 }: {
   value: string;
-  onChange: (v: string) => void;
+  onChange: (value: string) => void;
   onSubmit: () => void;
   loading: boolean;
   placeholder: string;

@@ -1,5 +1,6 @@
 //src/components/Chat/utils.ts
 import { langData } from "../../data/langData";
+import type { ExperienceType, ProjectType } from "../../types/project";
 
 export function safe<T>(fn: () => T, fallback: T): T {
   try {
@@ -45,11 +46,11 @@ export function buildProfileFromLang(lang: "en" | "id") {
 
   const exp = safe(
     () => langData[lang].experience.items?.[0],
-    undefined as any
+    undefined as ExperienceType | undefined
   );
   const projects = safe(
-    () => langData[lang].projects.items as ReadonlyArray<any>,
-    [] as ReadonlyArray<any>
+    () => langData[lang].projects.items as readonly ProjectType[],
+    [] as readonly ProjectType[]
   );
 
   return {
@@ -85,7 +86,7 @@ export function buildProfileFromLang(lang: "en" | "id") {
     projects: projects.map((p) => ({ title: String(p.title) })).slice(0, 3),
     links: {
       portfolio:
-        projects?.[0]?.links?.find?.((l: any) => l.labelKey === "website")
+        projects[0]?.links.find((link) => link.labelKey === "website")
           ?.url ?? "https://portfolio.alwi.tech/",
       github: "https://github.com/alwi2022",
       linkedin: "https://www.linkedin.com/in/imambahrialwi/",
@@ -251,8 +252,10 @@ export function buildSystemPrompt(lang: "en" | "id") {
   const policy =
     lang === "id"
       ? `Kamu adalah Alwi Junior. Jangan pernah menyebut dirimu AI, asisten, atau ChatGPT.
-Gaya bicara santai, receh, memable seperlunya, tapi tetap sopan. 
-Selalu menyesuaikan gaya bahasa user (formal kalau user formal, santai kalau user santai).
+WAJIB selalu membalas hanya dalam Bahasa Indonesia.
+Kalau user menulis dalam bahasa lain, tetap balas dalam Bahasa Indonesia.
+Sesuaikan nada user (formal kalau user formal, santai kalau user santai), tapi bahasa output tetap Bahasa Indonesia.
+Gaya bicara santai, receh, memable seperlunya, tapi tetap sopan.
 
 Jika user menyerang/mengejek Alwi, balas dengan sarkasme ringan/nyolot yang tetap aman dan tidak menghina kelompok mana pun.
 Contoh nada sarkas: "Iya, parah banget. Makanya kamu betah nanya-nanya soal dia."
@@ -266,7 +269,10 @@ Jika informasi tidak tersedia, katakan belum ada datanya dan berikan kontak lang
 
 Hindari format Markdown (tanpa **bold**, _italic_, atau bullet) dan jangan pakai emoji kecuali user memulai duluan.`
       : `You are Alwi Junior. Never call yourself an AI, assistant, or ChatGPT.
-Speak casually and adapt to the user's tone (mirror their style: formal if formal, casual if casual).
+You MUST always reply in English only.
+If the user writes in Indonesian (or any other language), still answer in English.
+Adapt only the user's tone (formal if formal, casual if casual), not the output language.
+Some profile facts may be in Indonesian, but your final answer must stay in English.
 
 If someone mocks/attacks Alwi, respond with light sarcasm/roast while staying safe (no slurs, no hate).
 Example vibe: "Totally. That's why you can't stop asking about him."

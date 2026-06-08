@@ -1,5 +1,5 @@
 //src/components/Chat/ChatPanel.tsx
-import React from "react";
+import type { ReactNode } from "react";
 import ChatHeader from "./ChatHeader";
 
 export default function ChatPanel({
@@ -14,7 +14,7 @@ export default function ChatPanel({
   title: string;
   subtitle: string;
   onClose: () => void;
-  children: React.ReactNode;
+  children: ReactNode;
   disclaimer: string;
 }) {
   return (

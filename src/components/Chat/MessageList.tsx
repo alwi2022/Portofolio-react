@@ -1,5 +1,5 @@
 // src/components/Chat/MessageList.tsx
-import React from "react";
+import type { RefObject } from "react";
 import type { ChatMessage } from "../../types/Chat";
 import { sanitizeHTML } from "./sanitize";
 import { displayUrl } from "./utils"; // <-- tambah ini
@@ -8,7 +8,7 @@ import { displayUrl } from "./utils"; // <-- tambah ini
 function linkifyAndShorten(html: string) {
   // step A: linkify url polos
   const urlRe = /((https?:\/\/)?([\w.-]+)\.[a-z]{2,}(\/[\w\-._~:/?#[\]@!$&'()*+,;=%]*)?)/gi;
-  let linked = html.replace(urlRe, (m) => {
+  const linked = html.replace(urlRe, (m) => {
     // jangan dobel-link kalau sudah di dalam tag <a ...>...</a>
     if (m.startsWith("<a ") || m.endsWith("</a>")) return m;
     const href = /^https?:\/\//i.test(m) ? m : `https://${m}`;
@@ -34,8 +34,8 @@ function linkifyAndShorten(html: string) {
 type Props = {
   messages: ChatMessage[];
   suggestions: ReadonlyArray<string>;
-  onSuggestClick?: (s: string) => void;
-  listRef: React.RefObject<HTMLDivElement | null>;
+  onSuggestClick?: (suggestion: string) => void;
+  listRef: RefObject<HTMLDivElement | null>;
   hello: string;
 };
 

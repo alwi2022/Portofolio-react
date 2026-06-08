@@ -24,7 +24,7 @@ function sanitize(text: string) {
   return t;
 }
 
-export function useChatAssistant(lang: "en" | "id", _hello: string) {
+export function useChatAssistant(lang: "en" | "id") {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
@@ -44,7 +44,12 @@ export function useChatAssistant(lang: "en" | "id", _hello: string) {
     setInput("");
     setLoading(true);
     try {
-      const res = await fetch(import.meta.env.VITE_BACKEND_API, {
+      const backendUrl = import.meta.env.VITE_BACKEND_API;
+      if (!backendUrl) {
+        throw new Error("VITE_BACKEND_API is not configured");
+      }
+
+      const res = await fetch(backendUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -69,7 +74,9 @@ export function useChatAssistant(lang: "en" | "id", _hello: string) {
             + `<a href="mailto:imambahrialwi21@gmail.com" target="_blank">Email</a> · `
             + `<a href="https://www.linkedin.com/in/imambahrialwi/" target="_blank">LinkedIn</a>`;
       setMessages((m) => [...m, { id: crypto.randomUUID(), role: "assistant", content: fallback }]);
-      console.error(e);
+      if (import.meta.env.DEV) {
+        console.error(e);
+      }
     } finally {
       setLoading(false);
     }

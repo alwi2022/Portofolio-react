@@ -3,15 +3,31 @@ export interface ProjectType {
   title: string;
   description: string;
   image: string;
-  github: string;
-  tags: string[];
+  tags: readonly string[];
   status: string;
   featured: boolean;
-  links: { labelKey: string; url: string }[];
-  live?: string;
-  beta?: string;
-  expo?: string;
-  website?: string;
+  duration: string;
+  links: readonly {
+    labelKey: "website" | "Docs" | "github" | "expo" | "demo";
+    url: string;
+  }[];
+}
+
+export interface CertificateType {
+  title: string;
+  image: string;
+  credentialUrl?: string;
+  showTitle: boolean;
+}
+
+export interface ExperienceType {
+  position: string;
+  company: string;
+  duration: string;
+  location: string;
+  description: string;
+  responsibilities: readonly string[];
+  technologies: readonly string[];
 }
 
 

@@ -75,7 +75,9 @@ const ContactSection = () => {
     } catch (error) {
       toast.dismiss();
       toast.error(t.validation.error);
-      console.error("EmailJS Error:", error);
+      if (import.meta.env.DEV) {
+        console.error("EmailJS Error:", error);
+      }
     } finally {
       setLoading(false);
     }
@@ -322,6 +324,7 @@ const ContactSection = () => {
                           width={32}
                           height={32}
                           loading="lazy"
+                          decoding="async"
                         />
                       </a>
                     ))}

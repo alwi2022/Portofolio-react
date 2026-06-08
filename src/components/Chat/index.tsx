@@ -11,7 +11,7 @@ export default function ChatAssistant() {
   const { lang } = useLang();
   const t = langData[lang].chatAssistant;
   const { open, setOpen, messages, input, setInput, loading, ask, listRef } =
-    useChatAssistant(lang, t.hello);
+    useChatAssistant(lang);
 
   return (
     <>

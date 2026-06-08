@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import type { MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
 import { useLang } from "../context/LangContext";
 import { getNavigationItems } from "../utils/navigation";
@@ -13,7 +14,7 @@ const Header = () => {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const toggleLang = () => setLang(lang === "en" ? "id" : "en");
 
-  const handleNavClick = (item: typeof navigationItems[0], event: React.MouseEvent) => {
+  const handleNavClick = (item: typeof navigationItems[0], event: MouseEvent) => {
     event.preventDefault();
     handleNavigation(item);
     setMenuOpen(false);
@@ -36,7 +37,14 @@ const Header = () => {
           className="cursor-pointer"
           aria-label="Go to home"
         >
-          <img src="logo.webp" alt="logo" className="w-12 h-auto aspect-square" />
+          <img
+            src="/logo.webp"
+            alt="Imam Bahri Alwi logo"
+            className="w-12 h-auto aspect-square"
+            width={48}
+            height={48}
+            decoding="async"
+          />
         </button>
 
         {/* Desktop Menu */}

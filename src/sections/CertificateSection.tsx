@@ -1,5 +1,3 @@
-// src/sections/CertificateSection.tsx
-import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 import { ExternalLink } from "lucide-react";
@@ -43,7 +41,10 @@ const CertificateSection = () => {
                   src={certificate.image}
                   alt={certificate.title}
                  className="w-full aspect-video object-cover transition-transform duration-300 md:group-hover:scale-105 motion-reduce:transform-none"
+                  width={1280}
+                  height={900}
                   loading="lazy"
+                  decoding="async"
                 />
 
                 {/* Hover overlay (pointer-events: none; biar nggak ganggu scroll) */}

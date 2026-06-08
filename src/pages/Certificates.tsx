@@ -1,23 +1,25 @@
-// src/pages/Certificates.tsx
-import React from "react";
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 import Header from "../components/Header";
 import Footer from "../sections/FooterSection";
 import { ExternalLink } from "lucide-react";
+import type { CertificateType } from "../types/project";
 
 export default function Certificates() {
   const { lang } = useLang();
   const certificateLang = langData[lang].certificates;
 
-  const CertificateCard = ({ certificate }: { certificate: any }) => (
+  const CertificateCard = ({ certificate }: { certificate: CertificateType }) => (
     <div className="group relative bg-zinc-900 border border-zinc-700 rounded-xl shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
       <div className="relative overflow-hidden">
         <img
           src={certificate.image}
           alt={certificate.title}
           className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
+          width={1280}
+          height={900}
           loading="lazy"
+          decoding="async"
         />
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -68,8 +70,8 @@ export default function Certificates() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {certificateLang.items.map((certificate: any, i: number) => (
-              <CertificateCard key={i} certificate={certificate} />
+            {certificateLang.items.map((certificate) => (
+              <CertificateCard key={certificate.title} certificate={certificate} />
             ))}
           </div>
         </div>

@@ -1,11 +1,13 @@
+/* eslint-disable react-refresh/only-export-components */
 // src/context/LangContext.tsx
 import { createContext, useContext, useEffect, useState } from "react";
+import type { ReactNode } from "react";
 
 type LangType = "en" | "id";
 
 interface LangContextProps {
   lang: LangType;
-  setLang: (lang: LangType) => void;
+  setLang: (newLang: LangType) => void;
 }
 
 const LangContext = createContext<LangContextProps>({
@@ -13,7 +15,7 @@ const LangContext = createContext<LangContextProps>({
   setLang: () => {},
 });
 
-export const LangProvider = ({ children }: { children: React.ReactNode }) => {
+export const LangProvider = ({ children }: { children: ReactNode }) => {
   const [lang, setLangState] = useState<LangType>("en");
 
   useEffect(() => {
