@@ -129,48 +129,6 @@ export function buildSystemPrompt(lang: "en" | "id") {
       ],
     },
     {
-      name: "Personal Finance Tracker",
-      short:
-        "Aplikasi pelacakan pemasukan/pengeluaran dengan analitik dan OTP login.",
-      points: [
-        "Dashboard visual, kategori transaksi, export Excel (.xlsx)",
-        "Auth JWT + OTP, Recharts untuk grafik",
-      ],
-      links: {
-        website: "https://finance.alwi.tech",
-        repo: "https://github.com/alwi2022/personal-finance-app",
-      },
-      stack: [
-        "React",
-        "TypeScript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Recharts",
-        "JWT",
-      ],
-    },
-    {
-      name: "QuickHire Dev",
-      short:
-        "AI resume builder: form bertahap + saran AI untuk Summary/Experience.",
-      points: [
-        "Memangkas waktu bikin CV dari jam jadi menit untuk fresh grads",
-        "Template rapi + validasi konten inti",
-      ],
-      links: {
-        website: "https://resume.alwi.tech",
-      },
-      stack: [
-        "React",
-        "Tailwind",
-        "TypeScript",
-        "Express",
-        "PostgreSQL",
-        "Vercel",
-      ],
-    },
-    {
       name: "Maneka",
       short:
         "Talent discovery & career planning berbasis teori Multiple Intelligences.",

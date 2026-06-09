@@ -45,37 +45,6 @@ export const langData = {
           duration: "Juni 2025 - Juli 2025",
         },
         {
-          title: "QuickHire Dev",
-          description:
-            "Build professional resumes in minutes. Just fill the form and let AI generate the Summary & Experience sections.",
-          image: "/images/projects/Quickhire.webp",
-          links: [
-            { labelKey: "website", url: "https://resume.alwi.tech/" },
-            { labelKey: "github", url: "https://github.com/alwi2022" },
-          ],
-          tags: ["React", "Node.js", "PostgreSQL", "Express", "Typescript"],
-          status: "Live",
-          featured: true,
-          duration: "April 2025",
-        },
-        {
-          title: "Personal Finance Tracker",
-          description:
-            "A simple yet powerful tool to monitor your daily expenses and manage your personal budget with ease.",
-          image: "/images/projects/Expanse-tracker.webp",
-          links: [
-            { labelKey: "website", url: "https://finance.alwi.tech" },
-            {
-              labelKey: "github",
-              url: "https://github.com/alwi2022/personal-finance-app",
-            },
-          ],
-          tags: ["React", "Node.js", "MongoDB", "Express", "Typescript"],
-          status: "Live",
-          featured: true,
-          duration: "Mei 2025",
-        },
-        {
           title: "Maneka",
           description:
             "AI-powered career planning platform inspired by Gardner’s theory of multiple intelligences.",
@@ -417,38 +386,6 @@ export const langData = {
           status: "Live",
           featured: true,
           duration: "Juni 2025 - Juli 2025",
-        },
-        {
-          title: "QuickHire Dev",
-          description:
-            "Membuat resume profesional dalam hitungan menit. Cukup isi formulir, dan biarkan AI yang menyusun bagian Ringkasan dan Pengalaman kerja Anda.",
-          image: "/images/projects/Quickhire.webp",
-          links: [
-            { labelKey: "website", url: "https://resume.alwi.tech/" },
-            { labelKey: "github", url: "https://github.com/alwi2022" },
-          ],
-          tags: ["React", "Node.js", "PostgreSQL", "Express", "Typescript"],
-          status: "Live",
-          featured: true,
-          duration: "April 2025",
-        },
-
-        {
-          title: "Personal Finance Tracker",
-          description:
-            "Alat sederhana namun efektif untuk mencatat pengeluaran harian dan mengelola anggaran pribadi dengan mudah.",
-          image: "/images/projects/Expanse-tracker.webp",
-          links: [
-            { labelKey: "website", url: "https://finance.alwi.tech" },
-            {
-              labelKey: "github",
-              url: "https://github.com/alwi2022/personal-finance-app",
-            },
-          ],
-          tags: ["React", "Node.js", "MongoDB", "Express", "Typescript"],
-          status: "Live",
-          featured: true,
-          duration: "Mei 2025",
         },
         {
           title: "Maneka",
