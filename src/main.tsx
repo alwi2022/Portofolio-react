@@ -12,6 +12,7 @@ import App from "./App";
 import "./index.css";
 import { LangProvider, useLang } from "./context/LangContext";
 import { useLocation } from "react-router";
+import { Seo } from "./components/Seo";
 
 const Project = lazy(() => import("./pages/Project"));
 const Certificates = lazy(() => import("./pages/Certificates"));
@@ -49,6 +50,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <LangProvider>
       <BrowserRouter>
+        <Seo />
         <ScrollToTop />
         <Suspense fallback={null}>
           <Routes>

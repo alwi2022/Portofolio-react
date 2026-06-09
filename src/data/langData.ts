@@ -202,7 +202,7 @@ export const langData = {
           title: "Fullstack Javascript Immersive",
           image: "/images/certificates/hacktiv8.webp",
           credentialUrl:
-            "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.webp",
+            "https://www.imambahri.com/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.webp",
           showTitle: false,
         },
         {
@@ -544,7 +544,7 @@ export const langData = {
           title: "Fullstack Javascript Immersive",
           image: "/images/certificates/hacktiv8.webp",
           credentialUrl:
-            "https://portfolio.alwi.tech/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.webp",
+            "https://www.imambahri.com/images/certificates/Certificate Hacktiv8 - Imam Bahri Alwi.webp",
           showTitle: false,
         },
         {

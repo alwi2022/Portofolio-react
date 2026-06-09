@@ -2,6 +2,7 @@
 import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 import { Link as RouterLink } from "react-router";
+import { getLocalizedPath } from "../utils/seo";
 
 const ExperienceSection = () => {
   const { lang } = useLang();
@@ -20,7 +21,7 @@ const ExperienceSection = () => {
           </p>
           <div className="mt-3 mb-4 text-right">
             <RouterLink
-              to="/experience"
+              to={getLocalizedPath("/experience", lang)}
               className="text-sm text-white hover:underline"
             >
               {lang === "en" ? "See all experience" : "Lihat semua pengalaman"}

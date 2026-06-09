@@ -2,6 +2,7 @@ import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 import { Github, Link, QrCode, Play, File } from "lucide-react";
 import { Link as RouterLink } from "react-router";
+import { getLocalizedPath } from "../utils/seo";
 
 const ProjectsSection = () => {
   const { lang } = useLang();
@@ -17,7 +18,10 @@ const ProjectsSection = () => {
           {projectLang.description}
         </p>
         <div className="mt-3 mb-4 text-right">
-          <RouterLink to="/project" className="text-sm text-white hover:underline">
+          <RouterLink
+            to={getLocalizedPath("/project", lang)}
+            className="text-sm text-white hover:underline"
+          >
             {lang === "en" ? "See all projects" : "Lihat semua proyek"}
           </RouterLink>
         </div>

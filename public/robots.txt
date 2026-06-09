@@ -1,2 +1,4 @@
 User-agent: *
-Sitemap: https://portfolio.alwi.tech/sitemap.xml
+Allow: /
+
+Sitemap: https://www.imambahri.com/sitemap.xml

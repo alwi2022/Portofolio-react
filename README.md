@@ -19,7 +19,7 @@ A modern, responsive, and bilingual portfolio built with React, Vite, and Tailwi
 
 ## Live Demo
 
-[https://portfolio.alwi.tech](https://portfolio.alwi.tech)
+[https://www.imambahri.com](https://www.imambahri.com)
 
 ## Tech Stack
 
@@ -76,7 +76,7 @@ Feel free to reach out if you'd like to collaborate or just say hello!
 
 - GitHub: [@alwi2022](https://github.com/alwi2022)
 - LinkedIn: [Imam Bahri Alwi](https://www.linkedin.com/in/imambahrialwi)
-- Portfolio: [portfolio.alwi.tech](https://portfolio.alwi.tech)
+- Portfolio: [www.imambahri.com](https://www.imambahri.com)
 
 ---
 

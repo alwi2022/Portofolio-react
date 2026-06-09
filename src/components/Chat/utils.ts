@@ -87,7 +87,7 @@ export function buildProfileFromLang(lang: "en" | "id") {
     links: {
       portfolio:
         projects[0]?.links.find((link) => link.labelKey === "website")
-          ?.url ?? "https://portfolio.alwi.tech/",
+          ?.url ?? "https://www.imambahri.com/",
       github: "https://github.com/alwi2022",
       linkedin: "https://www.linkedin.com/in/imambahrialwi/",
       email: "imambahrialwi21@gmail.com",

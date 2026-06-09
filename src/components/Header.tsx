@@ -1,18 +1,28 @@
 import { useState, useEffect } from "react";
 import type { MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
+import { useLocation, useNavigate } from "react-router";
 import { useLang } from "../context/LangContext";
 import { getNavigationItems } from "../utils/navigation";
 import { useNavigation } from "../hooks/useNavigation";
+import { getLocalizedPath } from "../utils/seo";
 
 const Header = () => {
   const { lang, setLang } = useLang();
   const navigationItems = getNavigationItems(lang);
   const { handleNavigation } = useNavigation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
-  const toggleLang = () => setLang(lang === "en" ? "id" : "en");
+  const toggleLang = () => {
+    const nextLang = lang === "en" ? "id" : "en";
+    const nextPath = getLocalizedPath(location.pathname, nextLang);
+
+    setLang(nextLang);
+    navigate(`${nextPath}${location.search}${location.hash}`);
+  };
 
   const handleNavClick = (item: typeof navigationItems[0], event: MouseEvent) => {
     event.preventDefault();

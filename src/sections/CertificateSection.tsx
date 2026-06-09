@@ -2,6 +2,7 @@ import { useLang } from "../context/LangContext";
 import { langData } from "../data/langData";
 import { ExternalLink } from "lucide-react";
 import { Link as RouterLink } from "react-router";
+import { getLocalizedPath } from "../utils/seo";
 
 const CertificateSection = () => {
   const { lang } = useLang();
@@ -21,7 +22,7 @@ const CertificateSection = () => {
           </p>
           <div className="mt-3 mb-4 text-right">
             <RouterLink
-              to="/certificates"
+              to={getLocalizedPath("/certificates", lang)}
               className="text-sm text-white hover:underline"
             >
               {lang === "en" ? "See all certificates" : "Lihat semua sertifikat"}
