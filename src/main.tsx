@@ -46,7 +46,7 @@ function LocalizedRoute({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const app = (
   <React.StrictMode>
     <LangProvider>
       <BrowserRouter>
@@ -100,3 +100,15 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     </LangProvider>
   </React.StrictMode>
 );
+
+// react-snap prerenders each route to static HTML at build time so the per-route
+// metadata set by <Seo /> is present in the initial HTML (for social scrapers and
+// non-JS crawlers). When that prerendered markup exists, hydrate it; otherwise
+// (dev) mount fresh.
+const rootElement = document.getElementById("root")!;
+
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrateRoot(rootElement, app);
+} else {
+  ReactDOM.createRoot(rootElement).render(app);
+}
