@@ -21,7 +21,15 @@
       "/",
       "/project",
       "/experience",
-      "/certificates"
+      "/certificates",
+      "/en",
+      "/en/project",
+      "/en/experience",
+      "/en/certificates",
+      "/id",
+      "/id/project",
+      "/id/experience",
+      "/id/certificates"
     ],
     "puppeteerArgs": [
       "--no-sandbox",
