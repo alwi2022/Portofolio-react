@@ -101,14 +101,7 @@ const app = (
   </React.StrictMode>
 );
 
-// react-snap prerenders each route to static HTML at build time so the per-route
-// metadata set by <Seo /> is present in the initial HTML (for social scrapers and
-// non-JS crawlers). When that prerendered markup exists, hydrate it; otherwise
-// (dev) mount fresh.
-const rootElement = document.getElementById("root")!;
-
-if (rootElement.hasChildNodes()) {
-  ReactDOM.hydrateRoot(rootElement, app);
-} else {
-  ReactDOM.createRoot(rootElement).render(app);
-}
+// The build emits one static HTML file per route (see prerender-seo in
+// vite.config.js) with that route's head metadata already in place; the body is
+// always client-rendered from here.
+ReactDOM.createRoot(document.getElementById("root")!).render(app);
