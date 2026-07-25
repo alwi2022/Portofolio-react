@@ -213,13 +213,17 @@ export function buildStructuredData(seo: SeoState) {
         inLanguage: seo.lang,
         isPartOf: { "@id": `${SITE_URL}/#website` },
         about: { "@id": `${SITE_URL}/#me` },
+        // ProfilePage requires mainEntity (the person the profile is about).
+        mainEntity: { "@id": `${SITE_URL}/#me` },
         primaryImageOfPage: {
           "@type": "ImageObject",
           url: seo.imageUrl,
           width: 1200,
           height: 630,
         },
-        dateModified: "2026-06-09",
+        // Full ISO-8601 datetime with timezone; a date-only value is rejected
+        // as an invalid datetime by Google's structured-data validator.
+        dateModified: "2026-06-09T00:00:00+07:00",
       },
     ],
   };
