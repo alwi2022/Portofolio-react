@@ -1,0 +1,54 @@
+# Imam Bahri Alwi
+
+> Full-stack developer in Tangerang, Indonesia, building production web and mobile systems across frontend, backend, databases, authentication, payments, automation, and SEO. Primary stack: TypeScript, Next.js, React Native, Node.js, NestJS, Express, Prisma, PostgreSQL, and Supabase.
+
+The site is a personal portfolio. Indonesian is the default language and is served
+at the bare path; English lives under /en. Both languages carry the same content.
+
+## Current role
+
+Full-Stack Developer at Konten.com (June 2026 – present), a creator-clipping
+platform. Work spans authentication, rewards and gamification, content systems,
+and automation. Also built the Kelas Clipper backend domain: 76 endpoints,
+22 PostgreSQL tables, and 23 production-safe migrations on a shared database
+serving approximately 150,000 accounts.
+
+## Pages
+
+- [Home](https://www.imambahri.com/): profile, skills, GitHub contributions, professional experience, education, and certificates
+- [Professional experience](https://www.imambahri.com/experience): five roles, each with responsibilities and the stack used
+- [Projects](https://www.imambahri.com/project): index of five selected projects
+- [Certificates](https://www.imambahri.com/certificates): eight credentials with verification links
+
+## Projects
+
+- [Satria Gear](https://www.imambahri.com/project/satria-gear): esports tournament platform with an admin operations dashboard, Midtrans payment automation, and an AI agent wired into Discord, GitHub Actions, and Vercel deploy logs
+- [OpenClaw Discord AI Moderator](https://www.imambahri.com/project/openclaw): prototype testing whether AI agents can carry real community moderation workflows
+- [TypeSynq Royale](https://www.imambahri.com/project/typesynq-royale): real-time multiplayer typing battle with on-chain betting on the Monad Testnet; top 6 at the official Monad Game Hackathon
+- [Galaxy POS](https://www.imambahri.com/project/galaxy-pos): Laravel 8 point-of-sale with multi-branch support, a service-repair module, and WhatsApp status notifications
+- [Maneka](https://www.imambahri.com/project/maneka): AI-powered career planning app built on Howard Gardner's Theory of Multiple Intelligences
+
+## Experience
+
+- Konten.com, Full-Stack Developer (June 2026 – present)
+- Kelas Clipper, Backend Developer (August 2026 – September 2026)
+- PT. Berkat Indah Garment (DRX), Full-Stack Developer (May 2025 – June 2026)
+- Hallo Hukum, Frontend Developer (February – May 2025, contract, completed)
+- ExplorePulau.id, Web Developer & SEO Recovery, freelance (March – April 2025)
+
+## Education
+
+- Hacktiv8, Full Stack JavaScript Immersive Program (October 2024 – February 2025)
+- Nurul Huda Baros Vocational High School, Multimedia (2020 – 2023)
+
+## Contact
+
+- Email: imambahrialwi21@gmail.com
+- GitHub: https://github.com/alwi2022
+- LinkedIn: https://www.linkedin.com/in/imambahrialwi
+- CV (PDF): https://www.imambahri.com/fullstack-cv-imambahrialwi.pdf
+
+## Optional
+
+- [English version](https://www.imambahri.com/en): same content, English copy
+- [Sitemap](https://www.imambahri.com/sitemap.xml): all 18 indexable URLs

@@ -1,0 +1,46 @@
+{
+  "github-contributions": {
+    "tooltip": "{count, number} kontribusi pada {date}",
+    "total": "{count, number} kontribusi dalam setahun terakhir di <link>GitHub</link>.",
+    "graph": {
+      "title": "Grafik Kontribusi",
+      "months": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Mei",
+        "Jun",
+        "Jul",
+        "Agu",
+        "Sep",
+        "Okt",
+        "Nov",
+        "Des"
+      ],
+      "weekdays": [
+        "Min",
+        "Sen",
+        "Sel",
+        "Rab",
+        "Kam",
+        "Jum",
+        "Sab"
+      ],
+      "total-count": "{count, number} kontribusi dalam setahun terakhir",
+      "legend": {
+        "less": "Sedikit",
+        "more": "Banyak",
+        "level": "{count, number} kontribusi"
+      }
+    }
+  },
+  "mode-toggle": {
+    "sr-label": "Ganti tema",
+    "options": {
+      "light": "Terang",
+      "dark": "Gelap",
+      "system": "Sistem"
+    }
+  }
+}

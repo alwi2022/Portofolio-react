@@ -1,5 +1,9 @@
 export const SITE_URL = "https://www.imambahri.com";
-export const DEFAULT_LANG = "en";
+export const DEFAULT_LANG = "id";
+
+// Evaluated once when the page is built, so structured data reports a real
+// last-modified date instead of a hardcoded one.
+export const BUILD_DATE = new Date().toISOString();
 export const SUPPORTED_LANGS = ["en", "id"] as const;
 
 export type SupportedLang = (typeof SUPPORTED_LANGS)[number];
@@ -34,46 +38,46 @@ const PAGE_BY_SEGMENT: Record<string, SeoPage> = {
 const SEO_COPY: Record<SupportedLang, Record<SeoPage, SeoCopy>> = {
   en: {
     home: {
-      title: "Imam Bahri Alwi | Fullstack Developer",
+      title: "Imam Bahri Alwi | Full-Stack Developer (Next.js, Node.js)",
       description:
-        "Explore Imam Bahri Alwi's portfolio, projects, experience, certificates, and full-stack development work in React, Next.js, Node.js, and modern web applications.",
+        "Explore Imam Bahri Alwi's portfolio: professional experience, education, certificates, and full-stack development work in TypeScript, Next.js, React Native, Node.js, and modern web applications.",
     },
     experience: {
-      title: "Experience | Imam Bahri Alwi",
+      title: "Full-Stack Developer Experience | Imam Bahri Alwi",
       description:
         "Professional experience of Imam Bahri Alwi as a full-stack developer working with React, Next.js, Node.js, React Native, SEO, and scalable web systems.",
     },
     project: {
-      title: "Projects | Imam Bahri Alwi",
+      title: "Full-Stack, Mobile & Web3 Projects | Imam Bahri Alwi",
       description:
         "Selected full-stack, mobile, Web3, and product projects built by Imam Bahri Alwi using React, TypeScript, Node.js, Laravel, and modern development tools.",
     },
     certificates: {
-      title: "Certificates | Imam Bahri Alwi",
+      title: "Certificates in AWS, SQL & JavaScript | Imam Bahri Alwi",
       description:
-        "Certificates and credentials earned by Imam Bahri Alwi across JavaScript, React, Node.js, SQL, AWS cloud basics, and web development.",
+        "Certificates and credentials earned by Imam Bahri Alwi across full-stack JavaScript, algorithms and data structures, SQL, and AWS cloud basics.",
     },
   },
   id: {
     home: {
-      title: "Imam Bahri Alwi | Fullstack Developer",
+      title: "Imam Bahri Alwi | Full-Stack Developer (Next.js, Node.js)",
       description:
-        "Lihat portfolio Imam Bahri Alwi, mulai dari proyek, pengalaman, sertifikat, hingga karya full-stack dengan React, Next.js, Node.js, dan aplikasi web modern.",
+        "Lihat portfolio Imam Bahri Alwi, mulai dari pengalaman profesional, pendidikan, sertifikat, hingga karya full-stack dengan TypeScript, Next.js, React Native, Node.js, dan aplikasi web modern.",
     },
     experience: {
-      title: "Pengalaman | Imam Bahri Alwi",
+      title: "Pengalaman Full-Stack Developer | Imam Bahri Alwi",
       description:
         "Pengalaman profesional Imam Bahri Alwi sebagai full-stack developer dengan React, Next.js, Node.js, React Native, SEO, dan sistem web yang scalable.",
     },
     project: {
-      title: "Proyek | Imam Bahri Alwi",
+      title: "Proyek Full-Stack, Mobile & Web3 | Imam Bahri Alwi",
       description:
         "Kumpulan proyek full-stack, mobile, Web3, dan produk yang dibuat Imam Bahri Alwi menggunakan React, TypeScript, Node.js, Laravel, dan tools modern.",
     },
     certificates: {
-      title: "Sertifikat | Imam Bahri Alwi",
+      title: "Sertifikat AWS, SQL & JavaScript | Imam Bahri Alwi",
       description:
-        "Sertifikat dan kredensial Imam Bahri Alwi di bidang JavaScript, React, Node.js, SQL, dasar AWS cloud, dan pengembangan web.",
+        "Sertifikat dan kredensial Imam Bahri Alwi di bidang full-stack JavaScript, algoritma dan struktur data, SQL, serta dasar AWS cloud.",
     },
   },
 };
@@ -137,7 +141,7 @@ export function getSeoState(
     imageUrl: toAbsoluteUrl("/og-image.png"),
     alternates: {
       en: toAbsoluteUrl(buildPagePath(page, "en")),
-      id: toAbsoluteUrl(buildPagePath(page, "id")),
+      id: toAbsoluteUrl(buildPagePath(page)),
       "x-default": toAbsoluteUrl(buildPagePath(page)),
     },
   };
@@ -223,8 +227,33 @@ export function buildStructuredData(seo: SeoState) {
         },
         // Full ISO-8601 datetime with timezone; a date-only value is rejected
         // as an invalid datetime by Google's structured-data validator.
-        dateModified: "2026-06-09T00:00:00+07:00",
+        dateModified: BUILD_DATE,
       },
     ],
+  };
+}
+
+export function getProjectSeoState(
+  pathname: string,
+  fallbackLang: SupportedLang,
+  project: { slug: string; title: string; description: string; role?: string },
+): SeoState {
+  const pathLang = getLangFromPath(pathname);
+  const lang = pathLang ?? fallbackLang;
+  const projectPath = (forLang?: SupportedLang) =>
+    `${forLang ? `/${forLang}` : ""}/project/${project.slug}`;
+
+  return {
+    page: "project",
+    lang,
+    title: `${project.title} | Imam Bahri Alwi`,
+    description: project.description,
+    canonicalUrl: toAbsoluteUrl(projectPath(pathLang)),
+    imageUrl: toAbsoluteUrl("/og-image.png"),
+    alternates: {
+      en: toAbsoluteUrl(projectPath("en")),
+      id: toAbsoluteUrl(projectPath()),
+      "x-default": toAbsoluteUrl(projectPath()),
+    },
   };
 }
