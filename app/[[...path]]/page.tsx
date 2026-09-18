@@ -6,7 +6,7 @@ import { Experience, Education } from '@/components/portfolio/experience';
 import { ProjectList, ProjectDetail } from '@/components/portfolio/projects';
 import { BackLink, ProjectBackLink } from '@/components/portfolio/back-link';
 import { langData } from '@/lib/content';
-import { getSeoState, getProjectSeoState, buildStructuredData, toAbsoluteUrl } from '@/lib/seo';
+import { getSeoState, getProjectSeoState, buildStructuredData } from '@/lib/seo';
 import { resolveRoute, pagePath, PROJECT_SLUGS } from '@/lib/routes';
 
 type Props = { params: Promise<{ path?: string[] }> };
@@ -33,10 +33,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const route = resolveRoute(path);
   if (!route) return { title: 'Page not found | Imam Bahri Alwi', robots: { index: false } };
   const seo = seoFor(path, route.lang, route.slug);
-  // Share a project's own preview image; every other page uses the site card.
-  const project = route.slug ? langData[route.lang].projects.items.find(item => item.slug === route.slug) : undefined;
-  const shareImage = project ? toAbsoluteUrl(project.image) : seo.imageUrl;
-  return { title: seo.title, description: seo.description, metadataBase: new URL('https://www.imambahri.com'), alternates: { canonical: seo.canonicalUrl, languages: seo.alternates }, openGraph: { type: 'website', title: seo.title, description: seo.description, url: seo.canonicalUrl, images: [shareImage] }, twitter: { card: 'summary_large_image', title: seo.title, description: seo.description, images: [shareImage] }, icons: { icon: '/favicon.ico' } };
+  // Every page shares the same JPEG card. Link-preview crawlers are stricter
+  // than browsers: WhatsApp in particular does not reliably render a WebP
+  // og:image, and the project covers are WebP. A generic preview that always
+  // appears beats a per-project one that sometimes does not.
+  const share = {
+    url: seo.imageUrl,
+    width: 1200,
+    height: 800,
+    type: 'image/jpeg',
+    alt: 'Imam Bahri Alwi, Full-Stack Developer',
+  };
+  return {
+    title: seo.title,
+    description: seo.description,
+    metadataBase: new URL('https://www.imambahri.com'),
+    alternates: { canonical: seo.canonicalUrl, languages: seo.alternates },
+    openGraph: {
+      type: 'website',
+      siteName: 'Imam Bahri Alwi',
+      locale: route.lang === 'id' ? 'id_ID' : 'en_US',
+      title: seo.title,
+      description: seo.description,
+      url: seo.canonicalUrl,
+      images: [share],
+    },
+    twitter: { card: 'summary_large_image', title: seo.title, description: seo.description, images: [share.url] },
+    icons: { icon: '/favicon.ico' },
+  };
 }
 
 export default async function Page({ params }: Props) {

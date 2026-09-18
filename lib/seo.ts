@@ -132,7 +132,7 @@ export function getSeoState(
     lang,
     ...SEO_COPY[lang][page],
     canonicalUrl: toAbsoluteUrl(buildPagePath(page, pathLang)),
-    imageUrl: toAbsoluteUrl("/og-image.webp"),
+    imageUrl: toAbsoluteUrl("/og-image.jpg"),
     alternates: {
       en: toAbsoluteUrl(buildPagePath(page, "en")),
       id: toAbsoluteUrl(buildPagePath(page)),
@@ -243,7 +243,7 @@ export function getProjectSeoState(
     title: `${project.title} | Imam Bahri Alwi`,
     description: project.description,
     canonicalUrl: toAbsoluteUrl(projectPath(pathLang)),
-    imageUrl: toAbsoluteUrl("/og-image.webp"),
+    imageUrl: toAbsoluteUrl("/og-image.jpg"),
     alternates: {
       en: toAbsoluteUrl(projectPath("en")),
       id: toAbsoluteUrl(projectPath()),

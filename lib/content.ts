@@ -387,11 +387,6 @@ export const langData = {
           credentialUrl: "https://www.hackerrank.com/certificates/1d057e9da521",
         },
         {
-          title: "React (Basic) - HackerRank",
-          image: "/images/certificates/hackerrank-react.webp",
-          credentialUrl: "https://www.hackerrank.com/certificates/bb7a82f2383c",
-        },
-        {
           title: "JavaScript (Intermediate) - HackerRank",
           image: "/images/certificates/hackerrank-javascript.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/3d00c06b155e",
@@ -805,11 +800,6 @@ export const langData = {
           title: "SQL (Intermediate) - HackerRank",
           image: "/images/certificates/hackerrank-sql.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/1d057e9da521",
-        },
-        {
-          title: "React (Basic) - HackerRank",
-          image: "/images/certificates/hackerrank-react.webp",
-          credentialUrl: "https://www.hackerrank.com/certificates/bb7a82f2383c",
         },
         {
           title: "JavaScript (Intermediate) - HackerRank",

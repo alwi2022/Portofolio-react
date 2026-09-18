@@ -18,7 +18,7 @@ serving approximately 150,000 accounts.
 - [Home](https://www.imambahri.com/): profile, skills, GitHub contributions, professional experience, education, and certificates
 - [Professional experience](https://www.imambahri.com/experience): five roles, each with responsibilities and the stack used
 - [Projects](https://www.imambahri.com/project): index of five selected projects
-- [Certificates](https://www.imambahri.com/certificates): eight credentials with verification links
+- [Certificates](https://www.imambahri.com/certificates): seven credentials with verification links
 
 ## Projects
 
