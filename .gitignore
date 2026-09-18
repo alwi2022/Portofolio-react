@@ -30,6 +30,9 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 
-# Dibuat ulang otomatis oleh `next dev`; tidak perlu masuk repo
+# Dokumen audit internal
+VERIFICATION-REPORT.md
+
+# Dibuat ulang otomatis oleh `next dev`
 AGENTS.md
 CLAUDE.md
