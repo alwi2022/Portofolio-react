@@ -2,7 +2,7 @@ export const langData = {
   en: {
     hero: {
       typed: ["Full-Stack Developer", "Software Developer", "Tech Enthusiast"],
-      desc: "Full-stack developer experienced in delivering production web and mobile systems across frontend, backend, databases, authentication, payments, automation, and SEO. Built end-to-end product features with TypeScript, Next.js, React Native, Node.js, Supabase, and PostgreSQL, including a 76-endpoint education platform on a production database serving approximately 150,000 accounts.",
+      desc: "I'm a full-stack developer building web and mobile applications with TypeScript, Next.js, React Native, and Node.js. My work covers the interface and the services behind it, including authentication, payments, automation, and SEO. I've also built an education platform with 76 API endpoints on a shared production database serving around 150,000 accounts, using Supabase and PostgreSQL.",
     },
     projects: {
       sectionTitle: "Projects",
@@ -426,7 +426,7 @@ export const langData = {
         "Pengembang Perangkat Lunak",
         "Penggemar Teknologi",
       ],
-      desc: "Full-stack developer dengan pengalaman merilis sistem web dan mobile production di sisi frontend, backend, database, autentikasi, pembayaran, otomasi, dan SEO. Membangun fitur produk end-to-end dengan TypeScript, Next.js, React Native, Node.js, Supabase, dan PostgreSQL, termasuk platform edukasi 76 endpoint di atas database produksi yang melayani sekitar 150.000 akun.",
+      desc: "Saya full-stack developer yang membangun aplikasi web dan mobile dengan TypeScript, Next.js, React Native, dan Node.js. Saya mengerjakan antarmuka dan layanan di baliknya, termasuk autentikasi, pembayaran, otomasi, dan SEO. Saya juga membangun platform edukasi dengan 76 endpoint API di atas database produksi bersama yang melayani sekitar 150.000 akun, menggunakan Supabase dan PostgreSQL.",
     },
 
     projects: {
