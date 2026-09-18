@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { langData, type LangKey } from '@/src/data/langData';
+import { langData, type LangKey } from '@/lib/content';
 import { pagePath, projectPath } from '@/lib/routes';
 
 export function ProjectList({ lang, limit, from }: { lang: LangKey; limit?: number; from?: 'home' }) {

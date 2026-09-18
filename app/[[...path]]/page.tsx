@@ -5,8 +5,8 @@ import { Intro, Skills, Contributions, Certificates, Contact } from '@/component
 import { Experience, Education } from '@/components/portfolio/experience';
 import { ProjectList, ProjectDetail } from '@/components/portfolio/projects';
 import { BackLink, ProjectBackLink } from '@/components/portfolio/back-link';
-import { langData } from '@/src/data/langData';
-import { getSeoState, getProjectSeoState, buildStructuredData, toAbsoluteUrl } from '@/src/utils/seo';
+import { langData } from '@/lib/content';
+import { getSeoState, getProjectSeoState, buildStructuredData, toAbsoluteUrl } from '@/lib/seo';
 import { resolveRoute, pagePath, PROJECT_SLUGS } from '@/lib/routes';
 
 type Props = { params: Promise<{ path?: string[] }> };

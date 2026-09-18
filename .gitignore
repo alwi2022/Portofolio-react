@@ -29,3 +29,7 @@ dist-ssr
 out/
 *.tsbuildinfo
 next-env.d.ts
+
+# Dibuat ulang otomatis oleh `next dev`; tidak perlu masuk repo
+AGENTS.md
+CLAUDE.md

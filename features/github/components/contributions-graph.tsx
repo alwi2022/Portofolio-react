@@ -1,6 +1,5 @@
 "use client";
 
-import { LoaderIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { use, useEffect, useMemo, useRef, useState } from "react";
 
@@ -134,10 +133,3 @@ export function GitHubContributionsGraph({
   );
 }
 
-export function GitHubContributionFallback() {
-  return (
-    <div className="flex h-40.5 w-full items-center justify-center">
-      <LoaderIcon className="text-muted-foreground animate-spin" />
-    </div>
-  );
-}

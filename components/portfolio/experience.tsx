@@ -3,11 +3,11 @@ import Image from 'next/image';
 import { GraduationCap } from 'lucide-react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
-import { langData, type LangKey } from '@/src/data/langData';
+import { langData, type LangKey } from '@/lib/content';
 import { cn } from '@/lib/utils';
 
 // Logos supplied only as white artwork; flip them to dark ink on the light theme.
-const INVERT_ON_LIGHT = new Set(['/images/companies/explorepulau-mark.png']);
+const INVERT_ON_LIGHT = new Set(['/images/companies/explore-pulau.webp']);
 
 function CompanyLogo({ src }: { src: string }) {
   return <Image src={src} alt="" width={32} height={32} className={cn('size-8 shrink-0 object-contain', INVERT_ON_LIGHT.has(src) && 'invert dark:invert-0')} />;

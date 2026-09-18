@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ModeToggle } from '@/components/theme/mode-toggle';
 import { buttonVariants } from '@/components/ui/button';
 import { pagePath, type Page } from '@/lib/routes';
-import type { LangKey } from '@/src/data/langData';
+import type { LangKey } from '@/lib/content';
 
 export function Navbar({ lang, page }: { lang: LangKey; page: Page }) {
   return <nav aria-label={lang === 'id' ? 'Navigasi utama' : 'Main navigation'} className="m-8 flex justify-center">

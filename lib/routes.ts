@@ -1,4 +1,4 @@
-import { langData, type LangKey } from '@/src/data/langData';
+import { langData, type LangKey } from '@/lib/content';
 
 export type Page = 'home' | 'project' | 'experience' | 'certificates';
 export type Route = { lang: LangKey; page: Page; slug?: string };

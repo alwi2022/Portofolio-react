@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight, Code, Download, Github, Home, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { langData, type LangKey } from '@/src/data/langData';
+import { langData, type LangKey } from '@/lib/content';
 import { pagePath } from '@/lib/routes';
 import { getGitHubContributions } from '@/features/github/server/get-contributions';
 import { GitHubContributionsGraph } from '@/features/github/components/contributions-graph';
@@ -11,7 +11,7 @@ const skills = ['TypeScript', 'JavaScript', 'React', 'Next.js', 'React Native', 
 export function Intro({ lang }: { lang: LangKey }) {
   return <section>
     <div className="relative flex w-full">
-      <div className="relative block size-28 shrink-0 md:size-36"><Image src="/imam.png" alt="Imam Bahri Alwi" fill sizes="(max-width: 768px) 112px, 144px" preload className="object-contain" /></div>
+      <div className="relative block size-28 shrink-0 md:size-36"><Image src="/imam.webp" alt="Imam Bahri Alwi" fill sizes="(max-width: 768px) 112px, 144px" preload className="object-contain" /></div>
       <div className="absolute top-1/2 left-28 md:left-36"><h1 className="text-lg leading-6 font-medium">Imam Bahri Alwi</h1><p className="text-sm text-muted-foreground">{langData[lang].hero.typed[0]}</p></div>
     </div>
     <div className="flex flex-col gap-1 text-sm [&_svg]:size-4 [&_svg]:shrink-0">
