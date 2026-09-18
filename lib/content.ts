@@ -106,12 +106,6 @@ export const langData = {
           ],
           gallery: [
             {
-              src: "/images/projects/galaxy-pos/login.png",
-              caption: "Redesigned login page",
-              width: 1919,
-              height: 996,
-            },
-            {
               src: "/images/projects/galaxy-pos/sidebar.webp",
               caption: "Dashboard with the reworked sidebar and ChartJS reporting",
               width: 1920,
@@ -530,12 +524,6 @@ export const langData = {
             "Sepanjang pengerjaan saya memperbaiki error PDF yang membuat cetak barcode member dan produk gagal, memodernkan sidebar, membangun ulang halaman login, dan mendesain ulang tata letak nota. Aplikasinya di-deploy ke AWS dan bisa dicoba langsung.",
           ],
           gallery: [
-            {
-              src: "/images/projects/galaxy-pos/login.png",
-              caption: "Halaman login yang didesain ulang",
-              width: 1919,
-              height: 996,
-            },
             {
               src: "/images/projects/galaxy-pos/sidebar.webp",
               caption: "Dashboard dengan sidebar baru dan laporan ChartJS",

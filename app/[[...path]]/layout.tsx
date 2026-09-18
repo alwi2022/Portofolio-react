@@ -17,7 +17,7 @@ export default async function Layout({ children, params }: { children: React.Rea
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(#D8E5F2B3_1px,transparent_1px)] mask-[radial-gradient(ellipse_50%_75%_at_50%_50%,#000_70%,transparent_100%)] bg-size-[20px_20px] dark:bg-[radial-gradient(#ffffff25_1px,transparent_1px)]" />
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
         <NextIntlClientProvider locale={lang} timeZone="Asia/Jakarta" messages={lang === 'id' ? id : en}>
-          <Navbar lang={lang} page={route?.page ?? 'home'} />
+          <Navbar lang={lang} page={route?.page ?? 'home'} slug={route?.slug} />
           {children}
           <Footer lang={lang} />
         </NextIntlClientProvider>
