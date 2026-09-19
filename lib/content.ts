@@ -9,11 +9,14 @@ export const langData = {
       allLabel: "All projects",
       backLabel: "Back to projects",
       backHomeLabel: "Back to home",
+      intro:
+        "Five projects I built end to end, from esports tournament operations to an on-chain multiplayer game. Each page covers the problem it solved, the stack behind it, and what actually shipped. Most run in production with real users; one is a prototype built to test whether an AI agent could carry real moderation work, and one came out of a hackathon. Where a project is publicly reachable, the link is on its page.",
       items: [
         {
           slug: "satria-gear",
           title: "Satria Gear",
           role: "Full-Stack Developer & AI Automation Engineer",
+          kicker: "Esports Tournament Platform",
           image: "/images/projects/satria-gear/cover.webp",
           description: "Esports tournament platform with public schedules, brackets and registration, an admin operations dashboard, and an AI-assisted DevOps workflow.",
           body: [
@@ -43,6 +46,7 @@ export const langData = {
           slug: "openclaw",
           title: "OpenClaw Discord AI Moderator",
           role: "AI Automation Engineer",
+          kicker: "Prototype",
           image: "/images/projects/openclaw/cover.webp",
           description: "Discord AI moderator prototype built to test whether AI agents can support real community moderation workflows.",
           body: [
@@ -63,6 +67,7 @@ export const langData = {
           slug: "typesynq-royale",
           title: "TypeSynq Royale",
           role: "Full-Stack Web3 Developer",
+          kicker: "Web3 Typing Game",
           image: "/images/projects/typesynq-royale/cover.webp",
           description: "Real-time multiplayer typing battle game with on-chain betting and reward distribution on the Monad Testnet.",
           body: [
@@ -95,6 +100,7 @@ export const langData = {
           slug: "galaxy-pos",
           title: "Galaxy POS",
           role: "Full-Stack Developer",
+          kicker: "Laravel Point of Sale",
           image: "/images/projects/galaxy-pos/cover.webp",
           description: "Point of Sales app to manage sales, cashier, reporting, branches, and service workflows, built with Laravel 8.",
           body: [
@@ -157,6 +163,7 @@ export const langData = {
           slug: "maneka",
           title: "Maneka",
           role: "Frontend Developer (Team Project)",
+          kicker: "AI Career Planning App",
           image: "/images/projects/maneka/cover.webp",
           description: "AI-powered career planning platform that helps users discover their strengths through Howard Gardner's Theory of Multiple Intelligences.",
           body: [
@@ -356,43 +363,50 @@ export const langData = {
     certificates: {
       sectionTitle: "Certificates",
       description:
-        "Here are some of the certificates I've earned through my learning journey and professional development.",
+        "Seven credentials from Hacktiv8, freeCodeCamp, Dicoding, and HackerRank, covering full-stack JavaScript, algorithms and data structures, SQL, Node.js, and AWS cloud fundamentals. The freeCodeCamp, Dicoding, and HackerRank entries link straight to the issuer's verification page, so they can be checked independently.",
       viewCredential: "View Credential",
       items: [
         {
           title: "Fullstack Javascript Immersive",
+          issuer: "Hacktiv8",
           image: "/images/certificates/hacktiv8.webp",
           credentialUrl:
             "https://www.imambahri.com/images/certificates/hacktiv8-certificate.webp",
         },
         {
           title: "JavaScript Algorithms and Data Structures",
+          issuer: "freeCodeCamp",
           image: "/images/certificates/freecodecamp-javascript.webp",
           credentialUrl:
-            "https://freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
+            "https://www.freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
         },
         {
           title: "Cloud Practitioner Essentials (AWS Cloud Basics)",
+          issuer: "Dicoding",
           image: "/images/certificates/dicoding-aws.webp",
           credentialUrl: "https://www.dicoding.com/certificates/QLZ92LDKDX5D",
         },
         {
           title: "Problem Solving (Basic) - HackerRank",
+          issuer: "HackerRank",
           image: "/images/certificates/hackerrank-problem-solving.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/80f26cd43965",
         },
         {
           title: "SQL (Intermediate) - HackerRank",
+          issuer: "HackerRank",
           image: "/images/certificates/hackerrank-sql.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/1d057e9da521",
         },
         {
           title: "JavaScript (Intermediate) - HackerRank",
+          issuer: "HackerRank",
           image: "/images/certificates/hackerrank-javascript.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/3d00c06b155e",
         },
         {
           title: "Node.js (Intermediate) - HackerRank",
+          issuer: "HackerRank",
           image: "/images/certificates/hackerrank-nodejs.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/d9e76b8ad085",
         },
@@ -423,11 +437,14 @@ export const langData = {
       allLabel: "Semua proyek",
       backLabel: "Kembali ke proyek",
       backHomeLabel: "Kembali ke beranda",
+      intro:
+        "Lima proyek yang saya bangun dari nol, mulai dari operasional turnamen esports sampai game multiplayer on-chain. Setiap halaman berisi masalah yang diselesaikan, stack yang dipakai, dan apa yang akhirnya benar-benar jalan. Sebagian berjalan di produksi dengan pengguna nyata; satu berupa prototipe untuk menguji apakah AI agent bisa menangani moderasi sungguhan, satu lagi lahir dari hackathon. Kalau proyeknya bisa diakses publik, tautannya ada di halamannya.",
       items: [
         {
           slug: "satria-gear",
           title: "Satria Gear",
           role: "Full-Stack Developer & AI Automation Engineer",
+          kicker: "Platform Turnamen Esports",
           image: "/images/projects/satria-gear/cover.webp",
           description: "Platform turnamen esports dengan jadwal, bracket, dan pendaftaran publik, dashboard operasional admin, serta alur DevOps berbantuan AI.",
           body: [
@@ -457,6 +474,7 @@ export const langData = {
           slug: "openclaw",
           title: "OpenClaw Discord AI Moderator",
           role: "AI Automation Engineer",
+          kicker: "Prototipe",
           image: "/images/projects/openclaw/cover.webp",
           description: "Prototipe moderator AI Discord untuk menguji apakah AI agent bisa mendukung alur moderasi komunitas yang sesungguhnya.",
           body: [
@@ -477,6 +495,7 @@ export const langData = {
           slug: "typesynq-royale",
           title: "TypeSynq Royale",
           role: "Full-Stack Web3 Developer",
+          kicker: "Game Ketik Web3",
           image: "/images/projects/typesynq-royale/cover.webp",
           description: "Game balap mengetik multiplayer real-time dengan taruhan dan pembagian hadiah on-chain di Monad Testnet.",
           body: [
@@ -509,6 +528,7 @@ export const langData = {
           slug: "galaxy-pos",
           title: "Galaxy POS",
           role: "Full-Stack Developer",
+          kicker: "Aplikasi Point of Sale",
           image: "/images/projects/galaxy-pos/cover.webp",
           description: "Aplikasi Point of Sales untuk mengelola penjualan, kasir, laporan, cabang, dan layanan servis, dibangun dengan Laravel 8.",
           body: [
@@ -571,6 +591,7 @@ export const langData = {
           slug: "maneka",
           title: "Maneka",
           role: "Frontend Developer (Team Project)",
+          kicker: "Aplikasi Karier Berbasis AI",
           image: "/images/projects/maneka/cover.webp",
           description: "Platform perencanaan karier berbasis AI yang membantu pengguna mengenali kekuatan dirinya lewat Teori Kecerdasan Majemuk Howard Gardner.",
           body: [
@@ -771,43 +792,50 @@ export const langData = {
     certificates: {
       sectionTitle: "Sertifikat",
       description:
-        "Berikut adalah beberapa sertifikat yang telah saya peroleh melalui perjalanan belajar dan pengembangan profesional.",
+        "Tujuh kredensial dari Hacktiv8, freeCodeCamp, Dicoding, dan HackerRank, mencakup full-stack JavaScript, algoritma dan struktur data, SQL, Node.js, serta dasar AWS cloud. Kredensial freeCodeCamp, Dicoding, dan HackerRank tertaut langsung ke halaman verifikasi penerbitnya, jadi bisa dicek sendiri.",
       viewCredential: "Lihat Kredensial",
       items: [
         {
           title: "Fullstack Javascript Immersive",
+          issuer: "Hacktiv8",
           image: "/images/certificates/hacktiv8.webp",
           credentialUrl:
             "https://www.imambahri.com/images/certificates/hacktiv8-certificate.webp",
         },
         {
           title: "JavaScript Algorithms and Data Structures",
+          issuer: "freeCodeCamp",
           image: "/images/certificates/freecodecamp-javascript.webp",
           credentialUrl:
             "https://www.freecodecamp.org/certification/alwi2025/javascript-algorithms-and-data-structures-v8",
         },
         {
           title: "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
+          issuer: "Dicoding",
           image: "/images/certificates/dicoding-aws.webp",
           credentialUrl: "https://www.dicoding.com/certificates/QLZ92LDKDX5D",
         },
         {
           title: "Problem Solving (Basic) - HackerRank",
+          issuer: "HackerRank",
           image: "/images/certificates/hackerrank-problem-solving.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/80f26cd43965",
         },
         {
           title: "SQL (Intermediate) - HackerRank",
+          issuer: "HackerRank",
           image: "/images/certificates/hackerrank-sql.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/1d057e9da521",
         },
         {
           title: "JavaScript (Intermediate) - HackerRank",
+          issuer: "HackerRank",
           image: "/images/certificates/hackerrank-javascript.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/3d00c06b155e",
         },
         {
           title: "Node.js (Intermediate) - HackerRank",
+          issuer: "HackerRank",
           image: "/images/certificates/hackerrank-nodejs.webp",
           credentialUrl: "https://www.hackerrank.com/certificates/d9e76b8ad085",
         },

@@ -6,7 +6,7 @@ import { Experience, Education } from '@/components/portfolio/experience';
 import { ProjectList, ProjectDetail } from '@/components/portfolio/projects';
 import { BackLink, ProjectBackLink } from '@/components/portfolio/back-link';
 import { langData } from '@/lib/content';
-import { getSeoState, getProjectSeoState, buildStructuredData } from '@/lib/seo';
+import { getSeoState, getProjectSeoState, buildStructuredData, SHARE_IMAGE } from '@/lib/seo';
 import { resolveRoute, pagePath, PROJECT_SLUGS } from '@/lib/routes';
 
 type Props = { params: Promise<{ path?: string[] }> };
@@ -39,10 +39,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // appears beats a per-project one that sometimes does not.
   const share = {
     url: seo.imageUrl,
-    width: 1200,
-    height: 800,
-    type: 'image/jpeg',
-    alt: 'Imam Bahri Alwi, Full-Stack Developer',
+    width: SHARE_IMAGE.width,
+    height: SHARE_IMAGE.height,
+    type: SHARE_IMAGE.type,
+    alt: SHARE_IMAGE.alt,
   };
   return {
     title: seo.title,
@@ -103,7 +103,7 @@ export default async function Page({ params }: Props) {
         </div>
         {slug && <ProjectDetail lang={lang} slug={slug} />}
         {page === 'project' && !slug && <ProjectList lang={lang} />}
-        {page === 'experience' && <Experience lang={lang} />}
+        {page === 'experience' && <Experience lang={lang} headingLevel={2} />}
         {page === 'certificates' && <Certificates lang={lang} />}
       </>}
     </div></div>

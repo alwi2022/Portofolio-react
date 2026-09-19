@@ -32,6 +32,7 @@ next-env.d.ts
 
 # Dokumen audit internal
 VERIFICATION-REPORT.md
+*-audit/
 
 # Dibuat ulang otomatis oleh `next dev`
 AGENTS.md

@@ -11,7 +11,7 @@ const skills = ['TypeScript', 'JavaScript', 'React', 'Next.js', 'React Native', 
 export function Intro({ lang }: { lang: LangKey }) {
   return <section>
     <div className="relative flex w-full">
-      <div className="relative block size-28 shrink-0 md:size-36"><Image src="/imam.webp" alt="Imam Bahri Alwi" fill sizes="(max-width: 768px) 112px, 144px" preload className="object-contain" /></div>
+      <div className="relative block size-28 shrink-0 md:size-36"><Image src="/imam.webp" alt="Imam Bahri Alwi" fill sizes="(max-width: 768px) 112px, 144px" preload fetchPriority="high" className="object-contain" /></div>
       <div className="absolute top-1/2 left-28 md:left-36"><h1 className="text-lg leading-6 font-medium">Imam Bahri Alwi</h1><p className="text-sm text-muted-foreground">{langData[lang].hero.typed[0]}</p></div>
     </div>
     <div className="flex flex-col gap-1 text-sm [&_svg]:size-4 [&_svg]:shrink-0">
@@ -33,11 +33,16 @@ export async function Contributions({ lang }: { lang: LangKey }) {
 }
 export function Certificates({ lang, preview = false }: { lang: LangKey; preview?: boolean }) {
   const t = langData[lang].certificates;
+  // Full page: the <h1> is "Certificates", so entries are h2. Home teaser:
+  // they nest under the section's h2, so h3. The intro belongs to the full
+  // page only — the home section stays a three-item teaser.
+  const Title = preview ? 'h3' : 'h2';
   return <div>
+    {!preview && <p className="mb-6 leading-relaxed">{t.description}</p>}
     <ul className="divide-y">{(preview ? t.items.slice(0, 3) : t.items).map(cert => <li key={cert.title}>
       <a href={cert.credentialUrl} target="_blank" rel="noreferrer" className="group flex items-center gap-4 py-4">
         <Image src={cert.image} alt="" width={72} height={48} className="h-12 w-18 rounded border object-cover" />
-        <span className="flex-1"><span className="font-medium group-hover:underline underline-offset-4">{cert.title}</span><span className="mt-1 block text-xs text-muted-foreground">{t.viewCredential}</span></span><ArrowUpRight className="size-4 shrink-0 text-muted-foreground" />
+        <span className="flex-1"><Title className="font-medium group-hover:underline underline-offset-4">{cert.title}</Title><span className="mt-1 block text-xs text-muted-foreground">{cert.issuer} &middot; {t.viewCredential}</span></span><ArrowUpRight className="size-4 shrink-0 text-muted-foreground" />
       </a>
     </li>)}</ul>
     {preview && <Link href={pagePath(lang, 'certificates')} className="mt-3 inline-flex min-h-9 items-center gap-1 text-xs font-medium hover:underline">{lang === 'id' ? 'Semua sertifikat' : 'All certificates'}<ArrowUpRight className="size-3" /></Link>}

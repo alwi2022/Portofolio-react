@@ -8,18 +8,28 @@ import { pagePath, projectPath } from '@/lib/routes';
 export function ProjectList({ lang, limit, from }: { lang: LangKey; limit?: number; from?: 'home' }) {
   const t = langData[lang].projects;
   const items = limit ? t.items.slice(0, limit) : t.items;
+  // Only the index renders the whole list. There the page <h1> is "Projects",
+  // so entries are h2; on the home page they nest under the section's h2 and
+  // are therefore h3. The index also carries the intro, thumbnails and
+  // per-project summaries — the home teaser stays compact.
+  const isIndex = !limit;
+  const Title = isIndex ? 'h2' : 'h3';
   return <div>
+    {isIndex && <p className="mb-6 leading-relaxed">{t.intro}</p>}
     <ul className="divide-y">
       {items.map(project => {
         // Widened so a project without a role still falls back to its summary.
         const subtitle: string = project.role;
         return <li key={project.slug}>
-          <Link href={from === 'home' ? `${projectPath(lang, project.slug)}?from=home` : projectPath(lang, project.slug)} className="group flex items-center gap-4 py-4 first:pt-0">
+          <Link href={from === 'home' ? `${projectPath(lang, project.slug)}?from=home` : projectPath(lang, project.slug)} className={`group flex gap-4 py-4 first:pt-0 ${isIndex ? 'items-start' : 'items-center'}`}>
+            {/* Empty alt: the heading beside it already names the project. */}
+            {isIndex && <Image src={project.image} alt="" width={96} height={56} className="h-14 w-24 shrink-0 rounded border object-cover" />}
             <span className="min-w-0 flex-1">
-              <span className="block font-medium group-hover:underline underline-offset-4">{project.title}</span>
-              <span className="mt-1 block line-clamp-1 text-xs text-muted-foreground">{subtitle || project.description}</span>
+              <Title className="font-medium group-hover:underline underline-offset-4">{project.title}</Title>
+              <span className={`mt-1 block text-xs text-muted-foreground ${isIndex ? '' : 'line-clamp-1'}`}>{subtitle || project.description}</span>
+              {isIndex && <span className="mt-1.5 block text-sm text-muted-foreground">{project.description}</span>}
             </span>
-            <ArrowUpRight className="size-4 shrink-0 text-muted-foreground" />
+            <ArrowUpRight className={`size-4 shrink-0 text-muted-foreground ${isIndex ? 'mt-1' : ''}`} />
           </Link>
         </li>;
       })}
@@ -33,7 +43,10 @@ export function ProjectDetail({ lang, slug }: { lang: LangKey; slug: string }) {
   const project = t.items.find(item => item.slug === slug);
   if (!project) return null;
   return <article>
-    <Image src={project.image} alt={`${project.title} preview`} width={960} height={540} priority className="mb-8 aspect-video w-full rounded-md border object-cover" sizes="(max-width: 768px) calc(100vw - 64px), 576px" />
+    {/* `preload` replaces the deprecated `priority` prop in Next 16. It only
+        inserts a <link rel=preload>, so the LCP hint on the element itself
+        still has to be set explicitly. */}
+    <Image src={project.image} alt={`${project.title} preview`} width={960} height={540} preload fetchPriority="high" className="mb-8 aspect-video w-full rounded-md border object-cover" sizes="(max-width: 768px) calc(100vw - 64px), 576px" />
     <div className="flex flex-col gap-4 leading-relaxed">{project.body.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
     {project.gallery.length > 0 && <div className="mt-8 flex flex-col gap-6">
       {project.gallery.map(shot => <figure key={shot.src}>

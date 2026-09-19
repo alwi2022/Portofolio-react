@@ -1,5 +1,17 @@
 const SITE_URL = "https://www.imambahri.com";
 
+// The real dimensions of public/og-image.jpg, read from the file itself.
+// Exported so the OG tags and the JSON-LD cannot disagree again: they used to
+// declare 1200x800 and 1200x630 respectively, and the structured data was the
+// one asserting something the file does not say.
+export const SHARE_IMAGE = {
+  path: "/og-image.jpg",
+  width: 1200,
+  height: 800,
+  type: "image/jpeg",
+  alt: "Imam Bahri Alwi, Full-Stack Developer",
+} as const;
+
 // Evaluated once when the page is built, so structured data reports a real
 // last-modified date instead of a hardcoded one.
 const BUILD_DATE = new Date().toISOString();
@@ -35,9 +47,14 @@ const PAGE_BY_SEGMENT: Record<string, SeoPage> = {
 const SEO_COPY: Record<SupportedLang, Record<SeoPage, SeoCopy>> = {
   en: {
     home: {
-      title: "Imam Bahri Alwi | Full-Stack Developer (Next.js, Node.js)",
+      // Must not match the Indonesian title byte-for-byte. Search Console
+      // reported /en as "Duplicate, Google chose a different canonical than
+      // the user" while the two titles were identical, so the English pages
+      // were being folded into their Indonesian twins despite correct,
+      // reciprocal hreflang.
+      title: "Imam Bahri Alwi | Full-Stack Developer in Jakarta, Indonesia",
       description:
-        "Explore Imam Bahri Alwi's portfolio: professional experience, education, certificates, and full-stack development work in TypeScript, Next.js, React Native, Node.js, and modern web applications.",
+        "Portfolio of Imam Bahri Alwi, a full-stack developer in Jakarta building web and mobile products with TypeScript, Next.js, Node.js, and React Native.",
     },
     experience: {
       title: "Full-Stack Developer Experience | Imam Bahri Alwi",
@@ -57,9 +74,9 @@ const SEO_COPY: Record<SupportedLang, Record<SeoPage, SeoCopy>> = {
   },
   id: {
     home: {
-      title: "Imam Bahri Alwi | Full-Stack Developer (Next.js, Node.js)",
+      title: "Imam Bahri Alwi | Full-Stack Developer Next.js & Node.js",
       description:
-        "Lihat portfolio Imam Bahri Alwi, mulai dari pengalaman profesional, pendidikan, sertifikat, hingga karya full-stack dengan TypeScript, Next.js, React Native, Node.js, dan aplikasi web modern.",
+        "Portfolio Imam Bahri Alwi, full-stack developer di Jakarta yang membangun aplikasi web dan mobile dengan TypeScript, Next.js, Node.js, dan React Native.",
     },
     experience: {
       title: "Pengalaman Full-Stack Developer | Imam Bahri Alwi",
@@ -170,10 +187,14 @@ export function buildStructuredData(seo: SeoState) {
           "@type": "Organization",
           name: "Hacktiv8",
         },
+        // Mirrors the social accounts declared on github.com/alwi2022, so the
+        // profiles this graph names and the profiles GitHub names agree in
+        // both directions. Agreement is what entity resolution runs on.
         sameAs: [
           "https://github.com/alwi2022",
           "https://www.linkedin.com/in/imambahrialwi",
           "https://www.instagram.com/aaalwi1/",
+          "https://x.com/AlwiImam72318",
         ],
         address: {
           "@type": "PostalAddress",
@@ -216,8 +237,8 @@ export function buildStructuredData(seo: SeoState) {
         primaryImageOfPage: {
           "@type": "ImageObject",
           url: seo.imageUrl,
-          width: 1200,
-          height: 630,
+          width: SHARE_IMAGE.width,
+          height: SHARE_IMAGE.height,
         },
         // Full ISO-8601 datetime with timezone; a date-only value is rejected
         // as an invalid datetime by Google's structured-data validator.
@@ -230,17 +251,29 @@ export function buildStructuredData(seo: SeoState) {
 export function getProjectSeoState(
   pathname: string,
   fallbackLang: SupportedLang,
-  project: { slug: string; title: string; description: string; role?: string },
+  project: {
+    slug: string;
+    title: string;
+    description: string;
+    role?: string;
+    kicker?: string;
+  },
 ): SeoState {
   const pathLang = getLangFromPath(pathname);
   const lang = pathLang ?? fallbackLang;
   const projectPath = (forLang?: SupportedLang) =>
     `${forLang ? `/${forLang}` : ""}/project/${project.slug}`;
+  // `kicker` is translated per language, so it keeps each project's two titles
+  // distinct. Without it both read "<Title> | Imam Bahri Alwi" in either
+  // language, which is what got /en folded into / as a duplicate.
+  const headline = project.kicker
+    ? `${project.title} — ${project.kicker}`
+    : project.title;
 
   return {
     page: "project",
     lang,
-    title: `${project.title} | Imam Bahri Alwi`,
+    title: `${headline} | Imam Bahri Alwi`,
     description: project.description,
     canonicalUrl: toAbsoluteUrl(projectPath(pathLang)),
     imageUrl: toAbsoluteUrl("/og-image.jpg"),

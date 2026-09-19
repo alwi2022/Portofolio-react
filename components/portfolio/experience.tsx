@@ -13,20 +13,25 @@ function CompanyLogo({ src }: { src: string }) {
   return <Image src={src} alt="" width={32} height={32} className={cn('size-8 shrink-0 object-contain', INVERT_ON_LIGHT.has(src) && 'invert dark:invert-0')} />;
 }
 
-export function Experience({ lang }: { lang: LangKey }) {
+export function Experience({ lang, headingLevel }: { lang: LangKey; headingLevel?: 2 | 3 }) {
   return <Accordion collapsible type="single">
     {langData[lang].experience.items.map((work) => <AccordionItem key={work.company} value={work.company}>
-      <AccordionTrigger>
+      <AccordionTrigger headingLevel={headingLevel}>
         <div className="flex flex-1 items-center gap-4 px-4">
           <CompanyLogo src={work.logo} />
           <div className="flex flex-1 flex-col items-start">
             <div className="flex w-full flex-row justify-between">
               <span className="leading-6">{work.company}</span>
+              {/* CSS separates these visually, but the heading serialises as one
+                  string for screen readers and for anything extracting text, so
+                  it needs real punctuation: "Konten.com, 06/26 - Sekarang,
+                  Full-Stack Developer" rather than one run-on word. */}
+              <span className="sr-only">, </span>
               {/* Dates use the reference's compact MM/YY form; nowrap keeps a
                   long company name from breaking the range across two lines. */}
               <span className="text-xs whitespace-nowrap text-muted-foreground">{work.duration}</span>
             </div>
-            <p className="text-xs font-light text-muted-foreground">{work.position}</p>
+            <p className="text-xs font-light text-muted-foreground"><span className="sr-only">, </span>{work.position}</p>
           </div>
         </div>
       </AccordionTrigger>

@@ -1,6 +1,6 @@
 # Imam Bahri Alwi
 
-> Full-stack developer in Tangerang, Indonesia, building production web and mobile systems across frontend, backend, databases, authentication, payments, automation, and SEO. Primary stack: TypeScript, Next.js, React Native, Node.js, NestJS, Express, Prisma, PostgreSQL, and Supabase.
+> Imam Bahri Alwi is a full-stack developer in Jakarta, Indonesia, building production web and mobile systems across frontend, backend, databases, authentication, payments, automation, and SEO. Primary stack: TypeScript, Next.js, React Native, Node.js, NestJS, Express, Prisma, PostgreSQL, and Supabase.
 
 The site is a personal portfolio. Indonesian is the default language and is served
 at the bare path; English lives under /en. Both languages carry the same content.
