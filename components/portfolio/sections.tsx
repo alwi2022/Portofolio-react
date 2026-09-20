@@ -38,7 +38,6 @@ export function Certificates({ lang, preview = false }: { lang: LangKey; preview
   // page only — the home section stays a three-item teaser.
   const Title = preview ? 'h3' : 'h2';
   return <div>
-    {!preview && <p className="mb-6 leading-relaxed">{t.description}</p>}
     <ul className="divide-y">{(preview ? t.items.slice(0, 3) : t.items).map(cert => <li key={cert.title}>
       <a href={cert.credentialUrl} target="_blank" rel="noreferrer" className="group flex items-center gap-4 py-4">
         <Image src={cert.image} alt="" width={72} height={48} className="h-12 w-18 rounded border object-cover" />

@@ -9,8 +9,6 @@ export const langData = {
       allLabel: "All projects",
       backLabel: "Back to projects",
       backHomeLabel: "Back to home",
-      intro:
-        "Five projects I built end to end, from esports tournament operations to an on-chain multiplayer game. Each page covers the problem it solved, the stack behind it, and what actually shipped. Most run in production with real users; one is a prototype built to test whether an AI agent could carry real moderation work, and one came out of a hackathon. Where a project is publicly reachable, the link is on its page.",
       items: [
         {
           slug: "satria-gear",
@@ -363,7 +361,7 @@ export const langData = {
     certificates: {
       sectionTitle: "Certificates",
       description:
-        "Seven credentials from Hacktiv8, freeCodeCamp, Dicoding, and HackerRank, covering full-stack JavaScript, algorithms and data structures, SQL, Node.js, and AWS cloud fundamentals. The freeCodeCamp, Dicoding, and HackerRank entries link straight to the issuer's verification page, so they can be checked independently.",
+        "Here are some of the certificates I've earned through my learning journey and professional development.",
       viewCredential: "View Credential",
       items: [
         {
@@ -437,8 +435,6 @@ export const langData = {
       allLabel: "Semua proyek",
       backLabel: "Kembali ke proyek",
       backHomeLabel: "Kembali ke beranda",
-      intro:
-        "Lima proyek yang saya bangun dari nol, mulai dari operasional turnamen esports sampai game multiplayer on-chain. Setiap halaman berisi masalah yang diselesaikan, stack yang dipakai, dan apa yang akhirnya benar-benar jalan. Sebagian berjalan di produksi dengan pengguna nyata; satu berupa prototipe untuk menguji apakah AI agent bisa menangani moderasi sungguhan, satu lagi lahir dari hackathon. Kalau proyeknya bisa diakses publik, tautannya ada di halamannya.",
       items: [
         {
           slug: "satria-gear",
@@ -792,7 +788,7 @@ export const langData = {
     certificates: {
       sectionTitle: "Sertifikat",
       description:
-        "Tujuh kredensial dari Hacktiv8, freeCodeCamp, Dicoding, dan HackerRank, mencakup full-stack JavaScript, algoritma dan struktur data, SQL, Node.js, serta dasar AWS cloud. Kredensial freeCodeCamp, Dicoding, dan HackerRank tertaut langsung ke halaman verifikasi penerbitnya, jadi bisa dicek sendiri.",
+        "Berikut adalah beberapa sertifikat yang telah saya peroleh melalui perjalanan belajar dan pengembangan profesional.",
       viewCredential: "Lihat Kredensial",
       items: [
         {

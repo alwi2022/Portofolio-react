@@ -10,26 +10,20 @@ export function ProjectList({ lang, limit, from }: { lang: LangKey; limit?: numb
   const items = limit ? t.items.slice(0, limit) : t.items;
   // Only the index renders the whole list. There the page <h1> is "Projects",
   // so entries are h2; on the home page they nest under the section's h2 and
-  // are therefore h3. The index also carries the intro, thumbnails and
-  // per-project summaries — the home teaser stays compact.
+  // are therefore h3.
   const isIndex = !limit;
   const Title = isIndex ? 'h2' : 'h3';
   return <div>
-    {isIndex && <p className="mb-6 leading-relaxed">{t.intro}</p>}
     <ul className="divide-y">
       {items.map(project => {
-        // Widened so a project without a role still falls back to its summary.
         const subtitle: string = project.role;
         return <li key={project.slug}>
-          <Link href={from === 'home' ? `${projectPath(lang, project.slug)}?from=home` : projectPath(lang, project.slug)} className={`group flex gap-4 py-4 first:pt-0 ${isIndex ? 'items-start' : 'items-center'}`}>
-            {/* Empty alt: the heading beside it already names the project. */}
-            {isIndex && <Image src={project.image} alt="" width={96} height={56} className="h-14 w-24 shrink-0 rounded border object-cover" />}
+          <Link href={from === 'home' ? `${projectPath(lang, project.slug)}?from=home` : projectPath(lang, project.slug)} className="group flex items-center gap-4 py-4 first:pt-0">
             <span className="min-w-0 flex-1">
               <Title className="font-medium group-hover:underline underline-offset-4">{project.title}</Title>
-              <span className={`mt-1 block text-xs text-muted-foreground ${isIndex ? '' : 'line-clamp-1'}`}>{subtitle || project.description}</span>
-              {isIndex && <span className="mt-1.5 block text-sm text-muted-foreground">{project.description}</span>}
+              <span className="mt-1 block line-clamp-1 text-xs text-muted-foreground">{subtitle || project.description}</span>
             </span>
-            <ArrowUpRight className={`size-4 shrink-0 text-muted-foreground ${isIndex ? 'mt-1' : ''}`} />
+            <ArrowUpRight className="size-4 shrink-0 text-muted-foreground" />
           </Link>
         </li>;
       })}
