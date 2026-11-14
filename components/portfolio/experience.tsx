@@ -20,7 +20,7 @@ export function Experience({ lang, headingLevel }: { lang: LangKey; headingLevel
         <div className="flex flex-1 items-center gap-4 px-4">
           <CompanyLogo src={work.logo} />
           <div className="flex flex-1 flex-col items-start">
-            <div className="flex w-full flex-row justify-between">
+            <div className="flex w-full flex-col gap-x-3 gap-y-1 sm:flex-row sm:justify-between">
               <span className="leading-6">{work.company}</span>
               {/* CSS separates these visually, but the heading serialises as one
                   string for screen readers and for anything extracting text, so

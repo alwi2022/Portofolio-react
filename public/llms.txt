@@ -7,30 +7,35 @@ at the bare path; English lives under /en. Both languages carry the same content
 
 ## Current role
 
-Full-Stack Developer at Konten.com (June 2026 – present), a creator-clipping
-platform. Work spans authentication, rewards and gamification, content systems,
-and automation. Also built the Kelas Clipper backend domain: 76 endpoints,
-22 PostgreSQL tables, and 23 production-safe migrations on a shared database
-serving approximately 150,000 accounts.
+Software Engineer (Contract) at PT Brifion Marden Group (October 2026 - present).
+Work covers a supermarket/distribution system, backend and database design,
+authentication and access control, stock and journal foundations, transaction
+integrity, integration testing, solution demos, and AI-assisted outreach planning.
+Previously Full-Stack Developer at Konten.com (June - October 2026). Also built
+the Kelas Clipper backend: 76 endpoints on a shared production database serving
+approximately 150,000 accounts.
 
 ## Pages
 
 - [Home](https://www.imambahri.com/): profile, skills, GitHub contributions, professional experience, education, and certificates
-- [Professional experience](https://www.imambahri.com/experience): five roles, each with responsibilities and the stack used
-- [Projects](https://www.imambahri.com/project): index of five selected projects
+- [Professional experience](https://www.imambahri.com/experience): six roles, each with responsibilities and the stack used
+- [Projects](https://www.imambahri.com/project): index of seven selected projects
 - [Certificates](https://www.imambahri.com/certificates): seven credentials with verification links
 
 ## Projects
 
+- [Knect](https://www.imambahri.com/project/knect): HRIS with a NestJS API, Next.js administration, and Flutter employee app; organization and employee records, shifts, GPS/face attendance, requests/approvals, payroll/payslips, performance, recruitment, announcements, notifications, and reports
+- [Taskflow](https://www.imambahri.com/project/taskflow): projects, Kanban, scheduling, workload, collaboration, attachments, notifications, reports, project documents, custom statuses/fields, and OAuth-based MCP connections for AI assistants; an account is required
 - [Satria Gear](https://www.imambahri.com/project/satria-gear): esports tournament platform with an admin operations dashboard, Midtrans payment automation, and an AI agent wired into Discord, GitHub Actions, and Vercel deploy logs
 - [OpenClaw Discord AI Moderator](https://www.imambahri.com/project/openclaw): prototype testing whether AI agents can carry real community moderation workflows
 - [TypeSynq Royale](https://www.imambahri.com/project/typesynq-royale): real-time multiplayer typing battle with on-chain betting on the Monad Testnet; top 6 at the official Monad Game Hackathon
-- [Galaxy POS](https://www.imambahri.com/project/galaxy-pos): Laravel 8 point-of-sale with multi-branch support, a service-repair module, and WhatsApp status notifications
+- [Galaxy POS](https://www.imambahri.com/project/galaxy-pos): Laravel multi-branch POS with retail, repairs, stock/returns, cash/bank/capital, loans/assets, double-entry journals, ledgers, financial statements, VAT summaries, period closing, and an offline Electron/PHP/SQLite Windows desktop app with backup/restore
 - [Maneka](https://www.imambahri.com/project/maneka): AI-powered career planning app built on Howard Gardner's Theory of Multiple Intelligences
 
 ## Experience
 
-- Konten.com, Full-Stack Developer (June 2026 – present)
+- PT Brifion Marden Group, Software Engineer (Contract) (October 2026 - present)
+- Konten.com, Full-Stack Developer (June - October 2026)
 - Kelas Clipper, Backend Developer (August 2026 – September 2026)
 - PT. Berkat Indah Garment (DRX), Full-Stack Developer (May 2025 – June 2026)
 - Hallo Hukum, Frontend Developer (February – May 2025, contract, completed)
@@ -51,4 +56,4 @@ serving approximately 150,000 accounts.
 ## Optional
 
 - [English version](https://www.imambahri.com/en): same content, English copy
-- [Sitemap](https://www.imambahri.com/sitemap.xml): all 18 indexable URLs
+- [Sitemap](https://www.imambahri.com/sitemap.xml): all 22 indexable URLs

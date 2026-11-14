@@ -2,6 +2,8 @@
 
 Portfolio minimalist menggunakan Next.js App Router, React, TypeScript, dan Tailwind CSS. Tampilan mengikuti project referensi lokal portfolio, dengan konten dan aset Imam Bahri Alwi.
 
+Website: [imambahri.com](https://imambahri.com).
+
 ## Menjalankan
 
 Gunakan Node.js 20.9+ dan npm.
@@ -29,6 +31,7 @@ npm start
 ## Konten dan rute
 
 - `lib/content.ts`: data proyek, pengalaman, pendidikan, sertifikat, dan terjemahan.
+- `lib/project-features.ts`: rincian fitur Knect HRIS, Galaxy POS, dan Taskflow dalam kedua bahasa.
 - `lib/seo.ts`: metadata, canonical, hreflang, dan structured data.
 - `lib/routes.ts`: pemetaan URL ke bahasa dan halaman.
 - `app/[[...path]]`: satu catch-all route untuk seluruh halaman portfolio.
@@ -38,7 +41,7 @@ npm start
 
 Bahasa default adalah Indonesia dan disajikan tanpa prefix; Inggris memakai `/en`.
 Rute yang tersedia: `/`, `/project`, `/project/<slug>`, `/experience`, `/certificates`,
-beserta padanan `/en/...` — 18 URL, sama persis dengan isi `sitemap.xml`.
+beserta padanan `/en/...` — 22 URL, sama persis dengan isi `sitemap.xml`.
 
 Tidak ada rute `/id/...`. URL tersebut dialihkan 301 ke padanan tanpa prefix lewat
 `vercel.json`, sehingga hanya berlaku saat di-deploy ke Vercel. Di `next start` lokal

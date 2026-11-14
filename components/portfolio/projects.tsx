@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { langData, type LangKey } from '@/lib/content';
 import { pagePath, projectPath } from '@/lib/routes';
+import { projectFeatures } from '@/lib/project-features';
 
 export function ProjectList({ lang, limit, from }: { lang: LangKey; limit?: number; from?: 'home' }) {
   const t = langData[lang].projects;
@@ -36,15 +37,37 @@ export function ProjectDetail({ lang, slug }: { lang: LangKey; slug: string }) {
   const t = langData[lang].projects;
   const project = t.items.find(item => item.slug === slug);
   if (!project) return null;
+  const isTaskflow = project.slug === 'taskflow';
+  const featureKey = project.slug;
+  const featureGroups = featureKey === 'knect' || featureKey === 'galaxy-pos' || featureKey === 'taskflow'
+    ? projectFeatures[lang][featureKey]
+    : undefined;
   return <article>
-    {/* `preload` replaces the deprecated `priority` prop in Next 16. It only
-        inserts a <link rel=preload>, so the LCP hint on the element itself
-        still has to be set explicitly. */}
-    <Image src={project.image} alt={`${project.title} preview`} width={960} height={540} preload fetchPriority="high" className="mb-8 aspect-video w-full rounded-md border object-cover" sizes="(max-width: 768px) calc(100vw - 64px), 576px" />
+    <figure className="mb-8">
+      {isTaskflow ? <a href={project.image} target="_blank" rel="noreferrer" className="block rounded-md" aria-label={lang === 'id' ? 'Lihat jadwal mingguan ukuran penuh' : 'View full-size weekly planner'}>
+        <Image src={project.image} alt={project.imageCaption} width={1920} height={1200} preload fetchPriority="high" className="h-auto w-full rounded-md border" sizes="(max-width: 768px) calc(100vw - 64px), 576px" />
+      </a> : <Image src={project.image} alt={'imageCaption' in project ? project.imageCaption : `${project.title} preview`} width={960} height={540} preload fetchPriority="high" className="aspect-video w-full rounded-md border object-cover" sizes="(max-width: 768px) calc(100vw - 64px), 576px" />}
+      {'imageCaption' in project && <figcaption className="mt-2 text-xs text-muted-foreground">
+        {project.imageCaption}
+      </figcaption>}
+    </figure>
     <div className="flex flex-col gap-4 leading-relaxed">{project.body.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+    {featureGroups && <section className="mt-10" aria-labelledby="project-features-title">
+      <h2 id="project-features-title" className="text-lg font-medium">{lang === 'id' ? 'Fitur' : 'Features'}</h2>
+      <div className="mt-6 flex flex-col gap-7">
+        {featureGroups.map(group => <section key={group.title}>
+          <h3 className="font-medium">{group.title}</h3>
+          <ul className="mt-3 list-disc space-y-2 pl-5 leading-relaxed marker:text-muted-foreground">
+            {group.items.map(item => <li key={item} className="pl-1">{item}</li>)}
+          </ul>
+        </section>)}
+      </div>
+    </section>}
     {project.gallery.length > 0 && <div className="mt-8 flex flex-col gap-6">
       {project.gallery.map(shot => <figure key={shot.src}>
-        <Image src={shot.src} alt={shot.caption} width={shot.width} height={shot.height} className="w-full rounded-md border" sizes="(max-width: 768px) calc(100vw - 64px), 576px" />
+        {isTaskflow ? <a href={shot.src} target="_blank" rel="noreferrer" className="block rounded-md" aria-label={lang === 'id' ? 'Lihat beban kerja tim ukuran penuh' : 'View full-size team workload'}>
+          <Image src={shot.src} alt={shot.caption} width={shot.width} height={shot.height} className="h-auto w-full rounded-md border" sizes="(max-width: 768px) calc(100vw - 64px), 576px" />
+        </a> : <Image src={shot.src} alt={shot.caption} width={shot.width} height={shot.height} className={shot.height > shot.width ? 'mx-auto w-full max-w-80 rounded-md border' : 'w-full rounded-md border'} sizes={shot.height > shot.width ? '(max-width: 384px) calc(100vw - 64px), 320px' : '(max-width: 768px) calc(100vw - 64px), 576px'} />}
         <figcaption className="mt-2 text-xs text-muted-foreground">{shot.caption}</figcaption>
       </figure>)}
     </div>}
