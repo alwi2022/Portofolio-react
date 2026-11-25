@@ -1,0 +1,1 @@
+export const skills = ['TypeScript', 'JavaScript', 'PHP', 'Dart', 'React', 'Next.js', 'React Native', 'Flutter', 'Node.js', 'NestJS', 'Express.js', 'Laravel', 'Prisma', 'PostgreSQL', 'Supabase', 'MongoDB', 'Tailwind CSS', 'Docker'];

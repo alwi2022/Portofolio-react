@@ -5,6 +5,7 @@ import { Navbar, Footer } from '@/components/portfolio/chrome';
 import { resolveRoute } from '@/lib/routes';
 import en from '@/messages/en.json';
 import id from '@/messages/id.json';
+import { ChatAssistant } from '@/components/portfolio/chat-assistant';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
@@ -20,6 +21,7 @@ export default async function Layout({ children, params }: { children: React.Rea
           <Navbar lang={lang} page={route?.page ?? 'home'} slug={route?.slug} />
           {children}
           <Footer lang={lang} />
+          <ChatAssistant key={lang} lang={lang} />
         </NextIntlClientProvider>
       </ThemeProvider>
     </body>

@@ -7,15 +7,16 @@ import { pagePath } from '@/lib/routes';
 import { getGitHubContributions } from '@/features/github/server/get-contributions';
 import { GitHubContributionsGraph } from '@/features/github/components/contributions-graph';
 
-const skills = ['TypeScript', 'JavaScript', 'PHP', 'Dart', 'React', 'Next.js', 'React Native', 'Flutter', 'Node.js', 'NestJS', 'Express.js', 'Laravel', 'Prisma', 'PostgreSQL', 'Supabase', 'MongoDB', 'Tailwind CSS', 'Docker'];
+import { skills } from '@/lib/skills';
 export function Intro({ lang }: { lang: LangKey }) {
+  const currentExperience = langData[lang].experience.items[0];
   return <section>
     <div className="relative flex w-full">
       <div className="relative block size-28 shrink-0 md:size-36"><Image src="/imam.webp" alt="Imam Bahri Alwi" fill sizes="(max-width: 768px) 112px, 144px" preload fetchPriority="high" className="object-contain" /></div>
       <div className="absolute top-1/2 left-28 md:left-36"><h1 className="text-lg leading-6 font-medium">Imam Bahri Alwi</h1><p className="text-sm text-muted-foreground">{langData[lang].hero.typed[0]}</p></div>
     </div>
     <div className="flex flex-col gap-1 text-sm [&_svg]:size-4 [&_svg]:shrink-0">
-      <p className="flex min-h-6 items-center gap-3 px-3 whitespace-nowrap"><Code /><span>Full-Stack Developer <span className="font-medium">@Konten.com</span></span></p>
+      <p className="flex min-h-6 items-center gap-3 px-3"><Code /><span>{currentExperience.position} <span className="font-medium">@{currentExperience.company}</span></span></p>
       <a className="profile-link" href="https://www.google.com/maps/search/?api=1&query=Jakarta%2C+Indonesia" target="_blank" rel="noreferrer"><Home />Jakarta, Indonesia</a>
       <a className="profile-link" href="mailto:imambahrialwi21@gmail.com"><Mail />imambahrialwi21@gmail.com</a>
       <a className="profile-link" href="https://www.linkedin.com/in/imambahrialwi/" target="_blank" rel="noreferrer"><Linkedin />linkedin.com/in/imambahrialwi</a>
