@@ -7,7 +7,7 @@ import { pagePath } from '@/lib/routes';
 import { getGitHubContributions } from '@/features/github/server/get-contributions';
 import { GitHubContributionsGraph } from '@/features/github/components/contributions-graph';
 
-const skills = ['TypeScript', 'JavaScript', 'React', 'Next.js', 'React Native', 'Node.js', 'NestJS', 'Express.js', 'Prisma', 'PostgreSQL', 'Supabase', 'MongoDB', 'Tailwind CSS', 'Docker'];
+const skills = ['TypeScript', 'JavaScript', 'PHP', 'Dart', 'React', 'Next.js', 'React Native', 'Flutter', 'Node.js', 'NestJS', 'Express.js', 'Laravel', 'Prisma', 'PostgreSQL', 'Supabase', 'MongoDB', 'Tailwind CSS', 'Docker'];
 export function Intro({ lang }: { lang: LangKey }) {
   return <section>
     <div className="relative flex w-full">
