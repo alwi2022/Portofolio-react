@@ -41,6 +41,55 @@ function inlineText(text: string) {
   });
 }
 
+function LauncherMascot() {
+  const [action, setAction] = useState<'idle' | 'peek' | 'wiggle' | 'hop'>('idle');
+  const [attentive, setAttentive] = useState(false);
+  useEffect(() => {
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let timer: ReturnType<typeof setTimeout>;
+    let turn = 0;
+    let disposed = false;
+    const schedule = () => {
+      if (disposed || motion.matches || document.hidden || attentive) return;
+      timer = setTimeout(() => {
+        const actions = ['peek', 'wiggle', 'hop'] as const;
+        setAction(actions[turn++ % actions.length]);
+        timer = setTimeout(() => { setAction('idle'); schedule(); }, 2100);
+      }, 8000 + Math.random() * 7000);
+    };
+    const reset = () => { clearTimeout(timer); setAction('idle'); schedule(); };
+    schedule();
+    document.addEventListener('visibilitychange', reset);
+    motion.addEventListener('change', reset);
+    return () => { disposed = true; clearTimeout(timer); document.removeEventListener('visibilitychange', reset); motion.removeEventListener('change', reset); };
+  }, [attentive]);
+  return <span className="chat-launcher-life" data-action={attentive ? 'idle' : action} onPointerEnter={event => { if (event.pointerType === 'mouse') setAttentive(true); }} onPointerLeave={() => { setAction('idle'); setAttentive(false); }}><span className="chat-launcher-motion"><Mascot /></span></span>;
+}
+
+function ReactiveMascot({ listening, lang }: { listening: boolean; lang: LangKey }) {
+  const [reaction, setReaction] = useState<'idle' | 'angry'>('idle');
+  const clicks = useRef<number[]>([]);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
+
+  function poke() {
+    const now = Date.now();
+    clicks.current = [...clicks.current.filter(time => now - time < 2000), now];
+    if (clicks.current.length < 4) return;
+    setReaction('angry');
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => { setReaction('idle'); clicks.current = []; }, 5000);
+  }
+
+  return <div className="chat-playful-bot" data-reaction={reaction}>
+    <button type="button" className="chat-poke-bot" onClick={poke} aria-label={lang === 'id' ? 'Ajak robot bermain' : 'Play with the robot'}>
+      <span className="chat-bot-reaction"><Mascot mood={listening ? 'listening' : 'idle'} /></span>
+      {reaction === 'angry' && <span className="chat-anger-effects" aria-hidden="true"><span className="chat-steam chat-steam-left" /><span className="chat-steam chat-steam-right" /><span className="chat-anger-mark"><i /><i /></span></span>}
+    </button>
+    <span className="sr-only" role="status">{reaction === 'angry' ? (lang === 'id' ? 'Robot memerah dan tampak marah.' : 'The robot turns red and looks angry.') : ''}</span>
+  </div>;
+}
+
 function Answer({ text }: { text: string }) {
   const blocks: ReactNode[] = [];
   let lines: string[] = [];
@@ -71,6 +120,7 @@ export function ChatAssistant({ lang }: { lang: LangKey }) {
   const [error, setError] = useState<'unavailable' | 'cancelled' | 'copy' | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
+  const [launcherHint, setLauncherHint] = useState(false);
   const [thinkingStep, setThinkingStep] = useState(0);
   const [threads, setThreads] = useState<ChatThread[]>([]);
   const [activeThread, setActiveThread] = useState<string | null>(null);
@@ -84,6 +134,16 @@ export function ChatAssistant({ lang }: { lang: LangKey }) {
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const id = lang === 'id';
   const title = 'AI';
+  useEffect(() => {
+    if (!window.matchMedia('(hover: none)').matches) return;
+    try { if (sessionStorage.getItem('imam-ai-hint-seen')) return; } catch { /* Storage can be unavailable in private browsers. */ }
+    const reveal = setTimeout(() => {
+      setLauncherHint(true);
+      try { sessionStorage.setItem('imam-ai-hint-seen', '1'); } catch { /* The hint still works without storage. */ }
+    }, 2500);
+    const hide = setTimeout(() => setLauncherHint(false), 7500);
+    return () => { clearTimeout(reveal); clearTimeout(hide); };
+  }, []);
   const currentThread = threads.find(thread => thread.id === activeThread);
   const visibleThreads = threads.filter(thread => thread.archived === showArchived && `${thread.title} ${thread.messages.map(message => message.content).join(' ')}`.toLocaleLowerCase().includes(search.toLocaleLowerCase()));
   const thinkingLabels = id ? ['Lagi mikir…', 'Hmm, sebentar…', 'Menyusun jawaban…'] : ['Thinking…', 'Mumbling…', 'Putting it together…'];
@@ -195,11 +255,12 @@ export function ChatAssistant({ lang }: { lang: LangKey }) {
   </form>;
 
   return <>
-    <button ref={launcher} type="button" className="portfolio-bot-launcher" data-open={open} aria-expanded={open} aria-label={open ? (id ? 'Tutup AI' : 'Close AI') : (id ? 'Buka AI' : 'Open AI')} aria-haspopup="dialog" aria-controls="alwi-chat" onClick={() => {
+    <button ref={launcher} type="button" className="portfolio-bot-launcher" data-open={open} data-hint={launcherHint} aria-expanded={open} aria-label={open ? (id ? 'Tutup AI' : 'Close AI') : (id ? 'Ask Imam, tanya AI tentang Imam' : 'Ask Imam, AI portfolio assistant')} aria-haspopup="dialog" aria-controls="alwi-chat" onClick={() => {
+      setLauncherHint(false);
       if (dialog.current?.open) dialog.current.close();
       else { dialog.current?.show(); setOpen(true); input.current?.focus(); }
     }}>
-      {open ? <ChevronDown className="chat-launcher-chevron" aria-hidden="true" /> : <Mascot />}{!open && <span className="chat-launcher-label" aria-hidden="true">AI</span>}
+      {open ? <ChevronDown className="chat-launcher-chevron" aria-hidden="true" /> : <LauncherMascot />}{!open && <span className="chat-launcher-label" aria-hidden="true"><span className="chat-hint-short">AI</span><span className="chat-hint-full">Ask Imam</span></span>}
     </button>
     <dialog ref={dialog} id="alwi-chat" aria-labelledby="alwi-chat-title" aria-describedby="alwi-chat-description" className="portfolio-chat" onClose={() => { setOpen(false); launcher.current?.focus(); }}>
       <div className="chat-shell">
@@ -227,10 +288,10 @@ export function ChatAssistant({ lang }: { lang: LangKey }) {
               </>}
               {deleteId === thread.id && <div className="chat-thread-confirm" role="group" aria-label={id ? 'Konfirmasi hapus' : 'Confirm deletion'}><p>{id ? 'Hapus percakapan ini permanen?' : 'Permanently delete this thread?'}</p><button type="button" onClick={() => setDeleteId(null)}>{id ? 'Batal' : 'Cancel'}</button><button type="button" className="chat-thread-delete" onClick={() => { setThreads(items => items.filter(item => item.id !== thread.id)); setDeleteId(null); if (activeThread === thread.id) { setActiveThread(null); setMessages([]); setValue(''); setError(null); } }}>{id ? 'Hapus' : 'Delete'}</button></div>}
             </div>)}
-          </div><p className="chat-thread-note">{id ? 'Tersimpan hanya di browser ini. Maksimal 50 percakapan.' : 'Saved only in this browser. Up to 50 threads.'}</p>
+          </div>
         </div> : <><div ref={list} className="chat-scroll">
           {!messages.length && <div className="chat-welcome">
-            <div className="chat-welcome-mascot"><Mascot mood={value.trim() ? 'listening' : 'idle'} /></div>
+            <div className="chat-welcome-mascot"><ReactiveMascot listening={!!value.trim()} lang={lang} /></div>
             <h3 className="sr-only">{id ? 'Tanya AI tentang Imam' : 'Ask AI about Imam'}</h3>
             {composer}
             <div className="chat-suggestions">{suggestions.map(suggestion => <button key={suggestion.label} type="button" onClick={() => void ask(suggestion.question)}><ChevronRight aria-hidden="true" />{suggestion.label}</button>)}</div>
